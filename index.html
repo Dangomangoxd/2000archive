@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#65c6d5">
+  <title>Frutiger Aero — Mi escritorio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --glass: rgba(239, 252, 255, .64);
+      --glass-border: rgba(255, 255, 255, .8);
+      --ink: #183c50;
+      --blue: #1683bb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      color: var(--ink);
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: url("windows_xp_14.jpg") center center / cover no-repeat fixed;
+    }
+
+    body::before, body::after {
+      display: none;
+    }
+
+    button { font: inherit; }
+    .desktop { position: relative; height: 100%; padding: 18px 14px 58px; }
+
+    .desktop-widgets {
+      position: absolute;
+      z-index: 1;
+      top: 24px;
+      right: 26px;
+      display: grid;
+      grid-template-columns: 178px 188px;
+      gap: 12px;
+    }
+
+    .desktop-widget {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 10px;
+      background: linear-gradient(145deg, rgba(255,255,255,.67), rgba(199,248,247,.35));
+      box-shadow: 0 8px 24px rgba(25,105,132,.16), inset 0 1px 0 rgba(255,255,255,.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .weather-widget {
+      position: relative;
+      min-height: 125px;
+      padding: 14px;
+      background:
+        radial-gradient(circle at 76% 38%, #fff 0 14px, #ffef9f 15px 23px, transparent 24px),
+        linear-gradient(145deg, rgba(255,255,255,.7), rgba(114,223,226,.55) 60%, rgba(84,183,223,.44));
+    }
+
+    .widget-label { color: #34738b; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .weather-temp { margin-top: 9px; color: #176f91; font-size: 31px; font-weight: 300; }
+    .weather-copy { color: #397a8a; font-size: 11px; }
+
+    .music-widget { min-height: 125px; padding: 12px; background: linear-gradient(145deg, rgba(255,255,255,.72), rgba(232,218,255,.65) 48%, rgba(255,211,218,.57)); }
+    .music-art { height: 48px; display: grid; place-items: center; margin: 8px 0 6px; border-radius: 6px; background: linear-gradient(130deg, #8be8d2, #74bced 50%, #c0a4f6 76%, #ffb9c3); color: white; font-size: 24px; text-shadow: 0 2px 4px #397597; }
+    .music-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; color: #496a7b; font-size: 10px; }
+    .music-toggle { width: 23px; height: 23px; flex: 0 0 23px; border: 1px solid rgba(255,255,255,.85); border-radius: 50%; background: linear-gradient(145deg, #fff, #8de5d3); color: #247d8e; cursor: pointer; }
+
+    .bubble-field { position: absolute; inset: 0; overflow: hidden; pointer-events: none; opacity: .12; }
+    .bubble { position: absolute; width: 52px; height: 52px; border: 1px solid rgba(255,255,255,.68); border-radius: 50%; background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.92), rgba(197,255,249,.34) 32%, rgba(64,196,221,.17) 72%, rgba(255,255,255,.5)); box-shadow: inset -5px -7px 12px rgba(255,255,255,.2), 0 0 18px rgba(255,255,255,.3); animation: float 7s ease-in-out infinite; }
+    .bubble:nth-child(1) { top: 42%; left: 24%; width: 34px; height: 34px; animation-delay: -2s; }
+    .bubble:nth-child(2) { top: 72%; left: 76%; width: 78px; height: 78px; animation-delay: -4s; }
+    .bubble:nth-child(3) { top: 24%; left: 63%; width: 22px; height: 22px; animation-delay: -1s; }
+    .bubble:nth-child(4) { top: 57%; left: 90%; width: 43px; height: 43px; animation-delay: -3s; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-13px); } }
+
+    .desktop-icons {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 13px;
+      width: 92px;
+    }
+
+    .desktop-icon {
+      width: 82px;
+      min-height: 88px;
+      padding: 5px 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      color: white;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background: transparent;
+      text-align: center;
+      text-shadow: 1px 2px 3px #17445a, 0 0 5px #17445a;
+      cursor: pointer;
+    }
+
+    .desktop-icon:hover, .desktop-icon:focus-visible {
+      border-color: rgba(255,255,255,.7);
+      outline: none;
+      background: rgba(225,250,255,.24);
+      box-shadow: inset 0 0 12px rgba(255,255,255,.2);
+    }
+
+    .desktop-icon .emoji { font-size: 36px; line-height: 1.1; filter: drop-shadow(0 2px 2px #367187); }
+    .icon-image { width: 36px; height: 36px; object-fit: contain; }
+    .window-title .icon-image { width: 19px; height: 19px; }
+    .task-item .icon-image { width: 20px; height: 20px; }
+    .desktop-icon span:last-child { font-size: 12px; line-height: 1.2; }
+
+    .taskbar {
+      position: fixed;
+      z-index: 20;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 4px 9px 4px 5px;
+      border-top: 1px solid rgba(255,255,255,.86);
+      background: linear-gradient(180deg, rgba(213,248,255,.77), rgba(47,131,164,.76) 48%, rgba(15,88,125,.88));
+      box-shadow: 0 -2px 8px rgba(12,74,103,.16), inset 0 1px 0 rgba(255,255,255,.62);
+      backdrop-filter: blur(14px);
+    }
+
+    .start-button {
+      position: relative;
+      width: 46px;
+      height: 42px;
+      flex: 0 0 46px;
+      display: grid;
+      place-items: center;
+      margin-right: 9px;
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 27%, #e9fff8 0 12%, #bdfc6e 17%, #68cf27 47%, #127d31 77%, #d9fff7 80%, #39a3bc 100%);
+      box-shadow: 0 0 7px 2px rgba(220,255,249,.72), inset 0 1px 3px white, 0 2px 4px #17485e;
+      cursor: pointer;
+    }
+
+    .start-button:hover { filter: brightness(1.12); }
+    .start-button img { width: 25px; height: 25px; object-fit: contain; }
+    .start-fallback { font-size: 24px; line-height: 1; color: #fff; text-shadow: 0 1px 2px #226e8a; }
+
+    .task-items { display: flex; align-items: center; gap: 4px; min-width: 0; flex: 1; }
+    .task-item {
+      max-width: 180px;
+      height: 35px;
+      min-width: 46px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 10px;
+      overflow: hidden;
+      border: 1px solid rgba(225,248,255,.36);
+      border-radius: 4px;
+      color: white;
+      background: linear-gradient(110deg, rgba(255,255,255,.26), rgba(37,115,158,.26));
+      text-shadow: 0 1px 2px #17485e;
+      cursor: pointer;
+    }
+
+    .task-item:hover, .task-item.active { background-color: rgba(198,240,255,.34); box-shadow: inset 0 0 8px rgba(255,255,255,.35); }
+    .task-item span:last-child { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12px; }
+    .pinned-task { width: 44px; flex: 0 0 44px; justify-content: center; padding: 0; }
+    .pinned-task .icon-image { width: 25px; height: 25px; }
+    .tray { display: flex; align-items: center; gap: 12px; height: 38px; padding: 0 10px; border-left: 1px solid rgba(255,255,255,.35); color: #fff; text-align: right; text-shadow: 0 1px 2px #17485e; }
+    .tray-icons { font-size: 14px; white-space: nowrap; }
+    .clock { min-width: 48px; font-size: 12px; line-height: 1.35; }
+
+    .start-menu {
+      position: fixed;
+      z-index: 30;
+      bottom: 54px;
+      left: 6px;
+      width: min(380px, calc(100vw - 16px));
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,.92);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(244,253,255,.96), rgba(204,238,249,.94));
+      box-shadow: 0 10px 28px rgba(11,61,83,.38), inset 0 0 0 1px rgba(84,165,194,.2);
+      backdrop-filter: blur(18px);
+    }
+
+    .start-menu[hidden] { display: none; }
+    .profile { display: flex; align-items: center; gap: 12px; padding: 6px 8px 12px; border-bottom: 1px solid rgba(62,132,161,.22); }
+    .profile-avatar { width: 45px; height: 45px; display: grid; place-items: center; border: 2px solid white; border-radius: 7px; background: linear-gradient(145deg, #9de3ec, #2c92bd); box-shadow: 0 2px 5px #8eb3c2; font-size: 26px; }
+    .profile strong { font-size: 14px; }
+    .start-links { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; padding: 10px 0; }
+    .start-link { padding: 8px; border: 1px solid transparent; border-radius: 4px; background: transparent; color: #214b60; text-align: left; cursor: pointer; }
+    .start-link:hover { border-color: rgba(70,154,187,.3); background: rgba(255,255,255,.62); }
+    .start-menu-footer { padding-top: 8px; border-top: 1px solid rgba(62,132,161,.22); color: #54788a; font-size: 11px; text-align: right; }
+
+    .window {
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      width: min(590px, calc(100vw - 36px));
+      max-height: calc(100% - 96px);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 8px;
+      background: rgba(239,249,251,.96);
+      box-shadow: 0 14px 42px rgba(12,58,83,.34), inset 0 0 0 1px rgba(105,181,207,.28);
+      transform: translate(-50%, -50%);
+    }
+
+    .window[hidden] { display: none; }
+    .social-window { width: min(850px, calc(100vw - 36px)); }
+    .social-window .window-content { padding: 0; }
+    .browser-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-bottom: 1px solid #bedce6; background: linear-gradient(#f9ffff, #dceff4); }
+    .browser-arrows { color: #4f8292; font-size: 14px; white-space: nowrap; }
+    .address-bar { min-width: 0; flex: 1; padding: 5px 9px; overflow: hidden; border: 1px solid #bad6df; border-radius: 12px; background: #fff; color: #62808b; font-size: 11px; white-space: nowrap; text-overflow: ellipsis; }
+    .social-site { min-height: 430px; padding: 11px; border: 1px solid #75416e; background: radial-gradient(circle, rgba(248,76,177,.28) 1px, transparent 1.6px) 8px 8px / 31px 31px, repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 4px), #100d13; color: #f0e4ef; font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+    .social-masthead { position: relative; display: flex; min-height: 150px; align-items: center; justify-content: space-between; gap: 10px; padding: 19px 24px; overflow: hidden; border: 3px double #f29ad5; border-radius: 0; background: linear-gradient(115deg, rgba(21,14,25,.97), rgba(54,20,48,.96) 55%, rgba(103,28,78,.95)); box-shadow: 5px 5px 0 #a52f7d, inset 0 0 0 2px #261726, 0 0 18px rgba(240,58,169,.22); color: #fff; }
+    .social-masthead::after { position: absolute; inset: 6px; border: 1px dashed rgba(255,205,239,.72); content: ""; pointer-events: none; }
+    .social-masthead > * { position: relative; z-index: 1; }
+    .social-logo { width: fit-content; color: #fff; font-size: 22px; font-weight: 700; letter-spacing: -.07em; }
+    .social-logo span { color: #ff64bb; }
+    .social-masthead small { color: #f6d9ec; font-size: 10px; }
+    .social-headline { margin: 5px 0 3px; color: #ff4eac; font-family: Georgia, "Times New Roman", serif; font-size: clamp(27px, 5vw, 48px); font-style: italic; font-weight: 900; letter-spacing: .035em; line-height: 1; text-shadow: 2px 2px 0 #591d50, 0 0 12px rgba(255,52,168,.64); text-transform: uppercase; }
+    .social-ticker { margin-top: 8px; padding: 8px 10px; border: 2px dashed #d958aa; background: rgba(23,16,27,.96); box-shadow: 3px 3px 0 #562247; color: #ffaddd; font-size: 10px; font-weight: 700; letter-spacing: .08em; }
+    .social-ticker span { display: block; }
+    .social-nav { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; padding: 0; border: 0; background: transparent; }
+    .social-nav button, .social-action { padding: 7px 12px; border: 2px solid #ffd5ed; border-radius: 0; background: #df399a; box-shadow: 3px 3px 0 #65204e; color: #210d1c; font: inherit; font-size: 11px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+    .social-nav button:hover, .social-action:hover { border-color: #fff; background: #ff72c4; color: #250d1d; }
+    .social-nav button[aria-current="page"] { border-color: #fff; background: #ff8acc; box-shadow: 3px 3px 0 #a12c73; color: #291020; }
+    .social-layout { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(160px, .72fr); gap: 12px; margin-top: 12px; }
+    .social-card { margin-bottom: 10px; padding: 12px; border: 3px double #d98bc4; border-radius: 0; background: rgba(24,19,29,.98); box-shadow: 4px 4px 0 rgba(106,35,83,.86); }
+    .social-card h2 { margin: -12px -12px 10px; padding: 8px 11px; border-bottom: 2px dashed #a54c8c; background: linear-gradient(90deg, #3b2038, #241a2b); color: #ff8bcf; font-size: 12px; text-transform: uppercase; }
+    .social-intro { display: grid; grid-template-columns: 92px 1fr; gap: 11px; }
+    .social-avatar { min-height: 92px; display: grid; place-items: center; border: 2px solid #e890ce; border-radius: 0; background: repeating-linear-gradient(135deg, #211927 0 9px, #382138 9px 18px); box-shadow: 3px 3px 0 #7a2b61; font-size: 44px; }
+    .social-name { margin: 1px 0 4px; color: #f18ac8; font-size: 17px; font-weight: 700; }
+    .social-copy { margin: 5px 0; color: #d2c7d7; font-size: 11px; line-height: 1.65; }
+    .online-dot { color: #c47caa; font-weight: 700; }
+    .social-stats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .social-stats span { padding: 4px 7px; border: 1px dashed #a75a91; border-radius: 0; background: #2d2030; color: #f1c6e3; font-size: 10px; }
+    .bulletin { border-left: 3px solid #9a83ae; }
+    .bulletin p { margin: 5px 0; color: #d5cbd9; font-size: 12px; line-height: 1.6; }
+    .bulletin small { color: #b59cad; font-size: 10px; }
+    .mood-box { padding: 9px; border: 1px dashed #a65b91; border-radius: 0; background: linear-gradient(120deg, #302235, #211b29); color: #ecd8e9; font-size: 11px; line-height: 1.6; }
+    .friend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+    .friend { text-align: center; color: #d0bcd0; font-size: 10px; }
+    .friend-face { display: grid; height: 45px; place-items: center; margin-bottom: 4px; border: 2px solid #a65b91; border-radius: 0; background: repeating-linear-gradient(135deg, #211927 0 8px, #382138 8px 16px); box-shadow: 2px 2px 0 #67244d; font-size: 23px; }
+    .social-feed { display: none; }
+    .social-feed.visible { display: block; }
+    .comment-form { display: flex; gap: 6px; margin-top: 8px; }
+    .comment-form input { min-width: 0; flex: 1; padding: 6px; border: 1px solid #68516f; border-radius: 1px; background: #19151f; color: #f2eaf2; font: inherit; font-size: 11px; }
+    .comment-list { margin: 8px 0 0; padding: 0; list-style: none; }
+    .comment-list li { padding: 5px 0; border-top: 1px dotted #59445f; color: #d9bfd6; font-size: 11px; }
+    .social-photo { height: 170px; display: grid; place-items: center; border: 2px solid #dc84bd; border-radius: 0; background: radial-gradient(circle at 50% 50%, rgba(255,92,188,.23), transparent 34%), repeating-linear-gradient(45deg, #211824 0 12px, #39213a 12px 24px); box-shadow: 3px 3px 0 #69244f; font-size: 43px; }
+    .blog-post { padding: 15px; border: 3px double #e08ac5; background: #18131e; box-shadow: 5px 5px 0 #872a67, 0 0 16px rgba(223,54,164,.15); }
+    .blog-date { display: flex; align-items: center; gap: 7px; margin-bottom: 7px; color: #edb4d9; font-size: 10px; }
+    .blog-date::before { width: 8px; height: 8px; background: #ff53b3; box-shadow: 0 0 8px #ff53b3; content: ""; }
+    .social-site .blog-post h1 { margin: 0 0 7px; color: #ff86cb; font-size: clamp(20px, 3vw, 26px); font-weight: 400; }
+    .blog-post-meta { padding-bottom: 10px; border-bottom: 1px dashed #a34b88; color: #dfbad8; font-size: 10px; }
+    .blog-hero { min-height: 140px; display: grid; place-items: center; margin: 12px 0; border: 2px solid #cd6aaa; background: radial-gradient(circle at 50% 50%, rgba(241,83,178,.3), transparent 42%), repeating-linear-gradient(45deg, #1c1724 0 16px, #33243a 16px 32px); box-shadow: 3px 3px 0 #6e2854; font-size: 44px; }
+    .social-site .blog-post p { color: #e0d5e2; font-size: 12px; line-height: 1.8; }
+    .blog-labels { display: flex; flex-wrap: wrap; gap: 5px; margin: 12px 0; }
+    .blog-labels span { padding: 4px 7px; border: 1px dashed #9d4d87; background: #332033; color: #f2b4dd; font-size: 10px; }
+    .blog-post-actions { display: flex; justify-content: space-between; gap: 8px; padding-top: 9px; border-top: 1px dashed #a34b88; color: #e3b8d8; font-size: 10px; }
+    .blog-tile-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .blog-tile { min-height: 58px; display: flex; align-items: center; gap: 7px; padding: 8px; border: 1px dashed #985081; background: linear-gradient(120deg, #302238, #29212f); color: #ead5e6; font-size: 10px; line-height: 1.4; }
+    .blog-tile:nth-child(2n) { background: linear-gradient(120deg, #29212f, #3b2338); }
+    .blog-tile strong { color: #ff83c9; font-size: 13px; }
+    .blog-side-link { display: block; padding: 6px 0; border-bottom: 1px dashed #67415f; color: #efb1dc; font-size: 11px; }
+    .blog-side-link:last-child { border-bottom: 0; }
+
+    .titlebar {
+      display: flex;
+      height: 39px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 7px 5px 13px;
+      border-bottom: 1px solid rgba(87,157,187,.28);
+      background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(204,235,246,.9));
+      cursor: grab;
+      user-select: none;
+    }
+
+    .titlebar:active { cursor: grabbing; }
+    .window-title { display: flex; align-items: center; gap: 8px; color: #244b60; font-size: 13px; font-weight: 600; }
+    .window-controls { display: flex; gap: 4px; }
+    .window-controls button { width: 27px; height: 23px; border: 1px solid #a6c9d6; border-radius: 4px; background: linear-gradient(#fff, #d9edf3); color: #355b6c; cursor: pointer; }
+    .window-controls button:last-child { border-color: #cf8a7c; background: linear-gradient(#f9d5cc, #e47861); color: white; }
+    .window-content { max-height: calc(100dvh - 190px); overflow: auto; padding: 22px; }
+    .window-content h1 { margin: 0 0 8px; color: #1b7195; font-size: clamp(22px, 4vw, 29px); font-weight: 400; }
+    .window-content p { margin: 8px 0; color: #426375; font-size: 14px; line-height: 1.6; }
+    .welcome-hero { min-height: 140px; display: grid; place-items: center; margin: -22px -22px 18px; background: radial-gradient(ellipse at center, rgba(255,255,255,.95), rgba(118,223,230,.58) 45%, rgba(48,157,187,.2)); font-size: 74px; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 10px; margin-top: 17px; }
+    .info-card { padding: 13px; border: 1px solid #c8e3eb; border-radius: 6px; background: linear-gradient(145deg, white, #e7f6f8); }
+    .info-card strong { display: block; margin-bottom: 5px; color: #237d9f; font-size: 13px; }
+    .info-card span { color: #587585; font-size: 12px; line-height: 1.4; }
+    .drive { display: flex; align-items: center; gap: 12px; margin: 9px 0; padding: 12px; border: 1px solid #d2e7ec; border-radius: 5px; background: #fff; }
+    .drive-icon { font-size: 27px; }
+    .drive-info { flex: 1; font-size: 13px; }
+    .drive-info small { display: block; margin-top: 3px; color: #63808e; }
+    .progress { width: 100%; height: 7px; margin-top: 6px; overflow: hidden; border-radius: 8px; background: #deedf0; }
+    .progress span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #79d9cb, #47a9d1); }
+    .file-window { width: min(720px, calc(100vw - 36px)); }
+    .file-toolbar { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-bottom: 1px solid #c9e0e7; background: linear-gradient(#fff, #e8f4f7); }
+    .file-toolbar button { width: 28px; height: 26px; border: 1px solid #c3dce4; border-radius: 4px; background: white; color: #517b8b; cursor: pointer; }
+    .file-address { flex: 1; min-width: 0; padding: 6px 10px; border: 1px solid #c6dfe6; border-radius: 4px; background: white; color: #557583; font-size: 12px; }
+    .file-layout { display: grid; grid-template-columns: 155px 1fr; min-height: 300px; }
+    .file-sidebar { padding: 12px 8px; border-right: 1px solid #d6e8ed; background: linear-gradient(180deg, #f4fbfc, #eaf6f7); }
+    .file-sidebar button { width: 100%; padding: 8px 7px; border: 1px solid transparent; border-radius: 4px; background: transparent; color: #466b7a; text-align: left; font: inherit; font-size: 12px; cursor: pointer; }
+    .file-sidebar button:hover, .file-sidebar button.selected { border-color: #c7e4e8; background: rgba(255,255,255,.85); color: #247c99; }
+    .file-list { padding: 17px; }
+    .file-list h1 { margin: 0 0 5px; color: #277d9b; font-size: 19px; font-weight: 400; }
+    .file-list > p { margin: 0 0 13px; color: #718b95; font-size: 11px; }
+    .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+    .file-entry { min-height: 83px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 8px 5px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: #476a79; font: inherit; font-size: 11px; text-align: center; cursor: pointer; }
+    .file-entry:hover, .file-entry:focus-visible { border-color: #b9dfe7; outline: none; background: linear-gradient(145deg, white, #e6f8f7); }
+    .file-entry .file-emoji { font-size: 30px; }
+    .file-status { padding: 7px 12px; border-top: 1px solid #d4e7eb; background: #f7fbfc; color: #78919a; font-size: 10px; }
+    .music-player-window { width: min(520px, calc(100vw - 30px)); }
+    .music-player-window .window-content { padding: 0; background: #d8e2e8; }
+    .player-shell { padding: 11px; background: linear-gradient(145deg, #e8f0f5, #b8c9d4 52%, #eaf2f4); }
+    .player-brand { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 10px; border: 1px solid #f8ffff; border-radius: 5px 5px 0 0; background: linear-gradient(90deg, #24516a, #427e91 56%, #668b9a); color: #e9ffff; text-shadow: 0 1px 2px #183b52; font-size: 12px; font-weight: 700; }
+    .player-brand small { color: #c8efdf; font-size: 9px; letter-spacing: .08em; }
+    .player-display { display: grid; grid-template-columns: 1fr 92px; gap: 9px; padding: 11px; border: 1px solid #f8ffff; border-top: 0; background: linear-gradient(135deg, #283944, #17252d); color: #baf8c4; font-family: "Courier New", monospace; }
+    .lcd { min-width: 0; padding: 8px; border: 1px solid #5c7c80; border-radius: 3px; background: linear-gradient(135deg, #112327, #1e3935); box-shadow: inset 0 0 9px rgba(0,0,0,.6); }
+    .lcd-title { overflow: hidden; color: #b5ffc8; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+    .lcd-meta { margin-top: 5px; color: #72d5bd; font-size: 10px; }
+    .lcd-time { margin-top: 11px; color: #d8ffc9; font-size: 16px; letter-spacing: .08em; }
+    .player-visualizer { height: 58px; display: flex; align-items: end; justify-content: center; gap: 3px; padding: 7px; border: 1px solid #5c7c80; border-radius: 3px; background: #101d22; }
+    .player-visualizer i { width: 5px; height: 15%; border-radius: 2px 2px 0 0; background: linear-gradient(#d6ff98, #42c5af 65%, #4c8bdf); }
+    .player-visualizer.playing i { animation: equalize .7s ease-in-out infinite alternate; }
+    .player-visualizer.playing i:nth-child(2n) { animation-delay: -.35s; }
+    .player-visualizer.playing i:nth-child(3n) { animation-delay: -.5s; }
+    @keyframes equalize { from { height: 12%; } to { height: 95%; } }
+    .seek-row { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; gap: 7px; margin: 10px 2px 6px; color: #516d7a; font: 10px "Courier New", monospace; }
+    .seek-row input, .volume-row input { width: 100%; accent-color: #328ea5; cursor: pointer; }
+    .player-controls { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 8px 0 10px; }
+    .player-controls button { min-width: 35px; height: 30px; border: 1px solid #91a9b4; border-radius: 4px; background: linear-gradient(#fff, #c6d6dd); color: #355a69; box-shadow: inset 0 1px 0 white, 0 1px 2px rgba(39,72,88,.2); cursor: pointer; }
+    .player-controls button:hover { background: linear-gradient(#fff, #b6e8e5); }
+    .player-controls .play-button { width: 50px; height: 36px; border-color: #4c9ba7; background: linear-gradient(#eaffcf, #8fce9b); color: #245a5b; font-size: 16px; }
+    .player-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .add-music { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid #b0c6ce; border-radius: 4px; background: linear-gradient(#fff, #d4e5e9); color: #426a78; font-size: 11px; cursor: pointer; }
+    .add-music:hover { background: linear-gradient(#fff, #c5eee2); }
+    .volume-row { display: flex; align-items: center; gap: 6px; width: 145px; color: #476a78; font-size: 12px; }
+    .playlist { margin-top: 10px; border: 1px solid #91aab5; border-radius: 4px; background: #f7fbfc; }
+    .playlist-heading { padding: 6px 8px; border-bottom: 1px solid #c4d6dc; background: linear-gradient(#fdfefe, #dfeaf0); color: #466a79; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .playlist-items { max-height: 135px; min-height: 68px; overflow: auto; padding: 4px; }
+    .playlist-empty { display: grid; min-height: 60px; place-items: center; padding: 8px; color: #8aa0a8; font-size: 11px; text-align: center; }
+    .playlist-track { display: flex; width: 100%; align-items: center; gap: 7px; padding: 6px 7px; border: 0; border-radius: 3px; background: transparent; color: #4d6874; font: inherit; font-size: 11px; text-align: left; cursor: pointer; }
+    .playlist-track:hover { background: #eaf7f4; }
+    .playlist-track.selected { background: linear-gradient(90deg, #d9f3ec, #e7f2fc); color: #276e82; }
+    .playlist-track span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .player-status { margin-top: 7px; color: #627d88; font-size: 10px; }
+    .player-drop.drag-over { outline: 2px dashed #4c9ba7; outline-offset: -5px; }
+    .minesweeper-window { width: min(430px, calc(100vw - 30px)); }
+    .minesweeper-window .window-content { padding: 14px; background: linear-gradient(145deg, #dce9ee, #f1f7f8); }
+    .mines-shell { display: grid; justify-items: center; gap: 10px; }
+    .mines-top { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 8px; border: 2px solid; border-color: #fff #82969f #82969f #fff; background: #c9d7dc; }
+    .mine-counter, .mine-timer { min-width: 54px; padding: 4px 5px; border: 1px inset #97a6a9; background: #213338; color: #ff544e; font: bold 22px/1 "Courier New", monospace; text-align: center; letter-spacing: .04em; }
+    .mines-reset { width: 39px; height: 36px; display: grid; place-items: center; border: 2px solid; border-color: #fff #84979f #84979f #fff; background: linear-gradient(#f7ffff, #c5d6dc); font-size: 22px; cursor: pointer; }
+    .mines-reset:active { border-color: #84979f #fff #fff #84979f; }
+    .mines-message { min-height: 17px; color: #52717d; font-size: 11px; text-align: center; }
+    .mines-board { display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 2px; padding: 5px; border: 3px solid; border-color: #8a9da4 #fff #fff #8a9da4; background: #aabac0; touch-action: manipulation; }
+    .mine-cell { width: clamp(25px, 7vw, 34px); height: clamp(25px, 7vw, 34px); display: grid; place-items: center; padding: 0; border: 2px solid; border-color: #fff #81949b #81949b #fff; border-radius: 0; background: linear-gradient(145deg, #e4edef, #bdcbd0); color: #315c78; font: bold 16px/1 "Segoe UI", Tahoma, sans-serif; cursor: pointer; user-select: none; }
+    .mine-cell:not(.revealed):hover { background: linear-gradient(145deg, #f8ffff, #c8e4e7); }
+    .mine-cell:active:not(.revealed) { border-color: #81949b #fff #fff #81949b; }
+    .mine-cell.revealed { border: 1px solid #9baeb3; background: #d7e1e3; cursor: default; }
+    .mine-cell.flagged { color: #db4946; font-size: 17px; }
+    .mine-cell.mine-hit { background: #f29b90; }
+    .mine-cell.wrong-flag { color: #bd3d39; }
+    .mine-cell[data-number="1"] { color: #166bc0; }
+    .mine-cell[data-number="2"] { color: #23823d; }
+    .mine-cell[data-number="3"] { color: #d43b35; }
+    .mine-cell[data-number="4"] { color: #3b3caa; }
+    .mine-cell[data-number="5"] { color: #87332d; }
+    .mine-cell[data-number="6"] { color: #22858b; }
+    .mine-cell[data-number="7"] { color: #333; }
+    .mine-cell[data-number="8"] { color: #777; }
+    .mines-help { max-width: 335px; margin: 0; color: #67818a; font-size: 10px; line-height: 1.5; text-align: center; }
+    .note { width: 100%; min-height: 165px; resize: vertical; padding: 12px; border: 1px solid #c9dfe5; border-radius: 5px; background: #fffef0; color: #395b67; font: 14px/1.6 "Segoe UI", Tahoma, sans-serif; }
+    .note-hint { font-size: 11px !important; }
+    .recycle-empty { padding: 22px 0; text-align: center; font-size: 53px; }
+    .recycle-empty + p { text-align: center; }
+
+    .toast {
+      position: fixed;
+      z-index: 40;
+      right: 15px;
+      bottom: 60px;
+      max-width: min(320px, calc(100vw - 30px));
+      padding: 12px 16px;
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 7px;
+      background: rgba(241,252,255,.93);
+      box-shadow: 0 6px 20px rgba(16,70,91,.26);
+      color: #315a6d;
+      font-size: 13px;
+      animation: appear .2s ease-out;
+    }
+
+    .toast[hidden] { display: none; }
+    @keyframes appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 520px) {
+      .desktop { padding-top: 10px; padding-left: 7px; }
+      .desktop-icons { gap: 5px; }
+      .desktop-icon { min-height: 78px; }
+      .tray { gap: 6px; padding: 0 5px; }
+      .tray-icons { font-size: 12px; }
+      .taskbar { padding-right: 5px; }
+      .window-content { padding: 17px; }
+      .welcome-hero { margin: -17px -17px 15px; }
+      .desktop-widgets { top: 14px; right: 10px; grid-template-columns: 140px 145px; gap: 7px; transform: scale(.86); transform-origin: top right; }
+      .weather-widget, .music-widget { min-height: 112px; padding: 10px; }
+      .social-site { padding: 9px; }
+      .social-layout { grid-template-columns: 1fr; }
+      .social-sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .social-sidebar .social-card { margin-bottom: 0; }
+      .file-layout { grid-template-columns: 112px 1fr; }
+      .file-sidebar { padding: 8px 4px; }
+      .file-list { padding: 12px 8px; }
+      .player-shell { padding: 8px; }
+      .player-display { grid-template-columns: 1fr 70px; gap: 6px; padding: 8px; }
+      .player-visualizer { height: 50px; gap: 2px; }
+      .volume-row { width: 110px; }
+      .minesweeper-window .window-content { padding: 10px 6px; }
+      .mines-board { gap: 1px; padding: 4px; }
+      .mine-cell { width: min(9vw, 34px); height: min(9vw, 34px); }
+    }
+
+    @media (max-width: 400px) {
+      .desktop-widgets { grid-template-columns: 128px; }
+      .music-widget { display: none; }
+      .social-masthead { align-items: flex-start; flex-direction: column; }
+      .social-intro { grid-template-columns: 70px 1fr; }
+      .social-avatar { min-height: 70px; font-size: 34px; }
+      .social-sidebar { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <main class="desktop" aria-label="Escritorio Frutiger Aero">
+    <div class="bubble-field" aria-hidden="true"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></div>
+    <section class="desktop-widgets" aria-label="Widgets del escritorio">
+      <div class="desktop-widget weather-widget">
+        <div class="widget-label">🌿 clima de hoy</div>
+        <div class="weather-temp">24°</div>
+        <div class="weather-copy">Soleado con brisa marina</div>
+      </div>
+      <div class="desktop-widget music-widget">
+        <div class="widget-label">♫ aqua fm</div>
+        <div class="music-art" aria-hidden="true">🌈 ♪</div>
+        <div class="music-row"><span id="music-track">Windows Media Player</span><button class="music-toggle" id="music-toggle" aria-label="Abrir reproductor de música">▶</button></div>
+      </div>
+    </section>
+    <section class="desktop-icons" aria-label="Iconos del escritorio">
+      <button class="desktop-icon" data-open="welcome">
+        <span class="emoji" aria-hidden="true">🌐</span><span>Internet Explorer</span>
+      </button>
+      <button class="desktop-icon" data-open="social">
+        <span class="emoji" aria-hidden="true">💌</span><span>SpaceHey</span>
+      </button>
+      <button class="desktop-icon" data-open="computer">
+        <span class="emoji" aria-hidden="true">🖥️</span><span>Equipo</span>
+      </button>
+      <button class="desktop-icon" data-open="files">
+        <span class="emoji" aria-hidden="true"><img class="icon-image" src="explorer.ico" alt=""></span><span>Archivos</span>
+      </button>
+      <button class="desktop-icon" data-open="player">
+        <span class="emoji" aria-hidden="true"><img class="icon-image" src="itunes1.ico" alt=""></span><span>Windows Media Player</span>
+      </button>
+      <button class="desktop-icon" data-open="minesweeper">
+        <span class="emoji" aria-hidden="true">💣</span><span>Buscaminas</span>
+      </button>
+      <button class="desktop-icon" data-open="notes">
+        <span class="emoji" aria-hidden="true">📝</span><span>Notas</span>
+      </button>
+      <button class="desktop-icon" data-open="recycle">
+        <span class="emoji" aria-hidden="true"><img class="icon-image" src="trashbin1.ico" alt=""></span><span>Papelera de reciclaje</span>
+      </button>
+    </section>
+
+    <section class="window" id="welcome" data-title="Bienvenido" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span>🌐</span> Bienvenido a mi escritorio</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <div class="welcome-hero" aria-hidden="true">🌊</div>
+        <h1>Un pequeño rincón de internet</h1>
+        <p>Bienvenido a este escritorio inspirado en Windows 7 y la estética Frutiger Aero: vidrio brillante, cielos azules y un futuro optimista.</p>
+        <div class="card-grid">
+          <div class="info-card"><strong>💧 Aqua</strong><span>Brillos, gotas y transparencias.</span></div>
+          <div class="info-card"><strong>🌱 Naturaleza</strong><span>Verde vivo y aire fresco.</span></div>
+          <div class="info-card"><strong>💿 Nostalgia</strong><span>Un guiño a la web de los 2000.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="computer" data-title="Equipo" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span>🖥️</span> Equipo</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <h1>Equipo</h1>
+        <p>Un vistazo a este pequeño mundo digital.</p>
+        <div class="drive"><span class="drive-icon">💽</span><div class="drive-info">Disco local (C:)<small>Espacio imaginario disponible: 72 GB</small><div class="progress"><span style="width:58%"></span></div></div></div>
+        <div class="drive"><span class="drive-icon">💿</span><div class="drive-info">Unidad de CD (D:)<small>Lista para explorar recuerdos</small><div class="progress"><span style="width:24%"></span></div></div></div>
+      </div>
+    </section>
+
+    <section class="window file-window" id="files" data-title="Explorador de archivos" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span><img class="icon-image" src="explorer.ico" alt=""></span> Explorador de archivos</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content" style="padding:0">
+        <div class="file-toolbar"><button aria-label="Atrás">◀</button><button aria-label="Adelante">▶</button><button aria-label="Subir">↑</button><div class="file-address">🖥️　Mi escritorio　›　Archivos</div><button aria-label="Buscar">⌕</button></div>
+        <div class="file-layout">
+          <aside class="file-sidebar" aria-label="Ubicaciones">
+            <button class="selected" data-folder="desktop">⭐　Favoritos</button>
+            <button data-folder="desktop">🖥️　Escritorio</button>
+            <button data-folder="documents">📄　Documentos</button>
+            <button data-folder="pictures">🖼️　Imágenes</button>
+            <button data-folder="music">🎵　Música</button>
+          </aside>
+          <div class="file-list">
+            <h1 id="folder-title">Mis archivos bonitos</h1>
+            <p>Elementos en esta ubicación</p>
+            <div class="file-grid" id="file-grid">
+              <button class="file-entry" data-folder="documents"><span class="file-emoji">📁</span><span>Documentos</span></button>
+              <button class="file-entry" data-folder="pictures"><span class="file-emoji">🌅</span><span>Imágenes</span></button>
+              <button class="file-entry" data-folder="music"><span class="file-emoji">🎵</span><span>Música</span></button>
+              <button class="file-entry"><span class="file-emoji">🌊</span><span>fondo-aqua.jpg</span></button>
+              <button class="file-entry"><span class="file-emoji">📝</span><span>mis-recuerdos.txt</span></button>
+              <button class="file-entry"><span class="file-emoji">💿</span><span>playlist-verano.mp3</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="file-status" id="file-status">6 elementos · Este equipo</div>
+      </div>
+    </section>
+
+    <section class="window music-player-window" id="player" data-title="Windows Media Player" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span><img class="icon-image" src="itunes1.ico" alt=""></span> Windows Media Player 2004</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <div class="player-shell player-drop" id="player-drop">
+          <div class="player-brand"><span>◉ WINDOWS MEDIA PLAYER</span><small>MEDIA CENTER · EDITION 2004</small></div>
+          <div class="player-display">
+            <div class="lcd">
+              <div class="lcd-title" id="player-title">♪ Sin pista seleccionada</div>
+              <div class="lcd-meta" id="player-meta">Carga tu música para comenzar</div>
+              <div class="lcd-time"><span id="player-current">00:00</span> <span style="color:#62847a">/</span> <span id="player-duration">00:00</span></div>
+            </div>
+            <div class="player-visualizer" id="player-visualizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="seek-row"><span id="seek-current">00:00</span><input id="player-seek" type="range" min="0" max="1000" value="0" aria-label="Posición de reproducción"><span id="seek-duration">00:00</span></div>
+          <div class="player-controls">
+            <button id="player-shuffle" aria-label="Aleatorio" title="Aleatorio">🔀</button>
+            <button id="player-previous" aria-label="Pista anterior" title="Anterior">◀◀</button>
+            <button class="play-button" id="player-play" aria-label="Reproducir" title="Reproducir">▶</button>
+            <button id="player-next" aria-label="Siguiente pista" title="Siguiente">▶▶</button>
+            <button id="player-stop" aria-label="Detener" title="Detener">■</button>
+          </div>
+          <div class="player-bottom">
+            <label class="add-music" for="music-files">＋ Añadir música</label>
+            <input id="music-files" type="file" accept="audio/*" multiple hidden>
+            <label class="volume-row" for="player-volume"><span aria-hidden="true">🔊</span><input id="player-volume" type="range" min="0" max="1" step="0.01" value="0.75" aria-label="Volumen"></label>
+          </div>
+          <div class="playlist">
+            <div class="playlist-heading">♫ Lista de reproducción</div>
+            <div class="playlist-items" id="playlist-items"><div class="playlist-empty">Tu lista está vacía.<br>Añade archivos de audio o arrástralos aquí 🎧</div></div>
+          </div>
+          <div class="player-status" id="player-status" aria-live="polite">Tus archivos se reproducen localmente en este navegador.</div>
+          <audio id="audio-player" preload="metadata"></audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="window minesweeper-window" id="minesweeper" data-title="Buscaminas" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span>💣</span> Buscaminas</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <div class="mines-shell">
+          <div class="mines-top">
+            <output class="mine-counter" id="mine-counter" aria-label="Minas restantes">010</output>
+            <button class="mines-reset" id="mines-reset" type="button" aria-label="Empezar nueva partida">🙂</button>
+            <output class="mine-timer" id="mine-timer" aria-label="Tiempo">000</output>
+          </div>
+          <div class="mines-message" id="mines-message" aria-live="polite">¡Encuentra las 10 minas!</div>
+          <div class="mines-board" id="mines-board" role="grid" aria-label="Tablero de Buscaminas"></div>
+          <p class="mines-help">Clic para revelar · clic derecho para poner o quitar bandera · revela todos los cuadros seguros para ganar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="notes" data-title="Notas" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span>📝</span> Bloc de notas</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <h1>Notas</h1>
+        <p>Escribe algo bonito. Tus notas se guardan en este navegador.</p>
+        <textarea class="note" id="note" aria-label="Tus notas" placeholder="Quizás el futuro sí era brillante..."></textarea>
+        <p class="note-hint" id="note-status" aria-live="polite">Guardado automáticamente en este dispositivo.</p>
+      </div>
+    </section>
+
+    <section class="window" id="recycle" data-title="Papelera de reciclaje" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span><img class="icon-image" src="trashbin1.ico" alt=""></span> Papelera de reciclaje</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <h1>Papelera de reciclaje</h1>
+        <div class="recycle-empty" aria-hidden="true">🫧</div>
+        <p>La papelera está vacía. Todo sigue en su lugar.</p>
+      </div>
+    </section>
+
+    <section class="window social-window" id="social" data-title="SpaceHey" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span>💌</span> Navegador — SpaceHey</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <div class="window-content">
+        <div class="browser-bar"><span class="browser-arrows" aria-hidden="true">◀　▶　↻</span><div class="address-bar">🔒　https://spacehey.com/profile/broken_st4r</div><span aria-hidden="true">☆</span></div>
+        <div class="social-site">
+          <div class="social-masthead">
+            <div><div class="social-logo">space<span>hey</span></div><div class="social-headline">mi rincón en la noche</div><small>un blog personal lleno de pensamientos, música y cosas que no digo en voz alta</small></div>
+            <small>no encajo, y está bien　✦</small>
+          </div>
+          <div class="social-ticker"><span>MY CHEMICAL ROMANCE　/　BLOG PERSONAL　/　ONLINE ≠ AVAILABLE</span></div>
+          <nav class="social-nav" aria-label="Navegación de SpaceHey">
+            <button data-social-tab="blog" aria-current="page">Mi blog</button>
+            <button data-social-tab="profile">Perfil</button>
+            <button data-social-tab="photos">Fotos</button>
+            <button data-social-tab="friends">Amigos</button>
+          </nav>
+          <div class="social-layout">
+            <div class="social-main">
+              <section class="social-feed" data-feed="profile">
+                <article class="social-card">
+                  <h2>♡ Sobre mí</h2>
+                  <div class="social-intro">
+                    <div class="social-avatar" aria-label="Avatar decorativo">🦇</div>
+                    <div>
+                      <div class="social-name">broken_st4r</div>
+                      <div class="social-copy"><span class="online-dot">● en línea (escuchando música)</span>　|　México<br>demasiado sentimental para este mundo ✦<br>flequillo chueco, delineador negro y audífonos siempre</div>
+                      <div class="social-stats"><span>🖤 18 años</span><span>☾ Acuario</span><span>♫ emocionalmente en otra parte</span></div>
+                    </div>
+                  </div>
+                  <div style="display:flex;gap:7px;margin-top:10px"><button class="social-action" id="friend-button">＋ Agregar amigx</button><button class="social-action" id="wave-button">👋 Saludar</button></div>
+                </article>
+                <article class="social-card bulletin">
+                  <h2>✎ Último bulletin</h2>
+                  <p>¿A alguien más le pasa que una canción triste le arregla un poquito el día? Dejen recomendaciones, necesito actualizar mi playlist de caminar mirando por la ventana. 🖤</p>
+                  <small>Publicado hace 12 minutos · mood: ☾ pensando demasiado</small>
+                </article>
+              </section>
+              <section class="social-feed visible" data-feed="blog">
+                <article class="blog-post">
+                  <div class="blog-date">22 de octubre de 2007　·　Entrada #07</div>
+                  <h1>demasiado ruido para una noche tan quieta...</h1>
+                  <div class="blog-post-meta">Escrito por <strong>broken_st4r</strong>　·　5 min de lectura　·　☾ mood: existiendo</div>
+                  <div class="blog-hero" aria-label="Corazón oscuro y estrellas" role="img">🖤　✦　☾</div>
+                  <p>Otra noche despierta con la habitación a oscuras y la pantalla como única luz. Tengo mil cosas en la cabeza, pero ninguna sale bien cuando intento explicarla. Así que las dejo acá, entre pixeles y canciones repetidas.</p>
+                  <p>Hoy volví a escuchar ese disco que ya me sé de memoria. Supongo que hay algo cómodo en sentirse triste con una melodía que te entiende, aunque sea por tres minutos. Afuera todos parecen tener un lugar al que ir; yo todavía estoy tratando de encontrar el mío.</p>
+                  <p>Si llegaste hasta acá, gracias por leer. Ojalá mañana pese un poquito menos. Dejo una estrella para quien también siga despiertx. ☆</p>
+                  <div class="blog-labels"><span>diario personal</span><span>emo 4ever</span><span>noches largas</span><span>música triste</span></div>
+                  <div class="blog-post-actions"><span>♡ 12 comentarios　·　Compartir entrada</span><span>♫ playlist: repeat forever</span></div>
+                </article>
+                <article class="social-card bulletin">
+                  <h2>Deja una nota en el blog</h2>
+                  <p>Deja una señal de vida o una canción para agregar a mis favoritos. ♡</p>
+                  <div class="comment-form"><input id="comment-input" type="text" maxlength="120" placeholder="escribe algo, aunque sea un :(" aria-label="Escribe un comentario"><button class="social-action" id="comment-button">Publicar</button></div>
+                  <ul class="comment-list" id="comment-list"><li>deadroses: aquí seguimos, un día a la vez 🖤</li></ul>
+                </article>
+              </section>
+              <section class="social-feed" data-feed="photos">
+                <article class="social-card"><h2>📷 Mis fotos</h2><div class="card-grid"><div class="social-photo">🥀</div><div class="social-photo">🖤</div><div class="social-photo">🌙</div><div class="social-photo">🦇</div></div><p class="social-copy">4 recuerdos borrosos de noches que no quiero olvidar 📷</p></article>
+              </section>
+              <section class="social-feed" data-feed="friends">
+                <article class="social-card"><h2>♡ Mis amigxs</h2><div class="friend-grid"><div class="friend"><div class="friend-face">🥀</div>deadroses</div><div class="friend"><div class="friend-face">🦇</div>night.lover</div><div class="friend"><div class="friend-face">🖤</div>soft_sadness</div><div class="friend"><div class="friend-face">☾</div>afterdark</div><div class="friend"><div class="friend-face">🎧</div>broken.fm</div><div class="friend"><div class="friend-face">✦</div>starless</div></div></article>
+              </section>
+            </div>
+            <aside class="social-sidebar">
+              <section class="social-card"><h2>✦ sobre quien escribe</h2><div class="mood-box"><strong>broken_st4r</strong><br>desde México · despierta después de las 2am<br>☾ escribiendo para no explotar<br>♫ ahora suena: playlist triste #13<br>🖤 status: leave me alone / text me</div></section>
+              <section class="social-card"><h2>archivo de pensamientos</h2><div class="blog-side-link">› Octubre 2007 <strong>(4)</strong></div><div class="blog-side-link">› Septiembre 2007 <strong>(7)</strong></div><div class="blog-side-link">› Agosto 2007 <strong>(5)</strong></div></section>
+              <section class="social-card"><h2>en esta entrada</h2><div class="blog-tile-list"><div class="blog-tile"><strong>01</strong> noches sin dormir</div><div class="blog-tile"><strong>02</strong> canciones tristes</div><div class="blog-tile"><strong>03</strong> pensamientos</div><div class="blog-tile"><strong>04</strong> seguir aquí</div></div></section>
+            </aside>
+          </div>
+          <p style="margin:10px 0 0;text-align:center;color:#d7b3cd;font-size:10px">Sitio de demostración hecho con cariño · No es una cuenta real de SpaceHey</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="taskbar" aria-label="Barra de tareas">
+    <button class="start-button" id="start-button" aria-label="Abrir menú Inicio" aria-expanded="false">
+      <span class="start-fallback" aria-hidden="true">✿</span>
+    </button>
+    <button class="task-item pinned-task" id="files-task-button" type="button" aria-label="Abrir Explorador de archivos" title="Explorador de archivos">
+      <img class="icon-image" src="explorer.ico" alt="">
+    </button>
+    <button class="task-item pinned-task" id="player-task-button" type="button" aria-label="Abrir Windows Media Player" title="Windows Media Player">
+      <img class="icon-image" src="itunes1.ico" alt="">
+    </button>
+    <div class="task-items" id="task-items"></div>
+    <div class="tray">
+      <span class="tray-icons" aria-hidden="true">⌃　📶　🔊</span>
+      <time class="clock" id="clock"></time>
+    </div>
+  </nav>
+
+  <aside class="start-menu" id="start-menu" hidden>
+    <div class="profile"><div class="profile-avatar" aria-hidden="true">🌊</div><strong>Mi escritorio</strong></div>
+    <div class="start-links">
+      <button class="start-link" data-open="welcome">🌐　Internet Explorer</button>
+      <button class="start-link" data-open="social">💌　SpaceHey</button>
+      <button class="start-link" data-open="computer">🖥️　Equipo</button>
+      <button class="start-link" data-open="files"><img class="icon-image" src="explorer.ico" alt="">　Archivos</button>
+      <button class="start-link" data-open="player"><img class="icon-image" src="itunes1.ico" alt="">　Windows Media Player</button>
+      <button class="start-link" data-open="minesweeper">💣　Buscaminas</button>
+      <button class="start-link" data-open="notes">📝　Notas</button>
+      <button class="start-link" data-open="recycle"><img class="icon-image" src="trashbin1.ico" alt="">　Papelera</button>
+    </div>
+    <div class="start-menu-footer">Un día brillante para navegar ☀️</div>
+  </aside>
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script>
+    const windows = [...document.querySelectorAll(".window")];
+    const taskItems = document.querySelector("#task-items");
+    const filesWindow = document.querySelector("#files");
+    const filesTaskButton = document.querySelector("#files-task-button");
+    const playerWindow = document.querySelector("#player");
+    const playerTaskButton = document.querySelector("#player-task-button");
+    const startButton = document.querySelector("#start-button");
+    const startMenu = document.querySelector("#start-menu");
+    const toast = document.querySelector("#toast");
+    let highestZ = 5;
+    let toastTimer;
+
+    function setStartMenu(open) {
+      startMenu.hidden = !open;
+      startButton.setAttribute("aria-expanded", String(open));
+    }
+
+    function updateTaskbar() {
+      taskItems.replaceChildren();
+      windows.filter(window => (!window.hidden || window.dataset.minimized === "true") && window !== filesWindow && window !== playerWindow).forEach(window => {
+        const button = document.createElement("button");
+        button.className = `task-item${window.dataset.minimized === "true" ? "" : " active"}`;
+        button.type = "button";
+        const icon = window.querySelector(".window-title span").cloneNode(true);
+        icon.setAttribute("aria-hidden", "true");
+        const title = document.createElement("span");
+        title.textContent = window.dataset.title;
+        button.append(icon, title);
+        button.addEventListener("click", () => {
+          if (window.dataset.minimized === "true") {
+            window.dataset.minimized = "false";
+            window.hidden = false;
+            focusWindow(window);
+          } else {
+            window.dataset.minimized = "true";
+            window.hidden = true;
+          }
+          updateTaskbar();
+        });
+        taskItems.append(button);
+      });
+      filesTaskButton.classList.toggle("active", !filesWindow.hidden && filesWindow.dataset.minimized !== "true");
+      playerTaskButton.classList.toggle("active", !playerWindow.hidden && playerWindow.dataset.minimized !== "true");
+    }
+
+    function focusWindow(window) {
+      highestZ += 1;
+      window.style.zIndex = highestZ;
+      windows.forEach(item => item.classList.toggle("is-active", item === window));
+    }
+
+    function openWindow(id) {
+      const window = document.getElementById(id);
+      if (!window) return;
+      window.hidden = false;
+      window.dataset.minimized = "false";
+      focusWindow(window);
+      setStartMenu(false);
+      updateTaskbar();
+    }
+
+    function closeWindow(window) {
+      window.hidden = true;
+      window.dataset.minimized = "false";
+      updateTaskbar();
+    }
+
+    document.querySelectorAll("[data-open]").forEach(button => {
+      button.addEventListener("click", () => openWindow(button.dataset.open));
+    });
+
+    filesTaskButton.addEventListener("click", () => {
+      if (filesWindow.hidden || filesWindow.dataset.minimized === "true") {
+        openWindow("files");
+      } else {
+        filesWindow.dataset.minimized = "true";
+        filesWindow.hidden = true;
+        updateTaskbar();
+      }
+    });
+
+    playerTaskButton.addEventListener("click", () => {
+      if (playerWindow.hidden || playerWindow.dataset.minimized === "true") {
+        openWindow("player");
+      } else {
+        playerWindow.dataset.minimized = "true";
+        playerWindow.hidden = true;
+        updateTaskbar();
+      }
+    });
+
+    document.querySelectorAll(".window").forEach(window => {
+      window.addEventListener("pointerdown", () => focusWindow(window));
+      window.querySelector("[data-close]").addEventListener("click", () => closeWindow(window));
+      window.querySelector("[data-minimize]").addEventListener("click", () => {
+        window.hidden = true;
+        window.dataset.minimized = "true";
+        updateTaskbar();
+      });
+
+      const titlebar = window.querySelector(".titlebar");
+      let drag;
+      titlebar.addEventListener("pointerdown", event => {
+        if (event.target.closest("button")) return;
+        const rect = window.getBoundingClientRect();
+        window.style.transform = "none";
+        window.style.left = `${rect.left}px`;
+        window.style.top = `${rect.top}px`;
+        drag = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+        titlebar.setPointerCapture(event.pointerId);
+        focusWindow(window);
+      });
+      titlebar.addEventListener("pointermove", event => {
+        if (!drag) return;
+        const maxX = window.parentElement.clientWidth - window.offsetWidth;
+        const maxY = window.parentElement.clientHeight - window.offsetHeight;
+        window.style.left = `${Math.max(0, Math.min(maxX, event.clientX - drag.x))}px`;
+        window.style.top = `${Math.max(0, Math.min(maxY, event.clientY - drag.y))}px`;
+      });
+      const stopDragging = () => { drag = null; };
+      titlebar.addEventListener("pointerup", stopDragging);
+      titlebar.addEventListener("pointercancel", stopDragging);
+    });
+
+    startButton.addEventListener("click", () => setStartMenu(startMenu.hidden));
+    document.addEventListener("pointerdown", event => {
+      if (!startMenu.hidden && !startMenu.contains(event.target) && !startButton.contains(event.target)) setStartMenu(false);
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") setStartMenu(false);
+      if (event.key === "Enter" && event.target.classList.contains("desktop-icon")) openWindow(event.target.dataset.open);
+    });
+
+    const note = document.querySelector("#note");
+    const noteStatus = document.querySelector("#note-status");
+    try {
+      note.value = localStorage.getItem("frutiger-aero-note") || "";
+    } catch (error) {
+      noteStatus.textContent = "El almacenamiento no está disponible; las notas no se guardarán.";
+    }
+    note.addEventListener("input", () => {
+      try {
+        localStorage.setItem("frutiger-aero-note", note.value);
+        noteStatus.textContent = "Guardado automáticamente en este dispositivo.";
+      } catch (error) {
+        noteStatus.textContent = "No se pudo guardar la nota en este navegador.";
+      }
+    });
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.hidden = false;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { toast.hidden = true; }, 2800);
+    }
+
+    function updateClock() {
+      const now = new Date();
+      document.querySelector("#clock").innerHTML = `${now.toLocaleTimeString("es-MX", { hour: "2-digit", minute: "2-digit" })}<br>${now.toLocaleDateString("es-MX", { day: "2-digit", month: "2-digit", year: "numeric" })}`;
+    }
+
+    updateClock();
+    setInterval(updateClock, 30_000);
+    document.querySelector(".start-menu-footer").addEventListener("click", () => showToast("¡Gracias por visitar mi escritorio! 🌿"));
+
+    const mineRows = 9;
+    const mineColumns = 9;
+    const totalMines = 10;
+    const mineBoard = document.querySelector("#mines-board");
+    const mineCounter = document.querySelector("#mine-counter");
+    const mineTimer = document.querySelector("#mine-timer");
+    const mineMessage = document.querySelector("#mines-message");
+    let mineCells = [];
+    let mineFlags = 0;
+    let mineStarted = false;
+    let mineFinished = false;
+    let mineSeconds = 0;
+    let mineTimerInterval;
+
+    function mineNeighbors(index) {
+      const row = Math.floor(index / mineColumns);
+      const column = index % mineColumns;
+      const neighbors = [];
+      for (let y = Math.max(0, row - 1); y <= Math.min(mineRows - 1, row + 1); y++) {
+        for (let x = Math.max(0, column - 1); x <= Math.min(mineColumns - 1, column + 1); x++) {
+          const neighbor = y * mineColumns + x;
+          if (neighbor !== index) neighbors.push(neighbor);
+        }
+      }
+      return neighbors;
+    }
+
+    function updateMineCounter() {
+      const remaining = totalMines - mineFlags;
+      mineCounter.textContent = remaining < 0 ? `-${String(Math.abs(remaining)).padStart(2, "0")}` : String(remaining).padStart(3, "0");
+    }
+
+    function updateMineCell(index) {
+      const cell = mineCells[index];
+      const button = mineBoard.children[index];
+      button.classList.toggle("revealed", cell.revealed);
+      button.classList.toggle("flagged", cell.flagged && !cell.revealed);
+      button.classList.toggle("mine-hit", cell.mine && cell.revealed && mineFinished && mineMessage.dataset.result === "lost");
+      button.classList.toggle("wrong-flag", cell.flagged && !cell.mine && mineFinished);
+      button.removeAttribute("data-number");
+      if (cell.revealed) {
+        button.textContent = cell.mine ? "💣" : cell.adjacent || "";
+        button.setAttribute("aria-label", cell.mine ? `Fila ${Math.floor(index / mineColumns) + 1}, columna ${index % mineColumns + 1}, mina` : `Fila ${Math.floor(index / mineColumns) + 1}, columna ${index % mineColumns + 1}, ${cell.adjacent ? `${cell.adjacent} minas alrededor` : "vacía"}`);
+        if (cell.adjacent > 0 && !cell.mine) button.dataset.number = String(cell.adjacent);
+      } else if (cell.flagged) {
+        button.textContent = "🚩";
+        button.setAttribute("aria-label", `Fila ${Math.floor(index / mineColumns) + 1}, columna ${index % mineColumns + 1}, marcada con bandera`);
+      } else {
+        button.textContent = mineFinished && cell.mine ? "💣" : "";
+        button.setAttribute("aria-label", `Fila ${Math.floor(index / mineColumns) + 1}, columna ${index % mineColumns + 1}, sin revelar`);
+      }
+    }
+
+    function placeMines(firstIndex) {
+      const safeCells = new Set([firstIndex, ...mineNeighbors(firstIndex)]);
+      const available = mineCells.map((_, index) => index).filter(index => !safeCells.has(index));
+      for (let index = available.length - 1; index > 0; index--) {
+        const swapIndex = Math.floor(Math.random() * (index + 1));
+        [available[index], available[swapIndex]] = [available[swapIndex], available[index]];
+      }
+      available.slice(0, totalMines).forEach(index => {
+        mineCells[index].mine = true;
+      });
+      mineCells.forEach((cell, index) => {
+        if (!cell.mine) cell.adjacent = mineNeighbors(index).filter(neighbor => mineCells[neighbor].mine).length;
+      });
+    }
+
+    function startMineTimer() {
+      if (mineStarted) return;
+      mineStarted = true;
+      mineTimerInterval = setInterval(() => {
+        mineSeconds = Math.min(999, mineSeconds + 1);
+        mineTimer.textContent = String(mineSeconds).padStart(3, "0");
+        if (mineSeconds === 999) clearInterval(mineTimerInterval);
+      }, 1000);
+    }
+
+    function finishMineGame(result) {
+      mineFinished = true;
+      clearInterval(mineTimerInterval);
+      mineMessage.dataset.result = result;
+      if (result === "lost") {
+        mineMessage.textContent = "¡BOOM! Encontraste una mina. Inténtalo otra vez.";
+        document.querySelector("#mines-reset").textContent = "😵";
+      } else {
+        mineMessage.textContent = `¡Ganaste! Limpiaste el campo en ${mineSeconds} segundos.`;
+        document.querySelector("#mines-reset").textContent = "😎";
+        mineCells.forEach(cell => {
+          if (cell.mine && !cell.flagged) {
+            cell.flagged = true;
+            mineFlags += 1;
+          }
+        });
+        updateMineCounter();
+      }
+      mineCells.forEach((_, index) => updateMineCell(index));
+    }
+
+    function checkMineWin() {
+      if (mineCells.every(cell => cell.mine || cell.revealed)) finishMineGame("won");
+    }
+
+    function revealMineCell(index) {
+      const cell = mineCells[index];
+      if (mineFinished || cell.revealed || cell.flagged) return;
+      if (!mineStarted) {
+        placeMines(index);
+        startMineTimer();
+      }
+      if (cell.mine) {
+        cell.revealed = true;
+        updateMineCell(index);
+        finishMineGame("lost");
+        return;
+      }
+      const pending = [index];
+      while (pending.length) {
+        const current = pending.pop();
+        const currentCell = mineCells[current];
+        if (currentCell.revealed || currentCell.flagged || currentCell.mine) continue;
+        currentCell.revealed = true;
+        if (currentCell.adjacent === 0) pending.push(...mineNeighbors(current));
+      }
+      mineCells.forEach((_, cellIndex) => updateMineCell(cellIndex));
+      checkMineWin();
+    }
+
+    function toggleMineFlag(index) {
+      const cell = mineCells[index];
+      if (mineFinished || cell.revealed || (!cell.flagged && mineFlags >= totalMines)) return;
+      cell.flagged = !cell.flagged;
+      mineFlags += cell.flagged ? 1 : -1;
+      updateMineCounter();
+      updateMineCell(index);
+    }
+
+    function handleMineChord(index) {
+      const cell = mineCells[index];
+      if (!cell.revealed || cell.adjacent === 0 || mineFinished) return;
+      const neighbors = mineNeighbors(index);
+      if (neighbors.filter(neighbor => mineCells[neighbor].flagged).length !== cell.adjacent) return;
+      neighbors.forEach(neighbor => {
+        if (!mineCells[neighbor].flagged && !mineCells[neighbor].revealed) revealMineCell(neighbor);
+      });
+    }
+
+    function resetMineGame() {
+      clearInterval(mineTimerInterval);
+      mineCells = Array.from({ length: mineRows * mineColumns }, () => ({ mine: false, revealed: false, flagged: false, adjacent: 0 }));
+      mineFlags = 0;
+      mineStarted = false;
+      mineFinished = false;
+      mineSeconds = 0;
+      mineTimer.textContent = "000";
+      mineMessage.textContent = "¡Encuentra las 10 minas!";
+      delete mineMessage.dataset.result;
+      document.querySelector("#mines-reset").textContent = "🙂";
+      mineBoard.replaceChildren();
+      mineCells.forEach((_, index) => {
+        const button = document.createElement("button");
+        button.className = "mine-cell";
+        button.type = "button";
+        button.setAttribute("role", "gridcell");
+        button.addEventListener("click", () => {
+          if (mineCells[index].revealed) handleMineChord(index);
+          else revealMineCell(index);
+        });
+        button.addEventListener("contextmenu", event => {
+          event.preventDefault();
+          toggleMineFlag(index);
+        });
+        mineBoard.append(button);
+        updateMineCell(index);
+      });
+      updateMineCounter();
+    }
+
+    document.querySelector("#mines-reset").addEventListener("click", resetMineGame);
+    resetMineGame();
+
+    document.querySelectorAll("[data-social-tab]").forEach(button => {
+      button.addEventListener("click", () => {
+        const selectedTab = button.dataset.socialTab;
+        document.querySelectorAll("[data-social-tab]").forEach(tab => {
+          if (tab === button) tab.setAttribute("aria-current", "page");
+          else tab.removeAttribute("aria-current");
+        });
+        document.querySelectorAll("[data-feed]").forEach(feed => {
+          feed.classList.toggle("visible", feed.dataset.feed === selectedTab);
+        });
+      });
+    });
+
+    const fileContents = {
+      desktop: { title: "Mis archivos bonitos", status: "6 elementos · Este equipo" },
+      documents: { title: "Documentos", status: "2 elementos · Documentos" },
+      pictures: { title: "Imágenes", status: "3 elementos · Imágenes" },
+      music: { title: "Música", status: "2 elementos · Música" }
+    };
+    const fileEntries = {
+      desktop: [["📁", "Documentos", "documents"], ["🌅", "Imágenes", "pictures"], ["🎵", "Música", "music"], ["🌊", "fondo-aqua.jpg"], ["📝", "mis-recuerdos.txt"], ["💿", "playlist-verano.mp3"]],
+      documents: [["📝", "mis-recuerdos.txt"], ["📄", "ideas-para-mi-web.txt"]],
+      pictures: [["🌊", "fondo-aqua.jpg"], ["🌅", "atardecer.png"], ["🐬", "amigos-del-mar.jpg"]],
+      music: [["💿", "playlist-verano.mp3"], ["🎶", "sonidos-del-oceano.mp3"]]
+    };
+
+    function showFolder(folder) {
+      const content = fileContents[folder];
+      if (!content) return;
+      document.querySelector("#folder-title").textContent = content.title;
+      document.querySelector("#file-status").textContent = content.status;
+      const grid = document.querySelector("#file-grid");
+      grid.replaceChildren();
+      fileEntries[folder].forEach(([icon, name, childFolder]) => {
+        const entry = document.createElement("button");
+        entry.className = "file-entry";
+        entry.type = "button";
+        const emoji = document.createElement("span");
+        emoji.className = "file-emoji";
+        emoji.textContent = icon;
+        const label = document.createElement("span");
+        label.textContent = name;
+        entry.append(emoji, label);
+        if (childFolder) {
+          entry.dataset.folder = childFolder;
+          entry.addEventListener("click", () => showFolder(childFolder));
+        } else {
+          entry.addEventListener("click", () => showToast(`${name} · archivo de demostración`));
+        }
+        grid.append(entry);
+      });
+      document.querySelectorAll(".file-sidebar [data-folder]").forEach(button => {
+        button.classList.toggle("selected", button.dataset.folder === folder);
+      });
+    }
+
+    document.querySelectorAll(".file-sidebar [data-folder]").forEach(button => {
+      button.addEventListener("click", () => showFolder(button.dataset.folder));
+    });
+    showFolder("desktop");
+
+    document.querySelector("#friend-button").addEventListener("click", event => {
+      const button = event.currentTarget;
+      const added = button.dataset.added === "true";
+      button.dataset.added = String(!added);
+      button.textContent = added ? "＋ Agregar amigx" : "✓ Solicitud enviada";
+      showToast(added ? "Solicitud cancelada." : "¡Solicitud de amistad enviada! 💚");
+    });
+
+    document.querySelector("#wave-button").addEventListener("click", () => showToast("¡Le mandaste un saludo a aqua_dream! 👋"));
+
+    document.querySelector("#comment-button").addEventListener("click", () => {
+      const input = document.querySelector("#comment-input");
+      const message = input.value.trim();
+      if (!message) {
+        showToast("Escribe un comentario antes de enviarlo.");
+        input.focus();
+        return;
+      }
+      const comment = document.createElement("li");
+      comment.textContent = `visitante: ${message}`;
+      document.querySelector("#comment-list").append(comment);
+      input.value = "";
+      showToast("Tu comentario quedó publicado ✨");
+    });
+
+    const audioPlayer = document.querySelector("#audio-player");
+    const playlistItems = document.querySelector("#playlist-items");
+    const playerStatus = document.querySelector("#player-status");
+    const playerSeek = document.querySelector("#player-seek");
+    const musicTracks = [];
+    let currentTrack = -1;
+    let shuffleTracks = false;
+
+    function formatTime(seconds) {
+      if (!Number.isFinite(seconds) || seconds < 0) return "00:00";
+      const minutes = Math.floor(seconds / 60);
+      const remainder = Math.floor(seconds % 60);
+      return `${String(minutes).padStart(2, "0")}:${String(remainder).padStart(2, "0")}`;
+    }
+
+    function updatePlayerDisplay() {
+      const track = musicTracks[currentTrack];
+      const duration = audioPlayer.duration;
+      document.querySelector("#player-title").textContent = track ? `♪ ${track.name}` : "♪ Sin pista seleccionada";
+      document.querySelector("#player-meta").textContent = track ? `PISTA ${String(currentTrack + 1).padStart(2, "0")} · AUDIO LOCAL` : "Carga tu música para comenzar";
+      document.querySelector("#player-current").textContent = formatTime(audioPlayer.currentTime);
+      document.querySelector("#seek-current").textContent = formatTime(audioPlayer.currentTime);
+      document.querySelector("#player-duration").textContent = formatTime(duration);
+      document.querySelector("#seek-duration").textContent = formatTime(duration);
+      playerSeek.value = Number.isFinite(duration) && duration > 0 ? String(Math.round(audioPlayer.currentTime / duration * 1000)) : "0";
+      document.querySelector("#player-play").textContent = audioPlayer.paused ? "▶" : "Ⅱ";
+      document.querySelector("#player-play").setAttribute("aria-label", audioPlayer.paused ? "Reproducir" : "Pausar");
+      document.querySelector("#player-visualizer").classList.toggle("playing", !audioPlayer.paused);
+      document.querySelector("#music-track").textContent = track ? track.name : "Windows Media Player";
+      [...playlistItems.querySelectorAll(".playlist-track")].forEach((item, index) => {
+        item.classList.toggle("selected", index === currentTrack);
+        item.setAttribute("aria-current", index === currentTrack ? "true" : "false");
+      });
+    }
+
+    function renderPlaylist() {
+      playlistItems.replaceChildren();
+      if (!musicTracks.length) {
+        const empty = document.createElement("div");
+        empty.className = "playlist-empty";
+        empty.innerHTML = "Tu lista está vacía.<br>Añade archivos de audio o arrástralos aquí 🎧";
+        playlistItems.append(empty);
+        updatePlayerDisplay();
+        return;
+      }
+      musicTracks.forEach((track, index) => {
+        const button = document.createElement("button");
+        button.className = "playlist-track";
+        button.type = "button";
+        const number = document.createElement("span");
+        number.textContent = String(index + 1).padStart(2, "0");
+        const title = document.createElement("span");
+        title.textContent = track.name;
+        button.append(number, title);
+        button.addEventListener("click", () => playTrack(index));
+        playlistItems.append(button);
+      });
+      updatePlayerDisplay();
+    }
+
+    function addAudioFiles(files) {
+      const audioFiles = [...files].filter(file => file.type.startsWith("audio/") || /\.(mp3|m4a|aac|ogg|oga|wav|flac|opus|wma)$/i.test(file.name));
+      if (!audioFiles.length) {
+        playerStatus.textContent = "No se encontraron archivos de audio compatibles.";
+        showToast("Selecciona archivos de música como MP3, WAV u OGG.");
+        return;
+      }
+      const firstNewTrack = musicTracks.length;
+      audioFiles.forEach(file => musicTracks.push({ name: file.name, url: URL.createObjectURL(file) }));
+      renderPlaylist();
+      playerStatus.textContent = `${audioFiles.length} ${audioFiles.length === 1 ? "pista añadida" : "pistas añadidas"} a la lista.`;
+      if (currentTrack === -1) playTrack(firstNewTrack);
+    }
+
+    async function playTrack(index) {
+      if (!musicTracks.length) {
+        showToast("Añade música a tu lista para comenzar a reproducir.");
+        return;
+      }
+      currentTrack = (index + musicTracks.length) % musicTracks.length;
+      audioPlayer.src = musicTracks[currentTrack].url;
+      renderPlaylist();
+      try {
+        await audioPlayer.play();
+        playerStatus.textContent = `Reproduciendo: ${musicTracks[currentTrack].name}`;
+      } catch (error) {
+        playerStatus.textContent = "No se pudo reproducir esta pista. Prueba con otro archivo de audio.";
+        showToast("El navegador no pudo reproducir esta pista.");
+      }
+      updatePlayerDisplay();
+    }
+
+    document.querySelector("#music-toggle").addEventListener("click", () => openWindow("player"));
+    document.querySelector("#music-files").addEventListener("change", event => {
+      addAudioFiles(event.currentTarget.files);
+      event.currentTarget.value = "";
+    });
+    document.querySelector("#player-play").addEventListener("click", async () => {
+      if (audioPlayer.paused) {
+        if (currentTrack === -1) await playTrack(0);
+        else {
+          try {
+            await audioPlayer.play();
+            playerStatus.textContent = `Reproduciendo: ${musicTracks[currentTrack].name}`;
+          } catch (error) {
+            playerStatus.textContent = "No se pudo reanudar esta pista.";
+            showToast("El navegador no pudo reanudar la reproducción.");
+          }
+        }
+      } else {
+        audioPlayer.pause();
+      }
+      updatePlayerDisplay();
+    });
+    document.querySelector("#player-next").addEventListener("click", () => {
+      if (shuffleTracks && musicTracks.length > 1) {
+        let nextTrack = currentTrack;
+        while (nextTrack === currentTrack) nextTrack = Math.floor(Math.random() * musicTracks.length);
+        playTrack(nextTrack);
+      } else {
+        playTrack(currentTrack + 1);
+      }
+    });
+    document.querySelector("#player-previous").addEventListener("click", () => playTrack(currentTrack <= 0 ? musicTracks.length - 1 : currentTrack - 1));
+    document.querySelector("#player-stop").addEventListener("click", () => {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+      playerStatus.textContent = currentTrack >= 0 ? `Detenido: ${musicTracks[currentTrack].name}` : "Añade música para comenzar.";
+      updatePlayerDisplay();
+    });
+    document.querySelector("#player-shuffle").addEventListener("click", event => {
+      shuffleTracks = !shuffleTracks;
+      event.currentTarget.classList.toggle("active", shuffleTracks);
+      playerStatus.textContent = shuffleTracks ? "Modo aleatorio activado." : "Modo aleatorio desactivado.";
+    });
+    document.querySelector("#player-volume").addEventListener("input", event => { audioPlayer.volume = Number(event.currentTarget.value); });
+    playerSeek.addEventListener("input", () => {
+      if (Number.isFinite(audioPlayer.duration)) audioPlayer.currentTime = audioPlayer.duration * Number(playerSeek.value) / 1000;
+    });
+    audioPlayer.addEventListener("timeupdate", updatePlayerDisplay);
+    audioPlayer.addEventListener("loadedmetadata", updatePlayerDisplay);
+    audioPlayer.addEventListener("play", updatePlayerDisplay);
+    audioPlayer.addEventListener("pause", updatePlayerDisplay);
+    audioPlayer.addEventListener("ended", () => {
+      if (currentTrack < musicTracks.length - 1 || shuffleTracks) {
+        if (shuffleTracks && musicTracks.length > 1) {
+          let nextTrack = currentTrack;
+          while (nextTrack === currentTrack) nextTrack = Math.floor(Math.random() * musicTracks.length);
+          playTrack(nextTrack);
+        } else playTrack(currentTrack + 1);
+      } else {
+        playerStatus.textContent = "Lista terminada.";
+        updatePlayerDisplay();
+      }
+    });
+    audioPlayer.addEventListener("error", () => {
+      playerStatus.textContent = "No se pudo leer el archivo de audio. Prueba con otro formato.";
+    });
+
+    const playerDrop = document.querySelector("#player-drop");
+    playerDrop.addEventListener("dragover", event => {
+      event.preventDefault();
+      playerDrop.classList.add("drag-over");
+    });
+    playerDrop.addEventListener("dragleave", event => {
+      if (!playerDrop.contains(event.relatedTarget)) playerDrop.classList.remove("drag-over");
+    });
+    playerDrop.addEventListener("drop", event => {
+      event.preventDefault();
+      playerDrop.classList.remove("drag-over");
+      addAudioFiles(event.dataTransfer.files);
+    });
+
+    updatePlayerDisplay();
+  </script>
+</body>
+</html>
