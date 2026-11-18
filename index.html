@@ -1328,6 +1328,7 @@
   </style>
 </head>
 <body>
+  <audio id="startup-sound" src="Microsoft Windows XP Startup Sound.mp3" preload="auto"></audio>
   <section class="story-screen is-loading" id="story-screen" aria-label="Pantalla de inicio y selección de perfiles">
     <div class="story-menu">
       <div class="story-brand">
@@ -1454,9 +1455,9 @@
     </div>
     <section class="desktop-widgets" aria-label="Widgets del escritorio">
       <div class="desktop-widget weather-widget">
-        <div class="widget-label">☀ clima de hoy</div>
+        <div class="widget-label" id="weather-label">☀ clima de hoy</div>
         <div class="weather-temp">24°</div>
-        <div class="weather-copy">Soleado con brisa marina</div>
+        <div class="weather-copy" id="weather-copy">Soleado con brisa marina</div>
       </div>
       <div class="desktop-widget music-widget">
         <div class="widget-label">♫ aqua fm</div>
@@ -1543,7 +1544,7 @@
         <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
       </header>
       <div class="window-content" style="padding:0">
-        <div class="file-toolbar"><button aria-label="Atrás">◀</button><button aria-label="Adelante">▶</button><button aria-label="Subir">↑</button><div class="file-address">🖥️　Mi escritorio　›　Archivos</div><button aria-label="Buscar">⌕</button></div>
+        <div class="file-toolbar"><button aria-label="Atrás">◀</button><button aria-label="Adelante">▶</button><button aria-label="Subir">↑</button><div class="file-address" id="file-address">🖥️　Mi escritorio　›　Archivos</div><button aria-label="Buscar">⌕</button></div>
         <div class="file-layout">
           <aside class="file-sidebar" aria-label="Ubicaciones">
             <button class="selected" data-folder="desktop">⭐　Favoritos</button>
@@ -1554,7 +1555,7 @@
           </aside>
           <div class="file-list">
             <h1 id="folder-title">Mis archivos bonitos</h1>
-            <p>Elementos en esta ubicación</p>
+            <p id="file-description">Elementos en esta ubicación</p>
             <div class="file-grid" id="file-grid">
               <button class="file-entry" data-folder="documents"><span class="file-emoji">📁</span><span>Documentos</span></button>
               <button class="file-entry" data-folder="pictures"><span class="file-emoji">🌅</span><span>Imágenes</span></button>
@@ -1925,6 +1926,7 @@
     let toastTimer;
 
     const storyScreen = document.querySelector("#story-screen");
+    const startupSound = document.querySelector("#startup-sound");
     const storyNewButton = document.querySelector("#story-new");
     const storyContinueButton = document.querySelector("#story-continue");
     const storyAboutButton = document.querySelector("#story-about");
@@ -1977,6 +1979,10 @@
       document.body.dataset.profile = profile;
       bubbleField.hidden = isGotita;
       vectorFlourishField.hidden = !isGotita;
+      document.querySelector("#weather-label").textContent = isGotita ? "▦ pronóstico urbano" : "☀ clima de hoy";
+      document.querySelector("#weather-copy").textContent = isGotita ? "Cielo despejado · Distrito Gotita" : "Soleado con brisa marina";
+      document.querySelector("#file-address").textContent = isGotita ? "▦　Gotita　›　Archivos" : "🖥️　Mi escritorio　›　Archivos";
+      showFolder("desktop");
       activeProfileName.textContent = isGotita ? "Gotita" : "Invitado";
       activeProfileAvatar.src = isGotita ? "gotita.png" : "clippy.png";
       activeProfileAvatar.alt = `Foto de perfil de ${isGotita ? "Gotita" : "Invitado"}`;
@@ -2025,6 +2031,15 @@
       storyDialogue.hidden = false;
     }
 
+    function playStartupSound() {
+      startupSound.pause();
+      startupSound.currentTime = 0;
+      startupSound.play().catch(error => {
+        console.error("No se pudo reproducir el sonido de inicio de Windows XP.", error);
+        showToast("No se pudo reproducir el sonido de inicio.");
+      });
+    }
+
     function enterDesktop(profile) {
       setActiveProfile(profile);
       configureMusicForProfile(profile);
@@ -2039,6 +2054,7 @@
         storyScreen.classList.remove("is-entering-game");
         storyScreen.hidden = true;
         document.body.classList.toggle("desktop-entered", isGotita);
+        playStartupSound();
         const saved = loadStoryProgress();
         if (saved === "complete") {
           showToast(isGotita ? "Perfil de Gotita cargado." : "Continuación cargada.");
@@ -3296,30 +3312,93 @@
     resetMineGame();
 
     const fileContents = {
-      desktop: { title: "Mis archivos bonitos", status: "6 elementos · Este equipo" },
-      documents: { title: "Documentos", status: "3 elementos · Documentos" },
-      pictures: { title: "Imágenes", status: "3 elementos · Imágenes" },
-      music: { title: "Música", status: "2 elementos · Música" }
+      guest: {
+        desktop: { title: "Mis archivos bonitos", status: "6 elementos · Este equipo" },
+        documents: { title: "Documentos", status: "3 elementos · Documentos" },
+        pictures: { title: "Imágenes", status: "3 elementos · Imágenes" },
+        music: { title: "Música", status: "2 elementos · Música" }
+      },
+      gotita: {
+        desktop: { title: "Archivos de Gotita", status: "6 elementos · Perfil Gotita" },
+        documents: { title: "Proyectos personales", status: "3 elementos · Documentos" },
+        pictures: { title: "Fondos y gráficos", status: "3 elementos · Diseños" },
+        music: { title: "Música", status: "" }
+      }
     };
     const fileEntries = {
-      desktop: [["📁", "Documentos", "documents"], ["🌅", "Imágenes", "pictures"], ["🎵", "Música", "music"], ["🌊", "fondo-aqua.jpg"], ["📝", "mis-recuerdos.txt"], ["💿", "playlist-verano.mp3"]],
-      documents: [["📝", "mis-recuerdos.txt"], ["📄", "ideas-para-mi-web.txt"], ["📘", "Qué es Frutiger Aero.txt"]],
-      pictures: [["🌊", "fondo-aqua.jpg"], ["🌅", "atardecer.png"], ["🐬", "amigos-del-mar.jpg"]],
-      music: [["💿", "playlist-verano.mp3"], ["🎶", "sonidos-del-oceano.mp3"]]
+      guest: {
+        desktop: [["📁", "Documentos", "documents"], ["🌅", "Imágenes", "pictures"], ["🎵", "Música", "music"], ["🌊", "fondo-aqua.jpg"], ["📝", "mis-recuerdos.txt"], ["💿", "playlist-verano.mp3"]],
+        documents: [["📝", "mis-recuerdos.txt"], ["📄", "ideas-para-mi-web.txt"], ["📘", "Qué es Frutiger Aero.txt"]],
+        pictures: [["🌊", "fondo-aqua.jpg"], ["🌅", "atardecer.png"], ["🐬", "amigos-del-mar.jpg"]],
+        music: [["💿", "playlist-verano.mp3"], ["🎶", "sonidos-del-oceano.mp3"]]
+      },
+      gotita: {
+        desktop: [["📁", "Documentos", "documents"], ["🖼️", "Imágenes", "pictures"], ["♫", "Música", "music"], ["🖼️", "luka gotita fondo.jpg"], ["📝", "perfil-gotita.txt"], ["✦", "vector-flourish.svg"]],
+        documents: [["📝", "notas-gotita.txt"], ["📄", "perfil-gotita.txt"], ["📘", "Qué es Frutiger Metro.txt"]],
+        pictures: [["🖼️", "luka gotita fondo.jpg"], ["👤", "gotita.png"], ["✦", "vector-flourish.svg"]],
+        music: []
+      }
+    };
+    const gotitaFileDescriptions = {
+      desktop: "Tu espacio digital: proyectos, fondos y música.",
+      documents: "Notas y proyectos personales de Gotita.",
+      pictures: "Fondos y recursos gráficos de tu escritorio.",
+      music: "Selección musical del perfil de Gotita."
+    };
+    const metroDocumentContent = {
+      headings: ["¿Qué es Frutiger Metro?", "¿Cómo reconocerlo?", "¿Qué inspira este estilo?", "¿Qué sensación transmite?"],
+      paragraphs: [
+        "En este perfil, Frutiger Metro representa una interfaz gráfica y urbana: tipografía clara, bloques de color y una composición directa, pensada para navegar de un vistazo.",
+        "Se apoya en formas geométricas, módulos planos y contrastes definidos. Prioriza una presentación limpia y visual, sin brillos acuáticos ni ornamentos naturalistas.",
+        "Su lenguaje recuerda a la señalética, los mapas y las pantallas de una ciudad conectada: cada elemento organiza la información en una pieza reconocible.",
+        "El resultado se siente moderno, enérgico y ordenado. En Gotita, el rosa, el violeta y los adornos vectoriales le dan personalidad propia."
+      ]
     };
 
     function closeFrutigerDocument() {
       closeWindow(frutigerDocument);
     }
 
+    function configureFrutigerDocument(profile) {
+      const isGotita = profile === "gotita";
+      const title = document.querySelector("#frutiger-document-title");
+      const headings = [...document.querySelectorAll(".document-copy h3")];
+      const paragraphs = [...document.querySelectorAll(".document-copy p")];
+      if (!title.dataset.defaultText) title.dataset.defaultText = title.textContent;
+      if (!frutigerDocument.dataset.defaultTitle) frutigerDocument.dataset.defaultTitle = frutigerDocument.dataset.title;
+      headings.forEach(heading => {
+        if (!heading.dataset.defaultText) heading.dataset.defaultText = heading.textContent;
+      });
+      paragraphs.forEach(paragraph => {
+        if (!paragraph.dataset.defaultText) paragraph.dataset.defaultText = paragraph.textContent;
+      });
+      title.textContent = isGotita ? "Qué es Frutiger Metro.txt" : title.dataset.defaultText;
+      frutigerDocument.dataset.title = isGotita ? "Qué es Frutiger Metro" : frutigerDocument.dataset.defaultTitle;
+      headings.forEach((heading, index) => {
+        heading.textContent = isGotita ? metroDocumentContent.headings[index] : heading.dataset.defaultText;
+      });
+      paragraphs.forEach((paragraph, index) => {
+        paragraph.textContent = isGotita ? metroDocumentContent.paragraphs[index] : paragraph.dataset.defaultText;
+      });
+    }
+
     function showFolder(folder) {
-      const content = fileContents[folder];
+      const profile = activeProfile === "gotita" ? "gotita" : "guest";
+      const content = fileContents[profile][folder];
       if (!content) return;
       document.querySelector("#folder-title").textContent = content.title;
-      document.querySelector("#file-status").textContent = content.status;
+      document.querySelector("#file-status").textContent = profile === "gotita" && folder === "music"
+        ? `${gotitaPlaylistTracks.length} pistas · Música`
+        : content.status;
+      document.querySelector("#file-description").textContent = profile === "gotita"
+        ? gotitaFileDescriptions[folder]
+        : "Elementos en esta ubicación";
       const grid = document.querySelector("#file-grid");
       grid.replaceChildren();
-      fileEntries[folder].forEach(([icon, name, childFolder]) => {
+      const entries = profile === "gotita" && folder === "music"
+        ? gotitaPlaylistTracks.map(track => ["♫", track.name])
+        : fileEntries[profile][folder];
+      entries.forEach(([icon, name, childFolder]) => {
         const entry = document.createElement("button");
         entry.className = "file-entry";
         entry.type = "button";
@@ -3332,9 +3411,10 @@
         if (childFolder) {
           entry.dataset.folder = childFolder;
           entry.addEventListener("click", () => showFolder(childFolder));
-        } else if (name === "Qué es Frutiger Aero.txt") {
+        } else if (name === "Qué es Frutiger Aero.txt" || name === "Qué es Frutiger Metro.txt") {
           entry.setAttribute("aria-haspopup", "dialog");
           entry.addEventListener("click", () => {
+            configureFrutigerDocument(profile);
             frutigerDocumentOpener = entry;
             openWindow("frutiger-document");
           });
@@ -3370,13 +3450,15 @@
     const trayNetworkToggle = document.querySelector("#tray-network-toggle");
     const musicTracks = [];
     let currentTrack = -1;
-    const gotitaNightcoreTracks = [
+    const gotitaPlaylistTracks = [
       { name: "Nightcore - Bad boy.mp3", url: "Nightcore - Bad boy.mp3" },
       { name: "Nightcore Classics - Rockefeller Street [HD].mp3", url: "Nightcore Classics - Rockefeller Street [HD].mp3" },
       { name: "6 Little Eggs Nightcore Eruruu.mp3", url: "6 Little Eggs Nightcore Eruruu.mp3" },
       { name: "Nightcore - Doktorspiele.mp3", url: "Nightcore - Doktorspiele.mp3" },
       { name: "Nightcore - Pretty Little Psycho.mp3", url: "Nightcore - Pretty Little Psycho.mp3" },
-      { name: "Psycho Teddy German Sub Español.mp3", url: "Psycho Teddy German Sub Español.mp3" }
+      { name: "Psycho Teddy German Sub Español.mp3", url: "Psycho Teddy German Sub Español.mp3" },
+      { name: "Nightcore - Angel of Darkness.mp3", url: "Nightcore - Angel of Darkness.mp3" },
+      { name: "join me in death (1998 demo) - HIM.mp3", url: "join me in death (1998 demo) - HIM.mp3" }
     ];
     let shuffleTracks = false;
     let networkConnected = true;
@@ -3398,8 +3480,8 @@
       musicTracks.splice(0, musicTracks.length);
       currentTrack = -1;
       if (profile === "gotita") {
-        musicTracks.push(...gotitaNightcoreTracks.map(track => ({ ...track })));
-        playerStatus.textContent = `${musicTracks.length} canciones Nightcore disponibles en el perfil de Gotita.`;
+        musicTracks.push(...gotitaPlaylistTracks.map(track => ({ ...track })));
+        playerStatus.textContent = `${musicTracks.length} canciones disponibles en el perfil de Gotita.`;
       } else {
         playerStatus.textContent = "Tus archivos se reproducen localmente en este navegador.";
       }
