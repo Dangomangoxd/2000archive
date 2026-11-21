@@ -288,26 +288,66 @@
     .start-menu {
       position: fixed;
       z-index: 30;
-      bottom: 54px;
-      left: 6px;
-      width: min(380px, calc(100vw - 16px));
-      padding: 10px;
-      border: 1px solid rgba(255,255,255,.92);
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(244,253,255,.96), rgba(204,238,249,.94));
-      box-shadow: 0 10px 28px rgba(11,61,83,.38), inset 0 0 0 1px rgba(84,165,194,.2);
-      backdrop-filter: blur(18px);
+      bottom: 48px;
+      left: 0;
+      width: min(384px, calc(100vw - 8px));
+      height: min(470px, calc(100dvh - 48px));
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      padding: 0;
+      border: 1px solid #003c74;
+      border-radius: 0;
+      background: #d6e8fa;
+      box-shadow: 2px 3px 8px rgba(0,0,0,.38);
+      color: #183c50;
+      font-family: Tahoma, "Segoe UI", sans-serif;
     }
 
     .start-menu[hidden] { display: none; }
-    .profile { display: flex; align-items: center; gap: 12px; padding: 6px 8px 12px; border-bottom: 1px solid rgba(62,132,161,.22); }
-    .profile-avatar { width: 45px; height: 45px; display: grid; place-items: center; border: 2px solid white; border-radius: 7px; background: linear-gradient(145deg, #9de3ec, #2c92bd); box-shadow: 0 2px 5px #8eb3c2; font-size: 26px; }
-    .profile-avatar img { width: 100%; height: 100%; border-radius: 4px; object-fit: cover; }
-    .profile strong { font-size: 14px; }
-    .start-links { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; padding: 10px 0; }
-    .start-link { padding: 8px; border: 1px solid transparent; border-radius: 4px; background: transparent; color: #214b60; text-align: left; cursor: pointer; }
-    .start-link:hover { border-color: rgba(70,154,187,.3); background: rgba(255,255,255,.62); }
-    .start-menu-footer { padding-top: 8px; border-top: 1px solid rgba(62,132,161,.22); color: #54788a; font-size: 11px; text-align: right; }
+    .start-menu-header { min-height: 48px; flex: 0 0 48px; display: flex; align-items: center; gap: 8px; padding: 3px 6px; background: linear-gradient(180deg, #1765c4, #287fe0 78%, #1162c1); color: #fff; text-shadow: 1px 1px 2px #003d80; }
+    .start-menu-header .profile-avatar { width: 40px; height: 40px; flex: 0 0 40px; display: grid; place-items: center; border: 2px solid #fff; border-radius: 3px; background: linear-gradient(145deg, #9de3ec, #2c92bd); box-shadow: 1px 2px 4px rgba(0,0,0,.4); font-size: 25px; }
+    .start-menu-header .profile-avatar img { width: 100%; height: 100%; border-radius: 1px; object-fit: cover; }
+    .start-menu-header strong { font-size: 14px; }
+    .start-menu-panels { min-height: 0; flex: 1; display: grid; grid-template-columns: 1fr 1fr; }
+    .start-programs { position: relative; min-width: 0; display: flex; flex-direction: column; border-right: 1px solid #86afe0; background: #fff; }
+    .start-links { min-height: 0; flex: 1; display: flex; flex-direction: column; gap: 0; padding: 3px 3px 0; }
+    .start-link { min-height: 0; flex: 1; display: flex; align-items: center; gap: 6px; padding: 2px 4px; overflow: hidden; border: 1px solid transparent; border-radius: 0; background: transparent; color: #111; text-align: left; cursor: pointer; }
+    .start-link .icon-image { width: 30px; height: 30px; flex: 0 0 30px; object-fit: contain; }
+    .start-link-image { width: 30px; height: 30px; flex: 0 0 30px; display: grid; place-items: center; font-size: 25px; }
+    .start-link-copy { min-width: 0; display: grid; gap: 2px; }
+    .start-link-copy strong { overflow: hidden; font-size: 11px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+    .start-link-copy small { overflow: hidden; color: #6b6b6b; font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+    .start-link:hover, .start-link:focus-visible { border-color: #316ac5; outline: none; background: #316ac5; color: #fff; }
+    .start-link:hover small, .start-link:focus-visible small { color: #e4efff; }
+    .start-all-programs { min-height: 34px; flex: 0 0 34px; display: flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-top: 1px solid #e1e1e1; background: #fff; color: #111; font: bold 11px Tahoma, sans-serif; cursor: pointer; }
+    .start-all-programs:hover, .start-all-programs[aria-expanded="true"] { background: #e7f1fc; color: #003c74; }
+    .start-all-programs-arrow { color: #198b32; font-size: 17px; text-shadow: 1px 1px 0 #777; }
+    .start-all-programs-popover { position: absolute; z-index: 2; bottom: 34px; left: 3px; width: calc(100% - 6px); padding: 3px; border: 1px solid #7998b7; background: #fff; box-shadow: 2px 2px 5px rgba(0,0,0,.3); }
+    .start-all-programs-popover[hidden] { display: none; }
+    .start-all-programs-popover .start-link { min-height: 34px; }
+    .start-system-links { min-width: 0; display: flex; flex-direction: column; padding: 5px 4px; background: linear-gradient(110deg, #dcecff, #c8dff8); }
+    .start-system-link { min-height: 28px; display: flex; align-items: center; gap: 7px; padding: 2px 4px; border: 1px solid transparent; background: transparent; color: #001b58; font: bold 10px Tahoma, sans-serif; text-align: left; cursor: pointer; }
+    .start-system-link:hover, .start-system-link:focus-visible { border-color: #83a9d2; outline: none; background: #b7d5f4; }
+    .start-system-icon { width: 19px; flex: 0 0 19px; font-size: 16px; text-align: center; }
+    .start-system-icon .icon-image { width: 19px; height: 19px; vertical-align: middle; }
+    .start-system-separator { height: 1px; flex: 0 0 1px; margin: 4px 1px; background: linear-gradient(90deg, transparent, #9cbada, transparent); }
+    .start-menu-footer { min-height: 39px; flex: 0 0 39px; display: flex; align-items: center; justify-content: flex-end; gap: 12px; padding: 3px 9px; border-top: 1px solid #8bb9ec; background: linear-gradient(180deg, #287de0, #1260be); }
+    .start-menu-footer button { display: flex; align-items: center; gap: 5px; padding: 2px 4px; border: 1px solid transparent; background: transparent; color: #fff; font: 10px Tahoma, sans-serif; text-shadow: 1px 1px 1px #003d80; cursor: pointer; }
+    .start-menu-footer button:hover, .start-menu-footer button:focus-visible { border-color: rgba(255,255,255,.7); outline: none; background: rgba(255,255,255,.16); }
+    .start-footer-icon { width: 22px; height: 22px; display: grid; place-items: center; border: 1px solid #ffe59c; border-radius: 4px; background: linear-gradient(#ffd769, #dc7e10); color: #fff; font-size: 14px; font-weight: 700; text-shadow: 1px 1px #844400; }
+    #start-turn-off .start-footer-icon { border-color: #ffb79b; background: linear-gradient(#ff9165, #c93211); }
+    .shutdown-screen { position: fixed; z-index: 1200; inset: 0; display: grid; place-items: center; background: #000; color: #fff; font-family: Tahoma, "Segoe UI", sans-serif; text-align: center; }
+    .shutdown-screen[hidden] { display: none; }
+    .shutdown-screen h2 { margin: 0 0 8px; font-size: 22px; font-weight: 400; }
+    .shutdown-screen p { margin: 0 0 18px; color: #c8c8c8; font-size: 13px; }
+    .shutdown-screen button { padding: 6px 12px; border: 1px solid #fff; border-radius: 2px; background: linear-gradient(#4b98f0, #0755b9); color: #fff; font: 12px Tahoma, sans-serif; cursor: pointer; }
+    @media (max-width: 400px) {
+      .start-system-link { min-height: 26px; gap: 4px; padding: 1px 2px; font-size: 9px; }
+      .start-system-icon { width: 17px; flex-basis: 17px; font-size: 14px; }
+      .start-link-copy strong { font-size: 10px; }
+      .start-link-copy small { font-size: 9px; }
+    }
 
     .desktop-context-menu {
       position: fixed;
@@ -587,38 +627,44 @@
     .note-hint { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     .recycle-empty { padding: 22px 0; text-align: center; font-size: 53px; }
     .recycle-empty + p { text-align: center; }
-    .paint-window { width: min(920px, calc(100vw - 36px)); height: min(650px, calc(100dvh - 110px)); display: flex; flex-direction: column; border: 1px solid #0a246a; border-radius: 4px; background: #ece9d8; box-shadow: 0 14px 42px rgba(12,58,83,.34), inset 0 0 0 1px #fff; }
-    .paint-window .titlebar { height: 32px; flex: 0 0 32px; padding: 3px 5px 3px 7px; border-bottom: 1px solid #0831a5; background: linear-gradient(180deg, #3b8df4, #1765e8 48%, #0751d5); }
-    .paint-window .window-title { gap: 6px; color: #fff; font-size: 13px; text-shadow: 0 1px 1px #003d94; }
-    .paint-window .window-title .icon-image { width: 20px; height: 20px; }
-    .paint-window .window-controls button { width: 27px; height: 24px; border: 1px solid #fff; border-radius: 3px; background: linear-gradient(#dceaff, #74a8f4 45%, #3479e6); color: #123b80; font-weight: 700; }
-    .paint-window .window-controls button:last-child { border-color: #fff; background: linear-gradient(#ffb5a4, #f26049 48%, #ca2818); color: white; }
-    .paint-window .window-content { min-height: 0; max-height: none; flex: 1; display: flex; flex-direction: column; gap: 0; overflow: hidden; padding: 0; background: #ece9d8; }
-    .paint-menu { min-height: 25px; display: flex; align-items: center; gap: 0; padding: 1px 4px; border-bottom: 1px solid #aca899; background: #f5f4ed; color: #111; font-size: 12px; }
-    .paint-menu span { padding: 3px 8px; }
+    .paint-window { width: min(920px, calc(100vw - 24px)); height: min(650px, calc(100dvh - 100px)); min-height: min(360px, calc(100dvh - 60px)); display: flex; flex-direction: column; border: 2px solid; border-color: #0831a5 #001e70 #001e70 #0831a5; border-radius: 0; background: #c0c0c0; box-shadow: 2px 3px 8px rgba(0,0,0,.4); font-family: Tahoma, "Segoe UI", sans-serif; }
+    .paint-window .titlebar { height: 27px; min-height: 27px; flex: 0 0 27px; padding: 2px 3px 2px 5px; border-bottom: 1px solid #001e70; background: linear-gradient(180deg, #0a66e8, #0053d6 52%, #003caa); }
+    .paint-window .window-title { gap: 5px; color: #fff; font-size: 13px; font-weight: 700; text-shadow: 1px 1px 1px #003477; }
+    .paint-window .window-title .icon-image { width: 18px; height: 18px; }
+    .paint-window .window-controls button { width: 23px; height: 21px; padding: 0; border: 1px solid #fff; border-radius: 2px; background: linear-gradient(#8fc7ff, #2676ee 48%, #0750c8); color: #fff; font: bold 15px/17px Tahoma, sans-serif; text-shadow: 0 1px #003477; }
+    .paint-window .window-controls button:last-child { border-color: #fff; background: linear-gradient(#ffb7a3, #f15a41 48%, #c82b19); color: white; }
+    .paint-window .window-content { min-width: 0; min-height: 0; max-height: none; flex: 1; display: flex; flex-direction: column; gap: 0; overflow: hidden; padding: 0; background: #c0c0c0; color: #111; }
+    .paint-menu { min-height: 23px; flex: 0 0 23px; display: flex; align-items: center; gap: 0; padding: 0 2px; border-bottom: 1px solid #808080; background: #c0c0c0; color: #111; font-size: 12px; }
+    .paint-menu span { padding: 3px 7px; }
     .paint-menu span:first-child { text-decoration: underline; text-underline-offset: 2px; }
-    .paint-toolbar { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: 8px; padding: 5px 8px; border: 0; border-bottom: 1px solid #aca899; border-radius: 0; background: #ece9d8; box-shadow: none; }
-    .paint-toolbar button { min-height: 25px; padding: 3px 9px; border: 1px solid #7f9db9; border-radius: 2px; background: linear-gradient(#fff, #e2e1d8); color: #111; font: inherit; font-size: 12px; cursor: pointer; }
-    .paint-toolbar button:hover, .paint-toolbar button[aria-pressed="true"] { border-color: #316ac5; background: linear-gradient(#fff, #d9e8ff); }
+    .paint-toolbar { min-height: 33px; display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: 7px; padding: 3px 5px; border: 0; border-bottom: 1px solid #808080; border-radius: 0; background: #c0c0c0; box-shadow: inset 0 1px #fff; }
+    .paint-toolbar button { min-height: 23px; padding: 2px 8px; border: 1px solid; border-color: #fff #404040 #404040 #fff; border-radius: 0; background: #c0c0c0; color: #111; font: 12px Tahoma, "Segoe UI", sans-serif; cursor: pointer; }
+    .paint-toolbar button:hover, .paint-toolbar button[aria-pressed="true"] { border-color: #404040 #fff #fff #404040; background: #c0c0c0; }
     .paint-toolbar button:focus-visible, .paint-toolbar input:focus-visible, .paint-tools button:focus-visible, .paint-swatch:focus-visible { outline: 2px solid #185abd; outline-offset: 1px; }
-    .paint-tool-separator { width: 1px; height: 22px; background: #b7b4a8; }
-    .paint-color-control, .paint-size-control { display: inline-flex; align-items: center; gap: 5px; color: #222; font-size: 12px; }
-    .paint-color-control input { width: 29px; height: 23px; padding: 1px; border: 1px solid #7f9db9; border-radius: 0; background: white; cursor: pointer; }
+    .paint-tool-separator { width: 1px; height: 20px; background: #808080; box-shadow: 1px 0 #fff; }
+    .paint-color-control, .paint-size-control { display: inline-flex; align-items: center; gap: 5px; color: #111; font-size: 11px; }
+    .paint-color-control input { width: 25px; height: 21px; padding: 1px; border: 1px solid; border-color: #404040 #fff #fff #404040; border-radius: 0; background: #c0c0c0; cursor: pointer; }
     .paint-size-control input { width: 90px; accent-color: #185abd; cursor: pointer; }
-    .paint-workspace { min-height: 0; flex: 1; display: flex; gap: 0; padding: 5px; overflow: hidden; background: #c6c6c6; }
-    .paint-tools { width: 54px; flex: 0 0 54px; display: grid; grid-template-columns: repeat(2, 24px); grid-auto-rows: 25px; align-content: start; justify-content: center; gap: 3px; padding: 4px 2px; border: 1px solid #fff; border-right-color: #808080; border-bottom-color: #808080; background: #ece9d8; }
-    .paint-tools button { width: 24px; height: 25px; padding: 1px; border: 1px solid transparent; border-radius: 0; background: transparent; color: #111; font: 20px/1 "Segoe UI Symbol", "Segoe UI", sans-serif; cursor: pointer; }
-    .paint-tools button:hover { border-color: #fff #808080 #808080 #fff; background: #f8f6eb; }
-    .paint-tools button[aria-pressed="true"] { border-color: #808080 #fff #fff #808080; background: #dce8f8; }
-    .paint-canvas-wrap { min-width: 0; min-height: 0; flex: 1; overflow: hidden; border: 1px solid; border-color: #808080 #fff #fff #808080; background: #fff; }
-    .paint-canvas { display: block; width: 100%; height: 100%; border: 1px solid #404040; background: #fff; cursor: crosshair; touch-action: none; }
-    .paint-palette { min-height: 54px; flex: 0 0 auto; display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-top: 1px solid #fff; background: #ece9d8; }
-    .paint-current-color { width: 31px; height: 31px; flex: 0 0 31px; padding: 2px; border: 2px solid; border-color: #808080 #fff #fff #808080; background: #ece9d8; }
+    .paint-workspace { min-height: 0; flex: 1; display: flex; gap: 0; padding: 0; overflow: hidden; background: #c0c0c0; }
+    .paint-tools { width: 58px; flex: 0 0 58px; display: grid; grid-template-columns: repeat(2, 24px); grid-auto-rows: 25px; align-content: start; justify-content: center; gap: 2px; margin: 0 3px 0 1px; padding: 3px 1px; border: 1px solid; border-color: #fff #808080 #808080 #fff; background: #c0c0c0; }
+    .paint-tools button { width: 24px; height: 25px; padding: 1px; border: 1px solid transparent; border-radius: 0; background: #c0c0c0; color: #111; font: 20px/1 "Segoe UI Symbol", "Segoe UI", sans-serif; cursor: pointer; }
+    .paint-tools button:hover { border-color: #fff #808080 #808080 #fff; background: #c0c0c0; }
+    .paint-tools button[aria-pressed="true"] { border-color: #808080 #fff #fff #808080; background: #b8b8b8; }
+    .paint-canvas-wrap { min-width: 0; min-height: 0; flex: 1; overflow: auto; border: 2px solid; border-color: #808080 #fff #fff #808080; background: #fff; }
+    .paint-canvas { display: block; width: 100%; min-width: 700px; height: 100%; min-height: 420px; border: 1px solid #404040; background: #fff; cursor: crosshair; touch-action: none; }
+    .paint-palette { min-height: 54px; flex: 0 0 auto; display: flex; align-items: center; gap: 7px; padding: 4px 6px; border-top: 1px solid #fff; background: #c0c0c0; }
+    .paint-current-color { width: 34px; height: 34px; flex: 0 0 34px; padding: 2px; border: 2px solid; border-color: #808080 #fff #fff #808080; background: #c0c0c0; }
     .paint-current-color input { width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
-    .paint-swatch-grid { display: grid; grid-template-columns: repeat(14, 17px); grid-template-rows: repeat(2, 17px); gap: 2px; }
+    .paint-swatch-grid { display: grid; grid-template-columns: repeat(14, 17px); grid-template-rows: repeat(2, 17px); gap: 2px; padding: 2px; border: 1px solid; border-color: #808080 #fff #fff #808080; }
     .paint-swatch { width: 17px; height: 17px; padding: 0; border: 1px solid; border-color: #fff #404040 #404040 #fff; border-radius: 0; background: var(--swatch-color); cursor: pointer; }
     .paint-swatch[aria-pressed="true"] { outline: 1px dotted #111; outline-offset: -3px; }
-    .paint-status { min-height: 20px; flex: 0 0 auto; padding: 3px 7px; border-top: 1px solid #aca899; background: #ece9d8; color: #333; font-size: 11px; }
+    .paint-status { min-height: 20px; flex: 0 0 auto; padding: 3px 7px; border-top: 1px solid #fff; background: #c0c0c0; color: #222; font-size: 11px; box-shadow: inset 1px 1px #808080; }
+    .paint-text-dialog { width: min(320px, calc(100vw - 32px)); padding: 14px; border: 2px solid; border-color: #fff #404040 #404040 #fff; background: #c0c0c0; color: #111; font: 12px Tahoma, "Segoe UI", sans-serif; box-shadow: 2px 3px 12px rgba(0,0,0,.4); }
+    .paint-text-dialog::backdrop { background: rgba(0,0,0,.3); }
+    .paint-text-dialog form { display: grid; gap: 10px; }
+    .paint-text-dialog input { min-width: 0; height: 28px; padding: 4px 6px; border: 1px solid; border-color: #404040 #fff #fff #404040; background: #fff; color: #111; font: inherit; }
+    .paint-text-actions { display: flex; justify-content: flex-end; gap: 7px; }
+    .paint-text-actions button { min-width: 76px; min-height: 24px; border: 1px solid; border-color: #fff #404040 #404040 #fff; border-radius: 0; background: #c0c0c0; color: #111; font: inherit; cursor: pointer; }
     @media (max-width: 560px) {
       .paint-toolbar { gap: 5px; padding: 4px; }
       .paint-toolbar button { padding: 3px 6px; }
@@ -707,6 +753,54 @@
     .file-entry { border-radius: 0; color: #111; }
     .file-entry:hover, .file-entry:focus-visible { border-color: #316ac5; background: #dce8f8; }
     .file-status { border-top: 1px solid #aca899; background: #ece9d8; color: #333; }
+    .computer-window { width: min(820px, calc(100vw - 24px)); height: min(560px, calc(100dvh - 100px)); min-height: min(380px, calc(100dvh - 60px)); display: flex; flex-direction: column; }
+    .computer-window > .titlebar { height: 29px; flex: 0 0 29px; padding: 2px 4px 2px 6px; }
+    .computer-content { min-width: 0; min-height: 0; flex: 1; display: flex; flex-direction: column; overflow: hidden; padding: 0; background: #fff; color: #111; font: 11px Tahoma, Arial, sans-serif; }
+    .computer-menu { min-height: 22px; flex: 0 0 22px; display: flex; align-items: center; gap: 0; padding: 0 2px; border-bottom: 1px solid #d5d1c5; background: #f3f0e5; color: #111; font-size: 11px; }
+    .computer-menu span { padding: 3px 7px; }
+    .computer-menu span:first-child { text-decoration: underline; }
+    .computer-toolbar { min-height: 40px; flex: 0 0 40px; display: flex; align-items: center; gap: 3px; padding: 2px 5px; border-bottom: 1px solid #aaa69a; background: linear-gradient(#fff, #e8e4d8); }
+    .computer-toolbar button { min-width: 34px; height: 34px; display: grid; grid-template-rows: 19px 11px; justify-items: center; align-content: center; padding: 1px 5px; border: 1px solid transparent; background: transparent; color: #111; font: 17px/18px "Segoe UI Symbol", Tahoma, sans-serif; cursor: pointer; }
+    .computer-toolbar button small { font: 9px/10px Tahoma, Arial, sans-serif; white-space: nowrap; }
+    .computer-toolbar button:hover:not(:disabled) { border-color: #b6cce3; background: #e7f2ff; }
+    .computer-toolbar button:disabled { color: #888; opacity: .7; }
+    .computer-toolbar-separator { width: 1px; height: 27px; margin: 0 4px; background: #aaa69a; box-shadow: 1px 0 #fff; }
+    .computer-address-row { min-height: 24px; flex: 0 0 24px; display: flex; align-items: center; gap: 5px; padding: 2px 5px; border-bottom: 1px solid #aebede; background: #f7f5ec; }
+    .computer-address-label { color: #555; font-size: 10px; }
+    .computer-address { min-width: 0; flex: 1; display: flex; align-items: center; gap: 5px; height: 19px; padding: 1px 4px; border: 1px solid #8a9bb5; background: #fff; color: #111; }
+    .computer-address-arrow { margin-left: auto; color: #183c50; font-size: 9px; }
+    .computer-go { width: 30px; height: 19px; padding: 0; border: 1px solid #7f9db9; background: linear-gradient(#fff, #dce8f8); color: #111; font: 10px Tahoma, sans-serif; cursor: pointer; }
+    .computer-main { min-width: 0; min-height: 0; flex: 1; display: grid; grid-template-columns: 180px minmax(0, 1fr); }
+    .computer-sidebar { min-height: 0; overflow: auto; padding: 9px 10px; background: linear-gradient(180deg, #637be3, #435bd1); }
+    .computer-side-panel { margin-bottom: 10px; padding: 0 5px 5px; border: 1px solid #9db8f5; background: #c9d9ff; color: #12387d; }
+    .computer-side-panel h2 { position: relative; margin: 0 -5px 3px; padding: 5px 7px; background: linear-gradient(90deg, #a5baff, #d9e4ff); color: #152f76; font-size: 11px; }
+    .computer-side-panel h2::after { position: absolute; top: 3px; right: 4px; content: "⌃"; color: #4262bb; font-size: 12px; }
+    .computer-side-panel button { width: 100%; display: flex; align-items: flex-start; gap: 4px; padding: 2px 1px; border: 0; background: transparent; color: #123b80; font: 9px/1.3 Tahoma, Arial, sans-serif; text-align: left; cursor: pointer; }
+    .computer-side-panel button span { width: 14px; flex: 0 0 14px; font-size: 11px; }
+    .computer-side-panel button:hover { color: #001c67; text-decoration: underline; }
+    .computer-details strong, .computer-details small { display: block; padding: 3px 2px; font-size: 9px; }
+    .computer-details small { color: #405b91; }
+    .computer-workspace { min-width: 0; min-height: 0; overflow: auto; padding: 5px 12px; background: #fff; }
+    .computer-group h2 { margin: 0; padding: 3px 0 4px; border-bottom: 1px solid #d6e5f7; color: #111; font-size: 12px; font-weight: 700; }
+    .computer-items { min-height: 70px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 3px 2px; }
+    .computer-folder-items { min-height: 76px; }
+    .computer-item { min-width: 175px; min-height: 54px; display: flex; align-items: center; gap: 8px; padding: 4px; border: 1px solid transparent; background: transparent; color: #111; font: 10px Tahoma, Arial, sans-serif; text-align: left; cursor: pointer; }
+    .computer-item:hover, .computer-item:focus-visible { border-color: #7da2c7; outline: none; background: #e7f2ff; }
+    .computer-item-icon { width: 38px; flex: 0 0 38px; font-size: 34px; line-height: 1; text-align: center; filter: drop-shadow(1px 2px 1px rgba(0,0,0,.2)); }
+    .computer-drive-icon { width: 38px; height: 38px; flex-basis: 38px; font-size: 31px; }
+    img.computer-drive-icon { object-fit: contain; }
+    .computer-window.details-view .computer-items { align-items: flex-start; flex-direction: column; gap: 0; }
+    .computer-window.details-view .computer-item { width: 100%; min-height: 32px; }
+    .computer-window.details-view .computer-item-icon { width: 25px; flex-basis: 25px; font-size: 21px; }
+    @media (max-width: 560px) {
+      .computer-window { width: calc(100vw - 16px); }
+      .computer-main { grid-template-columns: 138px minmax(0, 1fr); }
+      .computer-sidebar { padding: 7px 5px; }
+      .computer-workspace { padding: 5px 7px; }
+      .computer-item { min-width: 145px; }
+      .computer-toolbar { gap: 0; padding-right: 2px; padding-left: 2px; }
+      .computer-toolbar button { min-width: 28px; padding-right: 2px; padding-left: 2px; }
+    }
     .music-player-window .window-content { background: #c6c6c6; }
     .player-shell { padding: 8px; border: 2px solid; border-color: #fff #808080 #808080 #fff; background: #c6c6c6; }
     .player-brand { border: 1px solid #808080; border-radius: 0; background: #ece9d8; color: #111; text-shadow: none; }
@@ -805,7 +899,10 @@
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-      .bubble { animation-duration: .01ms; }
+      .bubble { animation: none !important; opacity: .92; }
+      .bubble.is-popping .bubble-art, .bubble.is-popping::after { animation: none !important; }
+      .xp-boot-segments { animation: none !important; left: 12%; }
+      .story-game-progress span { animation: none !important; transform: translateX(35%); }
       .bubble.is-popping .bubble-art, .bubble.is-popping::after { animation-duration: .01ms; }
       .browser-video-noise, .browser-viewport.retro-youtube::after { animation: none; }
     }
@@ -1096,12 +1193,21 @@
       color: #fff;
     }
 
-    body.profile-metro .profile { border-color: rgba(255,255,255,.2); }
-    body.profile-metro .profile-avatar { border: 0; border-radius: 0; background: #a93669; box-shadow: none; }
-    body.profile-metro .profile-avatar img { border-radius: 0; }
+    body.profile-metro .start-menu-header { border-bottom: 3px solid #d65287; background: #35202f; }
+    body.profile-metro .start-menu-header .profile-avatar { border: 0; border-radius: 0; background: #a93669; box-shadow: none; }
+    body.profile-metro .start-menu-header .profile-avatar img { border-radius: 0; }
+    body.profile-metro .start-programs { border-color: #70445e; background: #2b1d2b; }
     body.profile-metro .start-link { border-radius: 0; color: #fff; }
+    body.profile-metro .start-link-copy small { color: #d7b6c8; }
     body.profile-metro .start-link:hover { border-color: rgba(255,255,255,.35); background: #743451; }
-    body.profile-metro .start-menu-footer { border-color: rgba(255,255,255,.2); color: #edbfd1; }
+    body.profile-metro .start-all-programs { border-color: #70445e; background: #382338; color: #fff; }
+    body.profile-metro .start-all-programs:hover, body.profile-metro .start-all-programs[aria-expanded="true"] { background: #743451; }
+    body.profile-metro .start-all-programs-popover { border-color: #d5749c; background: #35202f; }
+    body.profile-metro .start-system-links { background: #40263a; }
+    body.profile-metro .start-system-link { color: #fff; }
+    body.profile-metro .start-system-link:hover, body.profile-metro .start-system-link:focus-visible { border-color: #d5749c; background: #743451; }
+    body.profile-metro .start-system-separator { background: #80536a; }
+    body.profile-metro .start-menu-footer { border-color: #d65287; background: #35202f; color: #edbfd1; }
 
     body.profile-metro .window:not(.paint-window) {
       border: 1px solid #d77aa0;
@@ -1470,7 +1576,7 @@
         <span class="emoji" aria-hidden="true"><img class="icon-image" src="ie3.ico" alt=""></span><span>Internet Explorer</span>
       </button>
       <button class="desktop-icon" data-open="computer">
-        <span class="emoji" aria-hidden="true">🖥️</span><span>Equipo</span>
+        <span class="emoji" aria-hidden="true"><img class="icon-image" src="equipo.png" alt=""></span><span>Equipo</span>
       </button>
       <button class="desktop-icon" data-open="files">
         <span class="emoji" aria-hidden="true"><img class="icon-image" src="explorer.ico" alt=""></span><span>Archivos</span>
@@ -1525,16 +1631,73 @@
       </div>
     </section>
 
-    <section class="window" id="computer" data-title="Equipo" hidden>
+    <section class="window computer-window" id="computer" data-title="Mi PC" hidden>
       <header class="titlebar">
-        <div class="window-title"><span>🖥️</span> Equipo</div>
+        <div class="window-title"><span>🖥️</span> Mi PC</div>
         <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
       </header>
-      <div class="window-content">
-        <h1>Equipo</h1>
-        <p>Un vistazo a este pequeño mundo digital.</p>
-        <div class="drive"><span class="drive-icon">💽</span><div class="drive-info">Disco local (C:)<small>Espacio imaginario disponible: 72 GB</small><div class="progress"><span style="width:58%"></span></div></div></div>
-        <div class="drive"><span class="drive-icon">💿</span><div class="drive-info">Unidad de CD (D:)<small>Lista para explorar recuerdos</small><div class="progress"><span style="width:24%"></span></div></div></div>
+      <div class="computer-content">
+        <nav class="computer-menu" aria-label="Menú de Mi PC">
+          <span>Archivo</span><span>Edición</span><span>Ver</span><span>Favoritos</span><span>Herramientas</span><span>Ayuda</span>
+        </nav>
+        <div class="computer-toolbar" aria-label="Barra de herramientas">
+          <button type="button" aria-label="Atrás" disabled>◀<small>Atrás</small></button>
+          <button type="button" aria-label="Adelante" disabled>▶<small>Adelante</small></button>
+          <button type="button" data-computer-action="up" aria-label="Subir un nivel">📁<small>Subir</small></button>
+          <span class="computer-toolbar-separator" aria-hidden="true"></span>
+          <button type="button" data-computer-action="search" aria-label="Buscar">🔎<small>Buscar</small></button>
+          <button type="button" data-computer-action="folders" aria-label="Abrir carpetas">📂<small>Carpetas</small></button>
+          <span class="computer-toolbar-separator" aria-hidden="true"></span>
+          <button type="button" data-computer-action="view" aria-label="Cambiar vista">▦<small>Vistas</small></button>
+        </div>
+        <div class="computer-address-row">
+          <span class="computer-address-label">Dirección</span>
+          <div class="computer-address"><span aria-hidden="true">🖥️</span><span>Mi PC</span><span class="computer-address-arrow">▼</span></div>
+          <button type="button" data-computer-action="up" class="computer-go">Ir</button>
+        </div>
+        <div class="computer-main">
+          <aside class="computer-sidebar" aria-label="Tareas y ubicaciones">
+            <section class="computer-side-panel">
+              <h2>Tareas del sistema</h2>
+              <button type="button" data-computer-action="system"><span>☑</span>Ver información del sistema</button>
+              <button type="button" data-computer-action="programs"><span>▣</span>Agregar o quitar programas</button>
+              <button type="button" data-computer-action="settings"><span>⚙</span>Cambiar una configuración</button>
+            </section>
+            <section class="computer-side-panel">
+              <h2>Otros lugares</h2>
+              <button type="button" data-computer-action="network"><span>🌐</span>Mis sitios de red</button>
+              <button type="button" data-open="files"><span>📁</span>Mis documentos</button>
+              <button type="button" data-open="files"><span>📂</span>Documentos compartidos</button>
+              <button type="button" data-computer-action="control-panel"><span>⚙</span>Panel de control</button>
+            </section>
+            <section class="computer-side-panel computer-details">
+              <h2>Detalles</h2>
+              <strong>🖥️ Mi PC</strong>
+              <small>2 unidades de almacenamiento</small>
+            </section>
+          </aside>
+          <div class="computer-workspace" role="region" aria-label="Contenido de Mi PC">
+            <section class="computer-group">
+              <h2>Archivos almacenados en este equipo</h2>
+              <div class="computer-items computer-folder-items">
+                <button type="button" class="computer-item" data-open="files"><span class="computer-item-icon">📁</span><span>Documentos compartidos</span></button>
+                <button type="button" class="computer-item" data-open="files"><span class="computer-item-icon">📁</span><span>Documentos de usuario</span></button>
+              </div>
+            </section>
+            <section class="computer-group">
+              <h2>Discos duros</h2>
+              <div class="computer-items">
+                <button type="button" class="computer-item" data-open="files"><span class="computer-item-icon computer-drive-icon">💽</span><span>Disco local (C:)</span></button>
+              </div>
+            </section>
+            <section class="computer-group">
+              <h2>Dispositivos con almacenamiento extraíble</h2>
+              <div class="computer-items">
+                <button type="button" class="computer-item" data-computer-action="cd"><img class="computer-item-icon computer-drive-icon" src="cd.ico" alt=""><span>Unidad de CD (D:)</span></button>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1667,8 +1830,22 @@
         </div>
         <div class="paint-workspace">
           <aside class="paint-tools" aria-label="Herramientas">
-            <button id="paint-pencil" type="button" aria-pressed="true" title="Lápiz" aria-label="Lápiz">✎</button>
-            <button id="paint-eraser" type="button" aria-pressed="false" title="Borrador" aria-label="Borrador">▱</button>
+            <button type="button" data-paint-tool="select-free" aria-pressed="false" title="Selección libre" aria-label="Selección libre">▧</button>
+            <button type="button" data-paint-tool="select-rect" aria-pressed="false" title="Selección rectangular" aria-label="Selección rectangular">▨</button>
+            <button id="paint-eraser" type="button" data-paint-tool="eraser" aria-pressed="false" title="Borrador" aria-label="Borrador">▰</button>
+            <button type="button" data-paint-tool="fill" aria-pressed="false" title="Relleno con color" aria-label="Relleno con color">◢</button>
+            <button type="button" data-paint-tool="eyedropper" aria-pressed="false" title="Cuentagotas" aria-label="Cuentagotas">◉</button>
+            <button type="button" data-paint-tool="zoom" aria-pressed="false" title="Lupa: alternar zoom" aria-label="Lupa">⌕</button>
+            <button id="paint-pencil" type="button" data-paint-tool="pencil" aria-pressed="true" title="Lápiz" aria-label="Lápiz">✎</button>
+            <button type="button" data-paint-tool="brush" aria-pressed="false" title="Pincel" aria-label="Pincel">▱</button>
+            <button type="button" data-paint-tool="airbrush" aria-pressed="false" title="Aerógrafo" aria-label="Aerógrafo">◌</button>
+            <button type="button" data-paint-tool="text" aria-pressed="false" title="Texto" aria-label="Texto">A</button>
+            <button type="button" data-paint-tool="line" aria-pressed="false" title="Línea" aria-label="Línea">╱</button>
+            <button type="button" data-paint-tool="curve" aria-pressed="false" title="Curva" aria-label="Curva">⌁</button>
+            <button type="button" data-paint-tool="rectangle" aria-pressed="false" title="Rectángulo" aria-label="Rectángulo">□</button>
+            <button type="button" data-paint-tool="polygon" aria-pressed="false" title="Polígono" aria-label="Polígono">⬠</button>
+            <button type="button" data-paint-tool="ellipse" aria-pressed="false" title="Elipse" aria-label="Elipse">◯</button>
+            <button type="button" data-paint-tool="round-rect" aria-pressed="false" title="Rectángulo redondeado" aria-label="Rectángulo redondeado">▢</button>
           </aside>
           <div class="paint-canvas-wrap">
             <canvas class="paint-canvas" id="paint-canvas" aria-label="Lienzo de dibujo"></canvas>
@@ -1708,6 +1885,16 @@
           </div>
         </div>
         <div class="paint-status" id="paint-status" role="status" aria-live="polite">Listo para dibujar.</div>
+        <dialog class="paint-text-dialog" id="paint-text-dialog" aria-labelledby="paint-text-label">
+          <form id="paint-text-form">
+            <label id="paint-text-label" for="paint-text-input">Texto para el lienzo</label>
+            <input id="paint-text-input" type="text" maxlength="300" autocomplete="off">
+            <div class="paint-text-actions">
+              <button id="paint-text-cancel" type="button">Cancelar</button>
+              <button type="submit">Insertar</button>
+            </div>
+          </form>
+        </dialog>
       </div>
     </section>
 
@@ -1844,19 +2031,62 @@
   </nav>
 
   <aside class="start-menu" id="start-menu" hidden>
-    <div class="profile"><div class="profile-avatar"><img id="active-profile-avatar" src="gotita.png" alt="Foto de perfil de Gotita"></div><strong id="active-profile-name">Gotita</strong></div>
-    <div class="start-links">
-      <button class="start-link" data-open="browser"><img class="icon-image" src="ie3.ico" alt="">　Internet Explorer</button>
-      <button class="start-link" data-open="computer">🖥️　Equipo</button>
-      <button class="start-link" data-open="files"><img class="icon-image" src="explorer.ico" alt="">　Archivos</button>
-      <button class="start-link" data-open="player"><img class="icon-image" src="wmp-icon.png" alt="">　Windows Media Player</button>
-      <button class="start-link" data-open="minesweeper"><img class="icon-image" src="minesweeper-icon.png" alt="">　Buscaminas</button>
-      <button class="start-link" data-open="notes"><img class="icon-image" src="notes-icon.png" alt="">　Notas</button>
-      <button class="start-link" data-open="paint"><img class="icon-image" src="Ms_paint_windows_xp_logo.webp" alt="">　Paint</button>
-      <button class="start-link" data-open="recycle"><img class="icon-image" src="trashbin1.ico" alt="">　Papelera</button>
+    <div class="start-menu-header"><div class="profile-avatar"><img id="active-profile-avatar" src="gotita.png" alt="Foto de perfil de Gotita"></div><strong id="active-profile-name">Gotita</strong></div>
+    <div class="start-menu-panels">
+      <section class="start-programs" aria-label="Programas">
+        <div class="start-links">
+          <button class="start-link" data-open="browser"><img class="icon-image" src="ie3.ico" alt=""><span class="start-link-copy"><strong>Internet Explorer</strong><small>Explorar Internet</small></span></button>
+          <button class="start-link" data-open="minesweeper"><img class="icon-image" src="minesweeper-icon.png" alt=""><span class="start-link-copy"><strong>Buscaminas</strong><small>Juego clásico</small></span></button>
+          <button class="start-link" data-open="notes"><img class="icon-image" src="notes-icon.png" alt=""><span class="start-link-copy"><strong>Bloc de notas</strong><small>Notas rápidas</small></span></button>
+          <button class="start-link" data-open="player"><img class="icon-image" src="wmp-icon.png" alt=""><span class="start-link-copy"><strong>Windows Media Player</strong><small>Música y audio</small></span></button>
+          <button class="start-link" data-open="paint"><img class="icon-image" src="Ms_paint_windows_xp_logo.webp" alt=""><span class="start-link-copy"><strong>Paint</strong><small>Dibujar y editar</small></span></button>
+          <button class="start-link" data-open="files"><img class="icon-image" src="explorer.ico" alt=""><span class="start-link-copy"><strong>Explorador de archivos</strong><small>Carpetas y documentos</small></span></button>
+          <button class="start-link" data-open="computer"><img class="icon-image" src="equipo.png" alt=""><span class="start-link-copy"><strong>Equipo</strong><small>Unidades del sistema</small></span></button>
+          <button class="start-link" data-open="recycle"><img class="icon-image" src="trashbin1.ico" alt=""><span class="start-link-copy"><strong>Papelera de reciclaje</strong><small>Elementos eliminados</small></span></button>
+        </div>
+        <div class="start-all-programs-popover" id="start-all-programs-popover" hidden>
+          <button class="start-link" data-open="browser"><img class="icon-image" src="ie3.ico" alt=""><span class="start-link-copy"><strong>Internet Explorer</strong></span></button>
+          <button class="start-link" data-open="files"><img class="icon-image" src="explorer.ico" alt=""><span class="start-link-copy"><strong>Explorador de archivos</strong></span></button>
+          <button class="start-link" data-open="player"><img class="icon-image" src="wmp-icon.png" alt=""><span class="start-link-copy"><strong>Windows Media Player</strong></span></button>
+          <button class="start-link" data-open="minesweeper"><img class="icon-image" src="minesweeper-icon.png" alt=""><span class="start-link-copy"><strong>Buscaminas</strong></span></button>
+          <button class="start-link" data-open="notes"><img class="icon-image" src="notes-icon.png" alt=""><span class="start-link-copy"><strong>Bloc de notas</strong></span></button>
+          <button class="start-link" data-open="paint"><img class="icon-image" src="Ms_paint_windows_xp_logo.webp" alt=""><span class="start-link-copy"><strong>Paint</strong></span></button>
+          <button class="start-link" data-open="computer"><img class="icon-image" src="equipo.png" alt=""><span class="start-link-copy"><strong>Equipo</strong></span></button>
+          <button class="start-link" data-open="recycle"><img class="icon-image" src="trashbin1.ico" alt=""><span class="start-link-copy"><strong>Papelera de reciclaje</strong></span></button>
+        </div>
+        <button class="start-all-programs" id="start-all-programs" type="button" aria-expanded="false" aria-controls="start-all-programs-popover">
+          <span>Todos los programas</span><span class="start-all-programs-arrow" aria-hidden="true">▶</span>
+        </button>
+      </section>
+      <section class="start-system-links" aria-label="Carpetas y opciones del sistema">
+        <button class="start-system-link" data-open="files"><span class="start-system-icon" aria-hidden="true">📁</span>Mis documentos</button>
+        <button class="start-system-link" data-open="files"><span class="start-system-icon" aria-hidden="true">🗂️</span>Documentos recientes <span aria-hidden="true">›</span></button>
+        <button class="start-system-link" data-open="files"><span class="start-system-icon" aria-hidden="true">🖼️</span>Mis imágenes</button>
+        <button class="start-system-link" data-open="player"><span class="start-system-icon" aria-hidden="true">🎵</span>Mi música</button>
+        <button class="start-system-link" data-open="computer"><span class="start-system-icon" aria-hidden="true"><img class="icon-image" src="equipo.png" alt=""></span>Mi PC</button>
+        <div class="start-system-separator" role="separator"></div>
+        <button class="start-system-link" data-start-action="control-panel"><span class="start-system-icon" aria-hidden="true">⚙️</span>Panel de control</button>
+        <button class="start-system-link" data-start-action="program-defaults"><span class="start-system-icon" aria-hidden="true">🌐</span>Acceso y programas predeterminados</button>
+        <button class="start-system-link" data-start-action="network"><span class="start-system-icon" aria-hidden="true">📶</span>Conectarse a <span aria-hidden="true">›</span></button>
+        <button class="start-system-link" data-start-action="printers"><span class="start-system-icon" aria-hidden="true">🖨️</span>Impresoras y faxes</button>
+        <div class="start-system-separator" role="separator"></div>
+        <button class="start-system-link" data-start-action="help"><span class="start-system-icon" aria-hidden="true">❔</span>Ayuda y soporte técnico</button>
+        <button class="start-system-link" data-start-action="search"><span class="start-system-icon" aria-hidden="true">🔎</span>Buscar</button>
+        <button class="start-system-link" data-start-action="run"><span class="start-system-icon" aria-hidden="true">▶️</span>Ejecutar...</button>
+      </section>
     </div>
-    <div class="start-menu-footer">Un día brillante para navegar ☀️</div>
+    <footer class="start-menu-footer">
+      <button id="start-log-off" type="button"><span class="start-footer-icon" aria-hidden="true">🔑</span>Cerrar sesión</button>
+      <button id="start-turn-off" type="button"><span class="start-footer-icon" aria-hidden="true">⏻</span>Apagar equipo</button>
+    </footer>
   </aside>
+  <section class="shutdown-screen" id="shutdown-screen" aria-label="Equipo apagado" hidden>
+    <div>
+      <h2>El equipo está apagado</h2>
+      <p>Puedes cerrar esta pestaña o volver al escritorio.</p>
+      <button id="shutdown-return" type="button">Volver a encender</button>
+    </div>
+  </section>
   <div class="toast" id="toast" role="status" hidden></div>
 
   <script>
@@ -1866,17 +2096,28 @@
     const filesTaskButton = document.querySelector("#files-task-button");
     const playerWindow = document.querySelector("#player");
     const playerTaskButton = document.querySelector("#player-task-button");
+    const computerWindow = document.querySelector("#computer");
+    const computerWorkspace = document.querySelector(".computer-workspace");
     const paintWindow = document.querySelector("#paint");
     const paintCanvas = document.querySelector("#paint-canvas");
-    const paintContext = paintCanvas.getContext("2d");
+    const paintContext = paintCanvas.getContext("2d", { willReadFrequently: true });
     const paintStatus = document.querySelector("#paint-status");
     const paintColor = document.querySelector("#paint-color");
     const paintColorCurrent = document.querySelector("#paint-color-current");
     const paintSize = document.querySelector("#paint-size");
+    const paintToolButtons = [...document.querySelectorAll("[data-paint-tool]")];
+    const paintTextDialog = document.querySelector("#paint-text-dialog");
+    const paintTextInput = document.querySelector("#paint-text-input");
     let paintDrawing = false;
-    let paintEraser = false;
     let paintInitialized = false;
     let paintLastPoint = null;
+    let paintStartPoint = null;
+    let paintTool = "pencil";
+    let paintSnapshot = null;
+    let paintSelectionSnapshot = null;
+    let paintSelectionPath = [];
+    let paintZoom = 1;
+    let paintTextPoint = null;
     const browserWindow = document.querySelector("#browser");
     const browserTabsElement = document.querySelector("#browser-tabs");
     const browserViewport = document.querySelector(".browser-viewport");
@@ -1888,6 +2129,12 @@
     const browserStatus = document.querySelector("#browser-status-text");
     const startButton = document.querySelector("#start-button");
     const startMenu = document.querySelector("#start-menu");
+    const startAllProgramsButton = document.querySelector("#start-all-programs");
+    const startAllProgramsPopover = document.querySelector("#start-all-programs-popover");
+    const startLogOffButton = document.querySelector("#start-log-off");
+    const startTurnOffButton = document.querySelector("#start-turn-off");
+    const shutdownScreen = document.querySelector("#shutdown-screen");
+    const shutdownReturnButton = document.querySelector("#shutdown-return");
     const toast = document.querySelector("#toast");
     const trayElement = document.querySelector(".tray");
     const trayPopovers = [...document.querySelectorAll(".tray-popover")];
@@ -2032,11 +2279,20 @@
     }
 
     function playStartupSound() {
+      startupSound.volume = 0.75;
+      startupSound.muted = false;
       startupSound.pause();
       startupSound.currentTime = 0;
+      startupSound.load();
       startupSound.play().catch(error => {
-        console.error("No se pudo reproducir el sonido de inicio de Windows XP.", error);
-        showToast("No se pudo reproducir el sonido de inicio.");
+        const retryOnReady = () => {
+          startupSound.removeEventListener("canplay", retryOnReady);
+          startupSound.play().catch(retryError => {
+            console.error("No se pudo reproducir el sonido de inicio de Windows XP.", retryError);
+            showToast("El navegador bloqueó el sonido de inicio.");
+          });
+        };
+        startupSound.addEventListener("canplay", retryOnReady, { once: true });
       });
     }
 
@@ -2044,6 +2300,7 @@
       setActiveProfile(profile);
       configureMusicForProfile(profile);
       const isGotita = profile === "gotita";
+      const enterDesktopDelay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 300 : 2800;
       storyGameLoadingName.textContent = isGotita ? "Gotita" : "Invitado";
       storyGameLoadingAvatar.src = isGotita ? "gotita.png" : "clippy.png";
       storyGameLoadingStatus.textContent = isGotita
@@ -2063,7 +2320,7 @@
         storyLine = /^\d+$/.test(saved) ? Number(saved) : 0;
         saveStoryProgress(String(storyLine));
         showStoryDialogue();
-      }, 2800);
+      }, enterDesktopDelay);
     }
 
     storyNewButton.addEventListener("click", () => enterDesktop("gotita"));
@@ -2085,7 +2342,7 @@
 
     setTimeout(() => {
       storyScreen.classList.remove("is-loading");
-    }, 2800);
+    }, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 300 : 2800);
     let contextMenuReturnFocus = null;
     let assistantTipTimer;
     let lastAssistantTipIndex = -1;
@@ -2093,6 +2350,10 @@
     function setStartMenu(open) {
       startMenu.hidden = !open;
       startButton.setAttribute("aria-expanded", String(open));
+      if (!open) {
+        startAllProgramsPopover.hidden = true;
+        startAllProgramsButton.setAttribute("aria-expanded", "false");
+      }
     }
 
     function updateTaskbar() {
@@ -2566,6 +2827,29 @@
       button.addEventListener("click", () => openWindow(button.dataset.open));
     });
 
+    computerWindow.addEventListener("click", event => {
+      const button = event.target.closest("[data-computer-action]");
+      if (!button) return;
+      const action = button.dataset.computerAction;
+      if (action === "control-panel" || action === "system" || action === "settings") {
+        document.querySelector("#desktop-resolution").textContent = `${innerWidth} × ${innerHeight}`;
+        desktopPropertiesDialog.showModal();
+      } else if (action === "programs") {
+        showToast("Los programas instalados en este escritorio están listos para usarse.");
+      } else if (action === "network") {
+        toggleTrayPopover(document.querySelector("#tray-network-button"));
+      } else if (action === "search" || action === "folders") {
+        openWindow("files");
+      } else if (action === "up") {
+        showToast("Ya estás en Mi PC.");
+      } else if (action === "view") {
+        const detailsView = computerWindow.classList.toggle("details-view");
+        button.setAttribute("aria-pressed", String(detailsView));
+      } else if (action === "cd") {
+        showToast("La unidad de CD (D:) está lista para explorar.");
+      }
+    });
+
     browserNewTabButton.addEventListener("click", () => {
       createBrowserTab();
       browserAddress.focus();
@@ -2776,6 +3060,52 @@
 
     trayTriggers.forEach(button => button.addEventListener("click", () => toggleTrayPopover(button)));
     startButton.addEventListener("click", () => setStartMenu(startMenu.hidden));
+    startAllProgramsButton.addEventListener("click", () => {
+      const open = startAllProgramsPopover.hidden;
+      startAllProgramsPopover.hidden = !open;
+      startAllProgramsButton.setAttribute("aria-expanded", String(open));
+    });
+    startMenu.addEventListener("click", event => {
+      const button = event.target.closest("[data-start-action]");
+      if (!button) return;
+      setStartMenu(false);
+      if (button.dataset.startAction === "control-panel") {
+        document.querySelector("#desktop-resolution").textContent = `${innerWidth} × ${innerHeight}`;
+        desktopPropertiesDialog.showModal();
+      } else if (button.dataset.startAction === "program-defaults") {
+        showToast("Los programas de este escritorio están listos para usarse.");
+      } else if (button.dataset.startAction === "network") {
+        toggleTrayPopover(document.querySelector("#tray-network-button"));
+      } else if (button.dataset.startAction === "printers") {
+        showToast("No hay impresoras configuradas en este escritorio.");
+      } else if (button.dataset.startAction === "help") {
+        showAssistantTip();
+      } else if (button.dataset.startAction === "search") {
+        openWindow("files");
+        showToast("Explora tus archivos y carpetas.");
+      } else if (button.dataset.startAction === "run") {
+        showToast("La opción Ejecutar no tiene comandos configurados.");
+      }
+    });
+    startLogOffButton.addEventListener("click", () => {
+      setStartMenu(false);
+      windows.forEach(window => {
+        window.hidden = true;
+        window.dataset.minimized = "false";
+      });
+      document.body.classList.remove("desktop-entered");
+      storyDialogue.hidden = true;
+      storyScreen.classList.remove("is-loading", "is-entering-game");
+      storyScreen.hidden = false;
+      updateTaskbar();
+    });
+    startTurnOffButton.addEventListener("click", () => {
+      setStartMenu(false);
+      shutdownScreen.hidden = false;
+    });
+    shutdownReturnButton.addEventListener("click", () => {
+      shutdownScreen.hidden = true;
+    });
     document.addEventListener("pointerdown", event => {
       if (!startMenu.hidden && !startMenu.contains(event.target) && !startButton.contains(event.target)) setStartMenu(false);
       if (!desktopContextMenu.hidden && !desktopContextMenu.contains(event.target)) closeDesktopContextMenu();
@@ -2850,6 +3180,10 @@
 
       let previousCanvas = null;
       if (paintInitialized) {
+        if (paintSelectionSnapshot && paintSelectionSnapshot.width === paintCanvas.width && paintSelectionSnapshot.height === paintCanvas.height) {
+          paintContext.putImageData(paintSelectionSnapshot, 0, 0);
+          paintSelectionSnapshot = null;
+        }
         previousCanvas = document.createElement("canvas");
         previousCanvas.width = paintCanvas.width;
         previousCanvas.height = paintCanvas.height;
@@ -2868,17 +3202,65 @@
     function getPaintPoint(event) {
       const rect = paintCanvas.getBoundingClientRect();
       return {
-        x: event.clientX - rect.left - paintCanvas.clientLeft,
-        y: event.clientY - rect.top - paintCanvas.clientTop
+        x: (event.clientX - rect.left) / paintZoom - paintCanvas.clientLeft,
+        y: (event.clientY - rect.top) / paintZoom - paintCanvas.clientTop
       };
     }
 
-    function setPaintTool(eraser) {
-      paintEraser = eraser;
-      document.querySelector("#paint-pencil").setAttribute("aria-pressed", String(!eraser));
-      document.querySelector("#paint-eraser").setAttribute("aria-pressed", String(eraser));
-      paintCanvas.style.cursor = eraser ? "cell" : "crosshair";
-      paintStatus.textContent = eraser ? "Borrador seleccionado." : "Lápiz seleccionado.";
+    function clearPaintSelection() {
+      if (paintSelectionSnapshot) {
+        if (paintSelectionSnapshot.width === paintCanvas.width && paintSelectionSnapshot.height === paintCanvas.height) {
+          paintContext.putImageData(paintSelectionSnapshot, 0, 0);
+        }
+        paintSelectionSnapshot = null;
+        paintSelectionPath = [];
+      }
+    }
+
+    function setPaintTool(tool) {
+      clearPaintSelection();
+      paintTool = tool;
+      paintToolButtons.forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.paintTool === tool));
+      });
+      const cursors = {
+        "select-free": "crosshair",
+        "select-rect": "crosshair",
+        eraser: "cell",
+        fill: "crosshair",
+        eyedropper: "copy",
+        zoom: paintZoom === 1 ? "zoom-in" : "zoom-out",
+        pencil: "crosshair",
+        brush: "crosshair",
+        airbrush: "crosshair",
+        text: "text",
+        line: "crosshair",
+        curve: "crosshair",
+        rectangle: "crosshair",
+        polygon: "crosshair",
+        ellipse: "crosshair",
+        "round-rect": "crosshair"
+      };
+      paintCanvas.style.cursor = cursors[tool] || "crosshair";
+      const labels = {
+        "select-free": "Selección libre",
+        "select-rect": "Selección rectangular",
+        eraser: "Borrador",
+        fill: "Relleno con color",
+        eyedropper: "Cuentagotas",
+        zoom: `Lupa: zoom ${paintZoom}×`,
+        pencil: "Lápiz",
+        brush: "Pincel",
+        airbrush: "Aerógrafo",
+        text: "Texto",
+        line: "Línea",
+        curve: "Curva",
+        rectangle: "Rectángulo",
+        polygon: "Polígono",
+        ellipse: "Elipse",
+        "round-rect": "Rectángulo redondeado"
+      };
+      paintStatus.textContent = `${labels[tool] || "Lápiz"} seleccionado.`;
     }
 
     function setPaintColor(color, selectedSwatch) {
@@ -2890,31 +3272,259 @@
       paintStatus.textContent = `Color ${color} seleccionado.`;
     }
 
-    paintCanvas.addEventListener("pointerdown", event => {
-      if (event.button !== 0 && event.pointerType === "mouse") return;
-      resizePaintCanvas();
-      paintDrawing = true;
-      paintCanvas.setPointerCapture(event.pointerId);
-      paintLastPoint = getPaintPoint(event);
+    function paintCanvasColorAt(point) {
+      const x = Math.max(0, Math.min(paintCanvas.width - 1, Math.floor(point.x * paintCanvas.width / paintCanvas.clientWidth)));
+      const y = Math.max(0, Math.min(paintCanvas.height - 1, Math.floor(point.y * paintCanvas.height / paintCanvas.clientHeight)));
+      return paintContext.getImageData(x, y, 1, 1).data;
+    }
+
+    function fillPaintArea(point) {
+      const image = paintContext.getImageData(0, 0, paintCanvas.width, paintCanvas.height);
+      const { data, width, height } = image;
+      const startX = Math.max(0, Math.min(width - 1, Math.floor(point.x * width / paintCanvas.clientWidth)));
+      const startY = Math.max(0, Math.min(height - 1, Math.floor(point.y * height / paintCanvas.clientHeight)));
+      const startIndex = (startY * width + startX) * 4;
+      const target = [data[startIndex], data[startIndex + 1], data[startIndex + 2], data[startIndex + 3]];
+      const color = paintColor.value.match(/[0-9a-f]{2}/gi).map(value => parseInt(value, 16)).concat(255);
+      if (target.every((value, index) => value === color[index])) return false;
+
+      const matchesTarget = index => data[index] === target[0]
+        && data[index + 1] === target[1]
+        && data[index + 2] === target[2]
+        && data[index + 3] === target[3];
+      const stack = new Int32Array(width * height * 2);
+      let stackLength = 0;
+      stack[stackLength++] = startX;
+      stack[stackLength++] = startY;
+      while (stackLength > 0) {
+        const y = stack[--stackLength];
+        const x = stack[--stackLength];
+        let left = x;
+        let index = (y * width + left) * 4;
+        if (!matchesTarget(index)) continue;
+        while (left > 0 && matchesTarget(index - 4)) {
+          left -= 1;
+          index -= 4;
+        }
+        let right = left;
+        index = (y * width + right) * 4;
+        while (right < width && matchesTarget(index)) {
+          data[index] = color[0];
+          data[index + 1] = color[1];
+          data[index + 2] = color[2];
+          data[index + 3] = color[3];
+          right += 1;
+          index += 4;
+        }
+        right -= 1;
+        for (const adjacentY of [y - 1, y + 1]) {
+          if (adjacentY < 0 || adjacentY >= height) continue;
+          let scanX = left;
+          while (scanX <= right) {
+            const scanIndex = (adjacentY * width + scanX) * 4;
+            if (matchesTarget(scanIndex)) {
+              if (stackLength + 2 > stack.length) throw new Error("El área por rellenar es demasiado compleja.");
+              stack[stackLength++] = scanX;
+              stack[stackLength++] = adjacentY;
+              while (scanX <= right && matchesTarget((adjacentY * width + scanX) * 4)) scanX += 1;
+            } else {
+              scanX += 1;
+            }
+          }
+        }
+      }
+      paintContext.putImageData(image, 0, 0);
+      return true;
+    }
+
+    function drawPaintAirbrush(point) {
+      const radius = Math.max(4, Number(paintSize.value) * 1.5);
+      const dotCount = Math.max(12, Math.round(radius * 1.5));
+      paintContext.fillStyle = paintColor.value;
+      for (let index = 0; index < dotCount; index += 1) {
+        const angle = Math.random() * Math.PI * 2;
+        const distance = Math.sqrt(Math.random()) * radius;
+        paintContext.fillRect(
+          point.x + Math.cos(angle) * distance,
+          point.y + Math.sin(angle) * distance,
+          1,
+          1
+        );
+      }
+    }
+
+    function drawPaintShape(endPoint) {
+      if (!paintStartPoint || !endPoint) return;
+      const start = paintStartPoint;
+      const width = endPoint.x - start.x;
+      const height = endPoint.y - start.y;
+      const left = Math.min(start.x, endPoint.x);
+      const top = Math.min(start.y, endPoint.y);
+      const shapeWidth = Math.abs(width);
+      const shapeHeight = Math.abs(height);
       paintContext.beginPath();
-      paintContext.moveTo(paintLastPoint.x, paintLastPoint.y);
-      paintContext.lineTo(paintLastPoint.x + 0.01, paintLastPoint.y + 0.01);
-      paintContext.strokeStyle = paintEraser ? "#ffffff" : paintColor.value;
+      paintContext.strokeStyle = paintColor.value;
       paintContext.lineWidth = Number(paintSize.value);
       paintContext.lineCap = "round";
       paintContext.lineJoin = "round";
+
+      if (paintTool === "line") {
+        paintContext.moveTo(start.x, start.y);
+        paintContext.lineTo(endPoint.x, endPoint.y);
+      } else if (paintTool === "curve") {
+        const curveOffset = Math.hypot(width, height) * .28;
+        paintContext.moveTo(start.x, start.y);
+        paintContext.quadraticCurveTo(
+          (start.x + endPoint.x) / 2 - height / (Math.hypot(width, height) || 1) * curveOffset,
+          (start.y + endPoint.y) / 2 + width / (Math.hypot(width, height) || 1) * curveOffset,
+          endPoint.x,
+          endPoint.y
+        );
+      } else if (paintTool === "rectangle") {
+        paintContext.rect(left, top, shapeWidth, shapeHeight);
+      } else if (paintTool === "round-rect") {
+        const radius = Math.min(12, shapeWidth / 2, shapeHeight / 2);
+        paintContext.moveTo(left + radius, top);
+        paintContext.lineTo(left + shapeWidth - radius, top);
+        paintContext.quadraticCurveTo(left + shapeWidth, top, left + shapeWidth, top + radius);
+        paintContext.lineTo(left + shapeWidth, top + shapeHeight - radius);
+        paintContext.quadraticCurveTo(left + shapeWidth, top + shapeHeight, left + shapeWidth - radius, top + shapeHeight);
+        paintContext.lineTo(left + radius, top + shapeHeight);
+        paintContext.quadraticCurveTo(left, top + shapeHeight, left, top + shapeHeight - radius);
+        paintContext.lineTo(left, top + radius);
+        paintContext.quadraticCurveTo(left, top, left + radius, top);
+        paintContext.closePath();
+      } else if (paintTool === "ellipse") {
+        paintContext.ellipse(left + shapeWidth / 2, top + shapeHeight / 2, Math.max(.5, shapeWidth / 2), Math.max(.5, shapeHeight / 2), 0, 0, Math.PI * 2);
+      } else if (paintTool === "polygon") {
+        paintContext.moveTo(left + shapeWidth / 2, top);
+        paintContext.lineTo(left + shapeWidth, top + shapeHeight);
+        paintContext.lineTo(left, top + shapeHeight);
+        paintContext.closePath();
+      }
       paintContext.stroke();
-      paintStatus.textContent = paintEraser ? "Borrando…" : "Dibujando…";
+    }
+
+    function drawPaintSelection() {
+      if (!paintSelectionPath.length) return;
+      paintContext.beginPath();
+      paintContext.strokeStyle = "#000";
+      paintContext.lineWidth = 1;
+      paintContext.setLineDash([4, 3]);
+      paintContext.moveTo(paintSelectionPath[0].x, paintSelectionPath[0].y);
+      if (paintTool === "select-rect") {
+        const start = paintSelectionPath[0];
+        const end = paintSelectionPath[paintSelectionPath.length - 1];
+        paintContext.rect(start.x, start.y, end.x - start.x, end.y - start.y);
+      } else {
+        paintSelectionPath.slice(1).forEach(point => paintContext.lineTo(point.x, point.y));
+        paintContext.closePath();
+      }
+      paintContext.stroke();
+      paintContext.setLineDash([]);
+    }
+
+    paintCanvas.addEventListener("pointerdown", event => {
+      if (event.button !== 0 && event.pointerType === "mouse") return;
+      resizePaintCanvas();
+      clearPaintSelection();
+      const point = getPaintPoint(event);
+
+      if (paintTool === "fill") {
+        try {
+          paintStatus.textContent = fillPaintArea(point) ? "Área rellenada." : "El área ya tiene ese color.";
+        } catch (error) {
+          console.error("No se pudo rellenar el área del lienzo.", error);
+          paintStatus.textContent = "No se pudo rellenar esa área.";
+        }
+        return;
+      }
+      if (paintTool === "eyedropper") {
+        const sample = paintCanvasColorAt(point);
+        const color = `#${[...sample].slice(0, 3).map(value => value.toString(16).padStart(2, "0")).join("")}`;
+        setPaintColor(color, null);
+        return;
+      }
+      if (paintTool === "zoom") {
+        paintZoom = paintZoom === 1 ? 2 : 1;
+        paintCanvas.style.transform = `scale(${paintZoom})`;
+        paintCanvas.style.transformOrigin = "top left";
+        paintCanvas.style.cursor = paintZoom === 1 ? "zoom-in" : "zoom-out";
+        paintStatus.textContent = `Zoom ${paintZoom}×. Haz clic para cambiar el aumento.`;
+        return;
+      }
+      if (paintTool === "text") {
+        paintTextPoint = point;
+        paintTextInput.value = "";
+        paintTextDialog.showModal();
+        paintTextInput.focus();
+        return;
+      }
+
+      paintDrawing = true;
+      paintCanvas.setPointerCapture(event.pointerId);
+      paintStartPoint = point;
+      paintLastPoint = point;
+      const isSelectionTool = paintTool === "select-free" || paintTool === "select-rect";
+      const isShapeTool = ["line", "curve", "rectangle", "round-rect", "ellipse", "polygon"].includes(paintTool);
+      paintSnapshot = isSelectionTool || isShapeTool
+        ? paintContext.getImageData(0, 0, paintCanvas.width, paintCanvas.height)
+        : null;
+      if (isSelectionTool) {
+        paintSelectionSnapshot = paintSnapshot;
+        paintSelectionPath = [point];
+        drawPaintSelection();
+      } else if (isShapeTool) {
+        paintStatus.textContent = "Arrastra para dibujar la forma.";
+      } else if (paintTool === "airbrush") {
+        drawPaintAirbrush(point);
+        paintStatus.textContent = "Aerografiando…";
+      } else {
+        paintContext.beginPath();
+        paintContext.moveTo(point.x, point.y);
+        paintContext.lineTo(point.x + .01, point.y + .01);
+        paintContext.strokeStyle = paintTool === "eraser" ? "#ffffff" : paintColor.value;
+        paintContext.lineWidth = Number(paintSize.value) * (paintTool === "brush" ? 1.8 : 1);
+        paintContext.lineCap = "round";
+        paintContext.lineJoin = "round";
+        paintContext.stroke();
+        paintStatus.textContent = paintTool === "eraser" ? "Borrando…" : paintTool === "brush" ? "Pintando…" : "Dibujando…";
+      }
       event.preventDefault();
     });
 
     paintCanvas.addEventListener("pointermove", event => {
       if (!paintDrawing || !paintLastPoint) return;
       const nextPoint = getPaintPoint(event);
-      paintContext.beginPath();
-      paintContext.moveTo(paintLastPoint.x, paintLastPoint.y);
-      paintContext.lineTo(nextPoint.x, nextPoint.y);
-      paintContext.stroke();
+      if (paintTool === "select-free" || paintTool === "select-rect") {
+        const lastSelectionPoint = paintSelectionPath[paintSelectionPath.length - 1];
+        if (Math.hypot(nextPoint.x - lastSelectionPoint.x, nextPoint.y - lastSelectionPoint.y) > 3) {
+          paintSelectionPath.push(nextPoint);
+        }
+        paintContext.putImageData(paintSnapshot, 0, 0);
+        drawPaintSelection();
+      } else if (["line", "curve", "rectangle", "round-rect", "ellipse", "polygon"].includes(paintTool)) {
+        paintContext.putImageData(paintSnapshot, 0, 0);
+        drawPaintShape(nextPoint);
+      } else if (paintTool === "airbrush") {
+        const distance = Math.hypot(nextPoint.x - paintLastPoint.x, nextPoint.y - paintLastPoint.y);
+        const steps = Math.max(1, Math.ceil(distance / 8));
+        for (let step = 1; step <= steps; step += 1) {
+          drawPaintAirbrush({
+            x: paintLastPoint.x + (nextPoint.x - paintLastPoint.x) * step / steps,
+            y: paintLastPoint.y + (nextPoint.y - paintLastPoint.y) * step / steps
+          });
+        }
+      } else {
+        paintContext.beginPath();
+        paintContext.moveTo(paintLastPoint.x, paintLastPoint.y);
+        paintContext.lineTo(nextPoint.x, nextPoint.y);
+        paintContext.strokeStyle = paintTool === "eraser" ? "#ffffff" : paintColor.value;
+        paintContext.lineWidth = Number(paintSize.value) * (paintTool === "brush" ? 1.8 : 1);
+        paintContext.lineCap = "round";
+        paintContext.lineJoin = "round";
+        paintContext.stroke();
+      }
       paintLastPoint = nextPoint;
       event.preventDefault();
     });
@@ -2923,19 +3533,50 @@
       if (!paintDrawing) return;
       paintDrawing = false;
       paintLastPoint = null;
+      if (paintTool === "select-free" || paintTool === "select-rect") {
+        paintStatus.textContent = "Área seleccionada.";
+      } else {
+        paintSelectionSnapshot = null;
+        paintSelectionPath = [];
+        paintSnapshot = null;
+        paintStatus.textContent = "Listo para dibujar.";
+      }
+      paintStartPoint = null;
       paintContext.closePath();
-      paintStatus.textContent = "Listo para dibujar.";
       if (event && paintCanvas.hasPointerCapture(event.pointerId)) paintCanvas.releasePointerCapture(event.pointerId);
     }
 
     paintCanvas.addEventListener("pointerup", stopPaintDrawing);
     paintCanvas.addEventListener("pointercancel", stopPaintDrawing);
     paintCanvas.addEventListener("lostpointercapture", () => {
+      if (paintDrawing && paintSnapshot && !paintSelectionSnapshot) paintContext.putImageData(paintSnapshot, 0, 0);
       paintDrawing = false;
       paintLastPoint = null;
+      paintStartPoint = null;
+      paintSnapshot = null;
     });
-    document.querySelector("#paint-pencil").addEventListener("click", () => setPaintTool(false));
-    document.querySelector("#paint-eraser").addEventListener("click", () => setPaintTool(true));
+    paintToolButtons.forEach(button => {
+      button.addEventListener("click", () => setPaintTool(button.dataset.paintTool));
+    });
+    document.querySelector("#paint-text-form").addEventListener("submit", event => {
+      event.preventDefault();
+      const text = paintTextInput.value;
+      if (text && paintTextPoint) {
+        paintContext.save();
+        paintContext.fillStyle = paintColor.value;
+        paintContext.font = `${Math.max(12, Number(paintSize.value) * 3)}px Arial, sans-serif`;
+        paintContext.textBaseline = "top";
+        paintContext.fillText(text, paintTextPoint.x, paintTextPoint.y);
+        paintContext.restore();
+        paintStatus.textContent = "Texto agregado.";
+      }
+      paintTextDialog.close();
+      paintTextPoint = null;
+    });
+    document.querySelector("#paint-text-cancel").addEventListener("click", () => {
+      paintTextDialog.close();
+      paintTextPoint = null;
+    });
     paintColor.addEventListener("input", () => setPaintColor(paintColor.value, null));
     paintColorCurrent.addEventListener("input", () => setPaintColor(paintColorCurrent.value, null));
     document.querySelectorAll(".paint-swatch").forEach(swatch => {
@@ -2945,6 +3586,7 @@
       document.querySelector("#paint-size-value").textContent = `${paintSize.value} px`;
     });
     document.querySelector("#paint-clear").addEventListener("click", () => {
+      clearPaintSelection();
       resizePaintCanvas();
       paintContext.save();
       paintContext.setTransform(1, 0, 0, 1, 0, 0);
@@ -2954,6 +3596,7 @@
       paintStatus.textContent = "Lienzo limpio.";
     });
     document.querySelector("#paint-save").addEventListener("click", () => {
+      clearPaintSelection();
       resizePaintCanvas();
       try {
         paintCanvas.toBlob(blob => {
@@ -3114,8 +3757,12 @@
     setInterval(updateClock, 30_000);
     createBubble();
     setInterval(createBubble, 3_600);
-    document.querySelector(".start-menu-footer").addEventListener("click", () => showToast("¡Gracias por visitar mi escritorio! 🌿"));
-
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden && activeProfile !== "gotita") {
+        bubbleField.replaceChildren();
+        createBubble();
+      }
+    });
     const mineRows = 9;
     const mineColumns = 9;
     const totalMines = 10;
@@ -3450,6 +4097,13 @@
     const trayNetworkToggle = document.querySelector("#tray-network-toggle");
     const musicTracks = [];
     let currentTrack = -1;
+    const guestPlaylistTracks = [
+      { name: "Aquatic Ambience", url: "scizzie - aquatic ambience.mp3" },
+      { name: "temcandoanything - Data Transfer [Official Audio].mp3", url: "temcandoanything - Data Transfer [Official Audio].mp3" },
+      { name: "temcandoanything - Photo Gallery [Official Audio].mp3", url: "temcandoanything - Photo Gallery [Official Audio].mp3" },
+      { name: "Nintendo Wii U - Mii Maker Editing Mii (TV + Gamepad).mp3", url: "Nintendo Wii U - Mii Maker Editing Mii (TV + Gamepad).mp3" },
+      { name: "Wired Or Wireless.mp3", url: "Wired Or Wireless.mp3" }
+    ];
     const gotitaPlaylistTracks = [
       { name: "Nightcore - Bad boy.mp3", url: "Nightcore - Bad boy.mp3" },
       { name: "Nightcore Classics - Rockefeller Street [HD].mp3", url: "Nightcore Classics - Rockefeller Street [HD].mp3" },
@@ -3483,7 +4137,8 @@
         musicTracks.push(...gotitaPlaylistTracks.map(track => ({ ...track })));
         playerStatus.textContent = `${musicTracks.length} canciones disponibles en el perfil de Gotita.`;
       } else {
-        playerStatus.textContent = "Tus archivos se reproducen localmente en este navegador.";
+        musicTracks.push(...guestPlaylistTracks.map(track => ({ ...track })));
+        playerStatus.textContent = `${musicTracks.length} ${musicTracks.length === 1 ? "canción disponible" : "canciones disponibles"} en el perfil Invitado.`;
       }
       renderPlaylist();
     }
