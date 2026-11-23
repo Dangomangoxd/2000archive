@@ -2640,9 +2640,11 @@
       }
     });
 
-    setTimeout(() => {
+    const finishStoryBoot = () => {
       storyScreen.classList.remove("is-loading");
-    }, 2800);
+    };
+    setTimeout(finishStoryBoot, 2200);
+    window.addEventListener("load", () => setTimeout(finishStoryBoot, 800), { once: true });
     let contextMenuReturnFocus = null;
     let assistantTipTimer;
     let lastAssistantTipIndex = -1;
@@ -4755,9 +4757,7 @@
       const rhythmSongFile = rhythmSongVersion === "full"
         ? "bad-apple-full.mp3"
         : "bad-apple-feat-nomico.mp3";
-      rhythmSong.src = location.protocol === "http:"
-        ? `http://127.0.0.1:8766/${rhythmSongFile}`
-        : rhythmSongFile;
+      rhythmSong.src = rhythmSongFile;
       rhythmSong.load();
       rhythmSong.currentTime = 0;
       const showCountdown = text => {
@@ -5246,7 +5246,6 @@
       { name: "Nightcore - Bad boy.mp3", url: "Nightcore - Bad boy.mp3" },
       { name: "Nightcore Classics - Rockefeller Street [HD].mp3", url: "Nightcore Classics - Rockefeller Street [HD].mp3" },
       { name: "Bad Apple!! feat.nomico", url: "bad-apple-feat-nomico.mp3" },
-      { name: "Bad Apple!! feat.nomico — Full", url: "bad-apple-full.mp3" },
       { name: "Bad Apple!! feat.nomico — Full", url: "bad-apple-full.mp3" },
       { name: "Nightcore - Doktorspiele.mp3", url: "Nightcore - Doktorspiele.mp3" },
       { name: "Nightcore - Pretty Little Psycho.mp3", url: "Nightcore - Pretty Little Psycho.mp3" },
