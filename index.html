@@ -51,6 +51,25 @@
       box-shadow: 2px 2px 0 rgba(0,0,0,.24), inset 0 0 0 1px #fff;
       backdrop-filter: none;
     }
+    .desktop-music-visualizer {
+      position: absolute;
+      z-index: 2;
+      right: 24px;
+      bottom: 72px;
+      width: min(250px, calc(100vw - 32px));
+      padding: 8px;
+      border: 1px solid #0a246a;
+      background: rgba(236,233,216,.94);
+      box-shadow: 2px 2px 0 rgba(0,0,0,.24), inset 0 0 0 1px #fff;
+    }
+    .desktop-music-visualizer[hidden] { display: none; }
+    .desktop-visualizer-title { margin-bottom: 6px; color: #123b80; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .desktop-visualizer-track { overflow: hidden; margin-bottom: 7px; color: #333; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+    .desktop-visualizer-bars { height: 48px; display: flex; align-items: end; justify-content: center; gap: 3px; padding: 5px 7px; overflow: hidden; border: 1px solid #5c7c80; background: #101d22; }
+    .desktop-visualizer-bars i { min-width: 2px; height: 5%; flex: 1; background: linear-gradient(to top, hsl(var(--bar-hue, 185) 92% 48%), hsl(var(--bar-hue, 185) 96% 72%)); box-shadow: 0 0 7px hsl(var(--bar-hue, 185) 92% 58% / .7); transition: height .07s linear; }
+    .desktop-visualizer-bars.playing.fallback i { animation: equalize .7s ease-in-out infinite alternate; }
+    .desktop-visualizer-bars.playing.fallback i:nth-child(2n) { animation-delay: -.35s; }
+    .desktop-visualizer-bars.playing.fallback i:nth-child(3n) { animation-delay: -.5s; }
 
     .desktop-widget::before {
       position: absolute;
@@ -342,6 +361,34 @@
     .shutdown-screen h2 { margin: 0 0 8px; font-size: 22px; font-weight: 400; }
     .shutdown-screen p { margin: 0 0 18px; color: #c8c8c8; font-size: 13px; }
     .shutdown-screen button { padding: 6px 12px; border: 1px solid #fff; border-radius: 2px; background: linear-gradient(#4b98f0, #0755b9); color: #fff; font: 12px Tahoma, sans-serif; cursor: pointer; }
+    .xp-application-error {
+      width: min(380px, calc(100vw - 28px));
+      max-width: none;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #0054e3;
+      border-radius: 6px 6px 3px 3px;
+      background: #f0f0f0;
+      box-shadow: 2px 3px 12px rgba(0,0,0,.4);
+      color: #111;
+      font: 12px Tahoma, Arial, sans-serif;
+    }
+    .xp-application-error::backdrop { background: rgba(0,0,0,.2); }
+    .xp-error-titlebar { height: 25px; display: flex; align-items: center; justify-content: space-between; padding: 2px 3px 2px 5px; background: linear-gradient(180deg, #3b8df4, #1765e8 48%, #0751d5); color: #fff; font-weight: 700; text-shadow: 1px 1px #003d94; }
+    .xp-error-title { display: flex; align-items: center; gap: 5px; }
+    .xp-error-small-icon { width: 14px; height: 14px; display: inline-grid; place-items: center; border: 1px solid #fff; border-radius: 50%; background: #e72b22; color: #fff; font: bold 12px/1 Arial, sans-serif; text-shadow: none; }
+    .xp-error-close { width: 21px; height: 20px; padding: 0; border: 1px solid #fff; border-radius: 3px; background: linear-gradient(#f99b87, #dc3e28 55%, #c51c13); color: #fff; font: bold 17px/16px Arial, sans-serif; text-shadow: 1px 1px #801008; cursor: pointer; }
+    .xp-error-content { min-height: 55px; display: flex; align-items: center; gap: 19px; padding: 10px 12px 3px; }
+    .xp-error-icon { position: relative; width: 29px; height: 29px; flex: 0 0 29px; border: 2px solid #fff; border-radius: 50%; background: radial-gradient(circle at 35% 28%, #ff7770, #dc1e17 70%); box-shadow: 0 1px 2px #777; }
+    .xp-error-icon::before, .xp-error-icon::after { position: absolute; top: 12px; left: 5px; width: 15px; height: 3px; border-radius: 2px; background: #fff; content: ""; }
+    .xp-error-icon::before { transform: rotate(45deg); }
+    .xp-error-icon::after { transform: rotate(-45deg); }
+    .xp-error-copy { min-width: 0; }
+    .xp-error-copy p { margin: 0; }
+    .xp-error-path { display: block; overflow: hidden; margin-bottom: 3px; text-overflow: ellipsis; white-space: nowrap; }
+    .xp-error-actions { display: flex; justify-content: center; padding: 2px 12px 8px; }
+    .xp-error-ok { width: 80px; height: 23px; border: 1px solid #555; border-radius: 0; background: linear-gradient(#fff, #e5e5e5); box-shadow: inset 0 0 0 1px #fff; color: #111; font: 12px Tahoma, Arial, sans-serif; cursor: pointer; }
+    .xp-error-ok:focus-visible { outline: 1px dotted #111; outline-offset: -4px; }
     @media (max-width: 400px) {
       .start-system-link { min-height: 26px; gap: 4px; padding: 1px 2px; font-size: 9px; }
       .start-system-icon { width: 17px; flex-basis: 17px; font-size: 14px; }
@@ -545,6 +592,13 @@
     .file-entry { min-height: 83px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 8px 5px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: #476a79; font: inherit; font-size: 11px; text-align: center; cursor: pointer; }
     .file-entry:hover, .file-entry:focus-visible { border-color: #b9dfe7; outline: none; background: linear-gradient(145deg, white, #e6f8f7); }
     .file-entry .file-emoji { font-size: 30px; }
+    .saved-paint-image { min-width: 0; padding: 5px; border: 1px solid #c3dce4; border-radius: 4px; background: #f7fbfc; }
+    .saved-paint-image-open { width: 100%; display: grid; gap: 5px; padding: 0; border: 0; background: transparent; color: #355a69; font: inherit; font-size: 11px; text-align: center; cursor: pointer; }
+    .saved-paint-image-open img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; border: 1px solid #c4d6dc; background: #fff; }
+    .saved-paint-image-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .saved-paint-image-actions { display: grid; gap: 3px; margin-top: 5px; }
+    .saved-paint-image-actions button { min-height: 21px; padding: 2px 4px; border: 1px solid #b0c6ce; border-radius: 3px; background: linear-gradient(#fff, #d4e5e9); color: #355a69; font: inherit; font-size: 10px; cursor: pointer; }
+    .saved-paint-image-actions button:hover { background: linear-gradient(#fff, #c5eee2); }
     .file-status { padding: 7px 12px; border-top: 1px solid #d4e7eb; background: #f7fbfc; color: #78919a; font-size: 10px; }
     .music-player-window { width: min(520px, calc(100vw - 30px)); }
     .music-player-window .window-content { padding: 0; background: #d8e2e8; }
@@ -587,6 +641,13 @@
     .mines-shell { display: grid; justify-items: center; gap: 8px; padding: 5px; border: 2px solid; border-color: #7f7f7f #fff #fff #7f7f7f; background: #c0c0c0; }
     .mines-top { width: 100%; min-height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 9px 10px; border: 3px solid; border-color: #fff #7f7f7f #7f7f7f #fff; background: #c0c0c0; }
     .mine-counter, .mine-timer { min-width: 76px; padding: 5px 6px; border: 2px inset #777; background: #050505; color: #ff1717; font: bold 27px/1 "Courier New", monospace; text-align: center; letter-spacing: .1em; text-shadow: 0 0 5px rgba(255,0,0,.8); }
+    .mine-counter, .mine-timer { display: flex; align-items: center; justify-content: center; }
+    .mine-pixel-digits { display: inline-flex; align-items: center; justify-content: center; gap: 2px; }
+    .mine-pixel-digit { display: grid; grid-template-columns: repeat(5, var(--mine-pixel-size, 2px)); grid-template-rows: repeat(7, var(--mine-pixel-size, 2px)); gap: 0; }
+    .mine-pixel-dot { width: var(--mine-pixel-size, 2px); height: var(--mine-pixel-size, 2px); }
+    .mine-pixel-dot.on { background: currentColor; box-shadow: 0 0 1px currentColor; }
+    .mine-counter .mine-pixel-digit, .mine-timer .mine-pixel-digit { --mine-pixel-size: 3px; }
+    .mine-cell .mine-pixel-digit { --mine-pixel-size: 3px; }
     .mines-reset { width: 43px; height: 42px; display: grid; place-items: center; padding: 0; border: 3px solid; border-color: #fff #7f7f7f #7f7f7f #fff; border-radius: 0; background: #c0c0c0; font-size: 23px; cursor: pointer; }
     .mines-reset:active { border-color: #7f7f7f #fff #fff #7f7f7f; }
     .mine-face { display: block; width: 34px; height: 34px; object-fit: contain; }
@@ -665,6 +726,22 @@
     .paint-text-dialog input { min-width: 0; height: 28px; padding: 4px 6px; border: 1px solid; border-color: #404040 #fff #fff #404040; background: #fff; color: #111; font: inherit; }
     .paint-text-actions { display: flex; justify-content: flex-end; gap: 7px; }
     .paint-text-actions button { min-width: 76px; min-height: 24px; border: 1px solid; border-color: #fff #404040 #404040 #fff; border-radius: 0; background: #c0c0c0; color: #111; font: inherit; cursor: pointer; }
+    .paint-image-preview { width: fit-content; max-width: calc(100vw - 28px); max-height: calc(100dvh - 28px); padding: 0; overflow: hidden; border: 2px solid; border-color: #fff #404040 #404040 #fff; background: #c0c0c0; color: #111; box-shadow: 2px 3px 12px rgba(0,0,0,.4); font: 12px Tahoma, "Segoe UI", sans-serif; }
+    .paint-image-preview::backdrop { background: rgba(0,0,0,.35); }
+    .paint-image-preview-titlebar { height: 27px; display: flex; align-items: center; justify-content: space-between; padding: 2px 3px 2px 7px; background: linear-gradient(180deg, #0a66e8, #0053d6 52%, #003caa); color: #fff; font-weight: 700; }
+    .paint-image-preview-titlebar button { width: 22px; height: 21px; padding: 0; border: 1px solid #fff; border-radius: 2px; background: linear-gradient(#ffb7a3, #f15a41 48%, #c82b19); color: #fff; font: bold 15px/17px Tahoma, sans-serif; cursor: pointer; }
+    .paint-image-preview img { display: block; max-width: min(880px, calc(100vw - 36px)); max-height: calc(100dvh - 64px); object-fit: contain; background: #fff; }
+    .paint-image-action-dialog { width: min(360px, calc(100vw - 32px)); padding: 0; border: 2px solid; border-color: #fff #404040 #404040 #fff; background: #c0c0c0; color: #111; box-shadow: 2px 3px 12px rgba(0,0,0,.4); font: 12px Tahoma, "Segoe UI", sans-serif; }
+    .paint-image-action-dialog::backdrop { background: rgba(0,0,0,.35); }
+    .paint-image-action-titlebar { height: 27px; display: flex; align-items: center; justify-content: space-between; padding: 2px 3px 2px 7px; background: linear-gradient(180deg, #0a66e8, #0053d6 52%, #003caa); color: #fff; font-weight: 700; }
+    .paint-image-action-titlebar button { width: 22px; height: 21px; padding: 0; border: 1px solid #fff; border-radius: 2px; background: linear-gradient(#ffb7a3, #f15a41 48%, #c82b19); color: #fff; font: bold 15px/17px Tahoma, sans-serif; cursor: pointer; }
+    .paint-image-action-dialog form { display: grid; gap: 10px; padding: 14px; }
+    .paint-image-action-dialog p { margin: 0; }
+    .paint-image-action-dialog label { display: grid; gap: 5px; }
+    .paint-image-action-dialog input { min-width: 0; height: 27px; padding: 4px 6px; border: 1px solid; border-color: #404040 #fff #fff #404040; background: #fff; color: #111; font: inherit; }
+    .paint-image-action-error { min-height: 14px; color: #a00000; }
+    .paint-image-action-buttons { display: flex; justify-content: flex-end; gap: 7px; }
+    .paint-image-action-buttons button { min-width: 76px; min-height: 24px; border: 1px solid; border-color: #fff #404040 #404040 #fff; border-radius: 0; background: #c0c0c0; color: #111; font: inherit; cursor: pointer; }
     @media (max-width: 560px) {
       .paint-toolbar { gap: 5px; padding: 4px; }
       .paint-toolbar button { padding: 3px 6px; }
@@ -752,6 +829,11 @@
     .file-list > p { color: #444; }
     .file-entry { border-radius: 0; color: #111; }
     .file-entry:hover, .file-entry:focus-visible { border-color: #316ac5; background: #dce8f8; }
+    .saved-paint-image { border-color: #999; border-radius: 0; background: #f3f3f3; }
+    .saved-paint-image-open { color: #111; }
+    .saved-paint-image-open img { border-color: #999; }
+    .saved-paint-image-actions button { border-color: #7f9db9; border-radius: 0; background: linear-gradient(#fff, #e2e1d8); color: #111; }
+    .saved-paint-image-actions button:hover { background: #dce8f8; }
     .file-status { border-top: 1px solid #aca899; background: #ece9d8; color: #333; }
     .computer-window { width: min(820px, calc(100vw - 24px)); height: min(560px, calc(100dvh - 100px)); min-height: min(380px, calc(100dvh - 60px)); display: flex; flex-direction: column; }
     .computer-window > .titlebar { height: 29px; flex: 0 0 29px; padding: 2px 4px 2px 6px; }
@@ -1333,6 +1415,11 @@
       background: linear-gradient(to top, #bd427c, #e992b6 65%, #b9a2ff);
       box-shadow: 0 0 8px rgba(220,111,164,.48);
     }
+    body.profile-metro .desktop-music-visualizer { border-color: #9c426c; background: rgba(53,32,47,.94); box-shadow: 2px 2px 0 rgba(26,10,22,.35), inset 0 0 0 1px #d5749c; }
+    body.profile-metro .desktop-visualizer-title { color: #f5c5d8; }
+    body.profile-metro .desktop-visualizer-track { color: #fff; }
+    body.profile-metro .desktop-visualizer-bars { border-color: #925072; background: #19151f; }
+    body.profile-metro .desktop-visualizer-bars i { background: linear-gradient(to top, #bd427c, #e992b6 65%, #b9a2ff); box-shadow: 0 0 8px rgba(220,111,164,.48); }
     body.profile-metro .seek-row { color: #e9cbd9; }
     body.profile-metro .seek-row input,
     body.profile-metro .volume-row input { accent-color: #dc6096; }
@@ -1604,6 +1691,11 @@
         <div class="music-row"><span id="music-track">Windows Media Player</span><button class="music-toggle" id="music-toggle" aria-label="Abrir reproductor de música">▶</button></div>
       </div>
     </section>
+    <aside class="desktop-music-visualizer" id="desktop-music-visualizer" aria-label="Visualizador de música" hidden>
+      <div class="desktop-visualizer-title">♫ Visualizador</div>
+      <div class="desktop-visualizer-track" id="desktop-visualizer-track"></div>
+      <div class="desktop-visualizer-bars" id="desktop-visualizer-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </aside>
     <section class="desktop-icons" aria-label="Iconos del escritorio">
       <button class="desktop-icon" data-open="browser">
         <span class="emoji" aria-hidden="true"><img class="icon-image" src="ie3.ico" alt=""></span><span>Internet Explorer</span>
@@ -1859,7 +1951,8 @@
           <label class="paint-size-control" for="paint-size">Grosor <input id="paint-size" type="range" min="1" max="40" value="6"><output id="paint-size-value" for="paint-size">6 px</output></label>
           <span class="paint-tool-separator" aria-hidden="true"></span>
           <button id="paint-clear" type="button" title="Borrar todo el lienzo">Nuevo</button>
-          <button id="paint-save" type="button" title="Descargar dibujo como PNG">Guardar</button>
+          <button id="paint-save" type="button" title="Guardar dibujo en la carpeta Imágenes">Guardar en Imágenes</button>
+          <button id="paint-download" type="button" title="Descargar dibujo como PNG">Exportar PNG</button>
         </div>
         <div class="paint-workspace">
           <aside class="paint-tools" aria-label="Herramientas">
@@ -2012,6 +2105,47 @@
       <p><strong>Fondo:</strong> Windows XP</p>
       <p><strong>Resolución:</strong> <span id="desktop-resolution"></span></p>
       <button value="close">Cerrar</button>
+    </form>
+  </dialog>
+  <dialog class="xp-application-error" id="xp-application-error" aria-labelledby="xp-error-window-title" aria-describedby="xp-error-message">
+    <div class="xp-error-titlebar">
+      <span class="xp-error-title"><span class="xp-error-small-icon" aria-hidden="true">×</span><span id="xp-error-window-title">C:\</span></span>
+      <button class="xp-error-close" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <div class="xp-error-content">
+      <span class="xp-error-icon" aria-hidden="true"></span>
+      <div class="xp-error-copy" id="xp-error-message">
+        <span class="xp-error-path" id="xp-error-path">C:\</span>
+        <p>Application not found</p>
+      </div>
+    </div>
+    <form method="dialog" class="xp-error-actions">
+      <button class="xp-error-ok" type="submit" value="ok">OK</button>
+    </form>
+  </dialog>
+  <dialog class="paint-image-preview" id="paint-image-preview" aria-labelledby="paint-image-preview-title">
+    <header class="paint-image-preview-titlebar">
+      <span id="paint-image-preview-title">Vista previa</span>
+      <button type="button" aria-label="Cerrar">×</button>
+    </header>
+    <img id="paint-image-preview-content" alt="">
+  </dialog>
+  <dialog class="paint-image-action-dialog" id="paint-image-action-dialog" aria-labelledby="paint-image-action-title">
+    <header class="paint-image-action-titlebar">
+      <span id="paint-image-action-title"></span>
+      <button type="button" aria-label="Cerrar">×</button>
+    </header>
+    <form id="paint-image-action-form">
+      <p id="paint-image-action-message"></p>
+      <label id="paint-image-name-label" for="paint-image-name" hidden>
+        Nombre del dibujo
+        <input id="paint-image-name" type="text" maxlength="100" autocomplete="off">
+      </label>
+      <p class="paint-image-action-error" id="paint-image-action-error" role="alert"></p>
+      <div class="paint-image-action-buttons">
+        <button id="paint-image-action-cancel" type="button">Cancelar</button>
+        <button id="paint-image-action-confirm" type="submit"></button>
+      </div>
     </form>
   </dialog>
   <nav class="taskbar" aria-label="Barra de tareas">
@@ -3063,7 +3197,7 @@
       const title = document.createElement("span");
       title.textContent = label;
       item.append(icon, title);
-      item.addEventListener("click", () => showToast(`${label} · elemento de demostración`));
+      item.addEventListener("click", () => showApplicationNotFound(label));
       desktopIcons.append(item);
       showToast(`Se creó «${label}» en el escritorio de demostración.`);
     }
@@ -3658,7 +3792,7 @@
       paintContext.restore();
       paintStatus.textContent = "Lienzo limpio.";
     });
-    document.querySelector("#paint-save").addEventListener("click", () => {
+    function preparePaintPng(onReady) {
       clearPaintSelection();
       resizePaintCanvas();
       try {
@@ -3668,18 +3802,80 @@
             showToast("No se pudo guardar el dibujo.");
             return;
           }
-          const imageUrl = URL.createObjectURL(blob);
-          const downloadLink = document.createElement("a");
-          downloadLink.href = imageUrl;
-          downloadLink.download = "mi-dibujo.png";
-          downloadLink.click();
-          setTimeout(() => URL.revokeObjectURL(imageUrl), 1000);
-          paintStatus.textContent = "Dibujo guardado como mi-dibujo.png.";
+          try {
+            onReady(blob);
+          } catch (error) {
+            console.error("No se pudo procesar el dibujo de Paint.", error);
+            paintStatus.textContent = "No se pudo guardar el dibujo.";
+            showToast("No se pudo guardar el dibujo.");
+          }
         }, "image/png");
       } catch (error) {
+        console.error("No se pudo exportar el dibujo de Paint.", error);
         paintStatus.textContent = "No se pudo exportar el dibujo.";
         showToast("No se pudo guardar el dibujo como PNG.");
       }
+    }
+
+    function savePaintDrawingToImages(blob, name, profile) {
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        try {
+          if (typeof reader.result !== "string") throw new Error("El archivo PNG no se pudo leer.");
+          const images = loadSavedPaintImages(profile);
+          if (images.some(image => image.name.toLowerCase() === name.toLowerCase())) {
+            document.querySelector("#paint-image-action-error").textContent = "Ya existe un dibujo con ese nombre.";
+            document.querySelector("#paint-image-action-confirm").disabled = false;
+            document.querySelector("#paint-image-action-confirm").textContent = "Guardar";
+            return;
+          }
+          images.push({ name, dataUrl: reader.result });
+          localStorage.setItem(`frutiger-aero-paint-images-${profile}`, JSON.stringify(images));
+          paintStatus.textContent = `Guardado en Imágenes como ${name}.`;
+          showToast(`«${name}» se guardó en Imágenes.`);
+          if (activeProfile === profile && document.querySelector("#folder-title").textContent === fileContents[profile].pictures.title) {
+            showFolder("pictures");
+          }
+          document.querySelector("#paint-image-action-dialog").close();
+        } catch (error) {
+          console.error("No se pudo guardar el dibujo en Imágenes.", error);
+          document.querySelector("#paint-image-action-error").textContent = "No se pudo guardar. Comprueba el espacio de almacenamiento e inténtalo de nuevo.";
+          document.querySelector("#paint-image-action-confirm").disabled = false;
+          document.querySelector("#paint-image-action-confirm").textContent = "Guardar";
+          paintStatus.textContent = "No se pudo guardar el dibujo en Imágenes.";
+        }
+      });
+      reader.addEventListener("error", () => {
+        console.error("No se pudo leer el PNG del dibujo.", reader.error);
+        document.querySelector("#paint-image-action-error").textContent = "No se pudo preparar el dibujo. Inténtalo de nuevo.";
+        document.querySelector("#paint-image-action-confirm").disabled = false;
+        document.querySelector("#paint-image-action-confirm").textContent = "Guardar";
+        paintStatus.textContent = "No se pudo preparar el dibujo.";
+      });
+      try {
+        reader.readAsDataURL(blob);
+      } catch (error) {
+        console.error("No se pudo leer el PNG del dibujo.", error);
+        document.querySelector("#paint-image-action-error").textContent = "No se pudo preparar el dibujo. Inténtalo de nuevo.";
+        document.querySelector("#paint-image-action-confirm").disabled = false;
+        document.querySelector("#paint-image-action-confirm").textContent = "Guardar";
+        paintStatus.textContent = "No se pudo preparar el dibujo.";
+      }
+    }
+
+    document.querySelector("#paint-save").addEventListener("click", () => {
+      preparePaintPng(blob => openPaintImageSaveDialog(blob, activeProfile));
+    });
+    document.querySelector("#paint-download").addEventListener("click", () => {
+      preparePaintPng(blob => {
+        const imageUrl = URL.createObjectURL(blob);
+        const downloadLink = document.createElement("a");
+        downloadLink.href = imageUrl;
+        downloadLink.download = "mi-dibujo.png";
+        downloadLink.click();
+        setTimeout(() => URL.revokeObjectURL(imageUrl), 1000);
+        paintStatus.textContent = "Dibujo descargado como mi-dibujo.png.";
+      });
     });
     if ("ResizeObserver" in window) {
       new ResizeObserver(resizePaintCanvas).observe(document.querySelector(".paint-workspace"));
@@ -3693,6 +3889,17 @@
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => { toast.hidden = true; }, 2800);
     }
+
+    function showApplicationNotFound(itemName) {
+      const dialog = document.querySelector("#xp-application-error");
+      dialog.querySelector("#xp-error-path").textContent = `C:\\${itemName}`;
+      dialog.showModal();
+      dialog.querySelector(".xp-error-ok").focus();
+    }
+
+    document.querySelector("#xp-application-error .xp-error-close").addEventListener("click", () => {
+      document.querySelector("#xp-application-error").close();
+    });
 
     const assistantTips = [
       "¿Muchas notas abiertas? Guarda los cambios antes de que el gato se siente en el teclado.",
@@ -3841,6 +4048,41 @@
     let mineSeconds = 0;
     let mineTimerInterval;
 
+    const minePixelPatterns = {
+      "-": ["00000", "00000", "11111", "00000", "00000", "00000", "00000"],
+      "0": ["01110", "10001", "10011", "10101", "11001", "10001", "01110"],
+      "1": ["00100", "01100", "00100", "00100", "00100", "00100", "01110"],
+      "2": ["01110", "10001", "00001", "00010", "00100", "01000", "11111"],
+      "3": ["11110", "00001", "00001", "01110", "00001", "00001", "11110"],
+      "4": ["00010", "00110", "01010", "10010", "11111", "00010", "00010"],
+      "5": ["11111", "10000", "10000", "11110", "00001", "00001", "11110"],
+      "6": ["01110", "10000", "10000", "11110", "10001", "10001", "01110"],
+      "7": ["11111", "00001", "00010", "00100", "01000", "01000", "01000"],
+      "8": ["01110", "10001", "10001", "01110", "10001", "10001", "01110"],
+      "9": ["01110", "10001", "10001", "01111", "00001", "00001", "01110"]
+    };
+
+    function renderMinePixelDigits(element, value) {
+      const digits = document.createElement("span");
+      digits.className = "mine-pixel-digits";
+      digits.setAttribute("aria-hidden", "true");
+      [...String(value)].forEach(character => {
+        const digit = document.createElement("span");
+        digit.className = "mine-pixel-digit";
+        const pattern = minePixelPatterns[character] || minePixelPatterns["0"];
+        pattern.forEach(row => {
+          [...row].forEach(pixel => {
+            const dot = document.createElement("span");
+            dot.className = `mine-pixel-dot${pixel === "1" ? " on" : ""}`;
+            digit.append(dot);
+          });
+        });
+        digits.append(digit);
+      });
+      element.replaceChildren(digits);
+      element.setAttribute("aria-label", String(value));
+    }
+
     function mineNeighbors(index) {
       const row = Math.floor(index / mineColumns);
       const column = index % mineColumns;
@@ -3856,7 +4098,8 @@
 
     function updateMineCounter() {
       const remaining = totalMines - mineFlags;
-      mineCounter.textContent = remaining < 0 ? `-${String(Math.abs(remaining)).padStart(2, "0")}` : String(remaining).padStart(3, "0");
+      const value = remaining < 0 ? `-${String(Math.abs(remaining)).padStart(2, "0")}` : String(remaining).padStart(3, "0");
+      renderMinePixelDigits(mineCounter, value);
     }
 
     function updateMineCell(index) {
@@ -3868,7 +4111,12 @@
       button.classList.toggle("wrong-flag", cell.flagged && !cell.mine && mineFinished);
       button.removeAttribute("data-number");
       if (cell.revealed) {
-        button.textContent = cell.mine ? "💣" : cell.adjacent || "";
+        button.textContent = "";
+        if (cell.mine) {
+          button.textContent = "💣";
+        } else if (cell.adjacent > 0) {
+          renderMinePixelDigits(button, cell.adjacent);
+        }
         button.setAttribute("aria-label", cell.mine ? `Fila ${Math.floor(index / mineColumns) + 1}, columna ${index % mineColumns + 1}, mina` : `Fila ${Math.floor(index / mineColumns) + 1}, columna ${index % mineColumns + 1}, ${cell.adjacent ? `${cell.adjacent} minas alrededor` : "vacía"}`);
         if (cell.adjacent > 0 && !cell.mine) button.dataset.number = String(cell.adjacent);
       } else if (cell.flagged) {
@@ -3900,7 +4148,7 @@
       mineStarted = true;
       mineTimerInterval = setInterval(() => {
         mineSeconds = Math.min(999, mineSeconds + 1);
-        mineTimer.textContent = String(mineSeconds).padStart(3, "0");
+        renderMinePixelDigits(mineTimer, String(mineSeconds).padStart(3, "0"));
         if (mineSeconds === 999) clearInterval(mineTimerInterval);
       }, 1000);
     }
@@ -3994,7 +4242,7 @@
       mineStarted = false;
       mineFinished = false;
       mineSeconds = 0;
-      mineTimer.textContent = "000";
+      renderMinePixelDigits(mineTimer, "000");
       mineMessage.textContent = "¡Encuentra las 10 minas!";
       delete mineMessage.dataset.result;
       setMineFace("normal");
@@ -4065,6 +4313,26 @@
       ]
     };
 
+    function loadSavedPaintImages(profile) {
+      const serializedImages = localStorage.getItem(`frutiger-aero-paint-images-${profile}`);
+      if (!serializedImages) return [];
+      const images = JSON.parse(serializedImages);
+      if (!Array.isArray(images) || images.some(image => !image || typeof image.name !== "string" || typeof image.dataUrl !== "string" || !image.dataUrl.startsWith("data:image/png;base64,"))) {
+        throw new Error(`La lista de imágenes guardadas del perfil ${profile} no tiene un formato válido.`);
+      }
+      return images;
+    }
+
+    function suggestedPaintImageName(images) {
+      let number = images.length + 1;
+      let name = number === 1 ? "mi-dibujo.png" : `mi-dibujo-${number}.png`;
+      while (images.some(image => image.name.toLowerCase() === name.toLowerCase())) {
+        number += 1;
+        name = `mi-dibujo-${number}.png`;
+      }
+      return name;
+    }
+
     function closeFrutigerDocument() {
       closeWindow(frutigerDocument);
     }
@@ -4097,9 +4365,6 @@
       const content = fileContents[profile][folder];
       if (!content) return;
       document.querySelector("#folder-title").textContent = content.title;
-      document.querySelector("#file-status").textContent = profile === "gotita" && folder === "music"
-        ? `${gotitaPlaylistTracks.length} pistas · Música`
-        : content.status;
       document.querySelector("#file-description").textContent = profile === "gotita"
         ? gotitaFileDescriptions[folder]
         : "Elementos en esta ubicación";
@@ -4107,8 +4372,53 @@
       grid.replaceChildren();
       const entries = profile === "gotita" && folder === "music"
         ? gotitaPlaylistTracks.map(track => ["♫", track.name])
-        : fileEntries[profile][folder];
-      entries.forEach(([icon, name, childFolder]) => {
+        : [...fileEntries[profile][folder]];
+      let savedPaintImages = [];
+      if (folder === "pictures") {
+        try {
+          savedPaintImages = loadSavedPaintImages(profile);
+        } catch (error) {
+          console.error("No se pudieron cargar los dibujos guardados en Imágenes.", error);
+          showToast("No se pudieron cargar los dibujos guardados en Imágenes.");
+        }
+        savedPaintImages.forEach(image => entries.push(["🖼️", image.name, null, image]));
+      }
+      document.querySelector("#file-status").textContent = folder === "pictures"
+        ? `${entries.length} elementos · ${profile === "gotita" ? "Diseños" : "Imágenes"}`
+        : profile === "gotita" && folder === "music" ? `${gotitaPlaylistTracks.length} pistas · Música` : content.status;
+      entries.forEach(([icon, name, childFolder, savedImage]) => {
+        if (savedImage) {
+          const imageEntry = document.createElement("article");
+          imageEntry.className = "saved-paint-image";
+          const openButton = document.createElement("button");
+          openButton.className = "saved-paint-image-open";
+          openButton.type = "button";
+          openButton.setAttribute("aria-label", `Previsualizar ${name}`);
+          const thumbnail = document.createElement("img");
+          thumbnail.src = savedImage.dataUrl;
+          thumbnail.alt = "";
+          const imageName = document.createElement("span");
+          imageName.className = "saved-paint-image-name";
+          imageName.textContent = name;
+          openButton.append(thumbnail, imageName);
+          openButton.addEventListener("click", () => openSavedPaintImage(savedImage));
+          const actions = document.createElement("div");
+          actions.className = "saved-paint-image-actions";
+          const renameButton = document.createElement("button");
+          renameButton.type = "button";
+          renameButton.textContent = "Renombrar";
+          renameButton.setAttribute("aria-label", `Cambiar nombre de ${name}`);
+          renameButton.addEventListener("click", () => openPaintImageAction("rename", savedImage, profile));
+          const deleteButton = document.createElement("button");
+          deleteButton.type = "button";
+          deleteButton.textContent = "Eliminar";
+          deleteButton.setAttribute("aria-label", `Eliminar ${name}`);
+          deleteButton.addEventListener("click", () => openPaintImageAction("delete", savedImage, profile));
+          actions.append(renameButton, deleteButton);
+          imageEntry.append(openButton, actions);
+          grid.append(imageEntry);
+          return;
+        }
         const entry = document.createElement("button");
         entry.className = "file-entry";
         entry.type = "button";
@@ -4129,7 +4439,7 @@
             openWindow("frutiger-document");
           });
         } else {
-          entry.addEventListener("click", () => showToast(`${name} · archivo de demostración`));
+          entry.addEventListener("click", () => showApplicationNotFound(name));
         }
         grid.append(entry);
       });
@@ -4137,6 +4447,137 @@
         button.classList.toggle("selected", button.dataset.folder === folder);
       });
     }
+
+    function openSavedPaintImage(image) {
+      const preview = document.querySelector("#paint-image-preview");
+      const imageElement = document.querySelector("#paint-image-preview-content");
+      document.querySelector("#paint-image-preview-title").textContent = image.name;
+      imageElement.src = image.dataUrl;
+      imageElement.alt = image.name;
+      preview.showModal();
+    }
+
+    const paintImagePreview = document.querySelector("#paint-image-preview");
+    paintImagePreview.querySelector(".paint-image-preview-titlebar button").addEventListener("click", () => paintImagePreview.close());
+    paintImagePreview.addEventListener("close", () => {
+      document.querySelector("#paint-image-preview-content").removeAttribute("src");
+    });
+
+    const paintImageActionDialog = document.querySelector("#paint-image-action-dialog");
+    const paintImageActionForm = document.querySelector("#paint-image-action-form");
+    const paintImageNameInput = document.querySelector("#paint-image-name");
+    let paintImageActionTarget = null;
+
+    function openPaintImageAction(action, image, profile) {
+      paintImageActionTarget = { action, image, profile };
+      const isRename = action === "rename";
+      document.querySelector("#paint-image-action-title").textContent = isRename ? "Cambiar nombre del dibujo" : "Eliminar dibujo";
+      document.querySelector("#paint-image-action-message").textContent = isRename
+        ? `Escribe un nombre nuevo para «${image.name}».`
+        : `¿Quieres eliminar «${image.name}» de Imágenes? Esta acción no se puede deshacer.`;
+      document.querySelector("#paint-image-name-label").hidden = !isRename;
+      document.querySelector("#paint-image-action-confirm").textContent = isRename ? "Guardar" : "Eliminar";
+      document.querySelector("#paint-image-action-confirm").disabled = false;
+      document.querySelector("#paint-image-action-error").textContent = "";
+      paintImageNameInput.value = image.name;
+      paintImageActionDialog.showModal();
+      if (isRename) {
+        paintImageNameInput.focus();
+        paintImageNameInput.select();
+      } else {
+        document.querySelector("#paint-image-action-confirm").focus();
+      }
+    }
+
+    function openPaintImageSaveDialog(blob, profile) {
+      let suggestedName;
+      try {
+        suggestedName = suggestedPaintImageName(loadSavedPaintImages(profile));
+      } catch (error) {
+        console.error("No se pudo preparar el guardado en Imágenes.", error);
+        paintStatus.textContent = "No se pudo preparar el guardado en Imágenes.";
+        showToast("No se pudieron cargar las imágenes guardadas.");
+        return;
+      }
+      paintImageActionTarget = { action: "save", blob, profile };
+      document.querySelector("#paint-image-action-title").textContent = "Guardar dibujo en Imágenes";
+      document.querySelector("#paint-image-action-message").textContent = "Elige un nombre para tu dibujo.";
+      document.querySelector("#paint-image-name-label").hidden = false;
+      document.querySelector("#paint-image-action-confirm").textContent = "Guardar";
+      document.querySelector("#paint-image-action-confirm").disabled = false;
+      document.querySelector("#paint-image-action-error").textContent = "";
+      paintImageNameInput.value = suggestedName;
+      paintImageActionDialog.showModal();
+      paintImageNameInput.focus();
+      paintImageNameInput.select();
+    }
+
+    function normalizedPaintImageName(value) {
+      const baseName = value.trim().replace(/\.png$/i, "").trim().replace(/[. ]+$/, "");
+      if (!baseName || /[<>:"/\\|?*\u0000-\u001f]/.test(baseName)) return null;
+      return `${baseName}.png`;
+    }
+
+    paintImageActionForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const target = paintImageActionTarget;
+      if (!target) return;
+      const errorMessage = document.querySelector("#paint-image-action-error");
+      try {
+        const images = loadSavedPaintImages(target.profile);
+        if (target.action === "save" || target.action === "rename") {
+          const newName = normalizedPaintImageName(paintImageNameInput.value);
+          if (!newName) {
+            errorMessage.textContent = "Escribe un nombre válido para el dibujo.";
+            paintImageNameInput.focus();
+            return;
+          }
+          const imageIndex = target.action === "rename"
+            ? images.findIndex(image => image.name === target.image.name && image.dataUrl === target.image.dataUrl)
+            : -1;
+          if (target.action === "rename" && imageIndex < 0) throw new Error("El dibujo ya no está en la carpeta Imágenes.");
+          const duplicate = images.some((image, index) => index !== imageIndex && image.name.toLowerCase() === newName.toLowerCase());
+          if (duplicate) {
+            errorMessage.textContent = "Ya existe un dibujo con ese nombre.";
+            paintImageNameInput.focus();
+            return;
+          }
+          if (target.action === "save") {
+            const confirmButton = document.querySelector("#paint-image-action-confirm");
+            confirmButton.disabled = true;
+            confirmButton.textContent = "Guardando…";
+            errorMessage.textContent = "";
+            savePaintDrawingToImages(target.blob, newName, target.profile);
+          } else {
+            images[imageIndex].name = newName;
+            localStorage.setItem(`frutiger-aero-paint-images-${target.profile}`, JSON.stringify(images));
+            paintImageActionDialog.close();
+            if (activeProfile === target.profile) showFolder("pictures");
+            showToast(`El dibujo ahora se llama «${newName}».`);
+          }
+        } else {
+          const imageIndex = images.findIndex(image => image.name === target.image.name && image.dataUrl === target.image.dataUrl);
+          if (imageIndex < 0) throw new Error("El dibujo ya no está en la carpeta Imágenes.");
+          const deletedName = images[imageIndex].name;
+          images.splice(imageIndex, 1);
+          localStorage.setItem(`frutiger-aero-paint-images-${target.profile}`, JSON.stringify(images));
+          paintImageActionDialog.close();
+          if (activeProfile === target.profile) showFolder("pictures");
+          showToast(`Se eliminó «${deletedName}» de Imágenes.`);
+        }
+      } catch (error) {
+        console.error("No se pudo actualizar el dibujo guardado.", error);
+        errorMessage.textContent = "No se pudo actualizar el dibujo. Inténtalo de nuevo.";
+      }
+    });
+
+    document.querySelector("#paint-image-action-cancel").addEventListener("click", () => paintImageActionDialog.close());
+    paintImageActionDialog.querySelector(".paint-image-action-titlebar button").addEventListener("click", () => paintImageActionDialog.close());
+    paintImageActionDialog.addEventListener("close", () => {
+      paintImageActionTarget = null;
+      document.querySelector("#paint-image-action-confirm").disabled = false;
+      document.querySelector("#paint-image-action-error").textContent = "";
+    });
 
     document.querySelectorAll(".file-sidebar [data-folder]").forEach(button => {
       button.addEventListener("click", () => showFolder(button.dataset.folder));
@@ -4150,6 +4591,10 @@
     const playerVolumeControl = document.querySelector("#player-volume");
     const playerVisualizer = document.querySelector("#player-visualizer");
     const visualizerBars = [...playerVisualizer.querySelectorAll("i")];
+    const desktopMusicVisualizer = document.querySelector("#desktop-music-visualizer");
+    const desktopVisualizerTrack = document.querySelector("#desktop-visualizer-track");
+    const desktopVisualizerBarsContainer = document.querySelector("#desktop-visualizer-bars");
+    const desktopVisualizerBars = [...desktopVisualizerBarsContainer.querySelectorAll("i")];
     const trayVolumeControl = document.querySelector("#tray-volume");
     const trayVolumeValue = document.querySelector("#tray-volume-value");
     const trayVolumeButton = document.querySelector("#tray-volume-button");
@@ -4208,6 +4653,9 @@
 
     visualizerBars.forEach((bar, index) => {
       bar.style.setProperty("--bar-hue", String(180 + index * 14));
+    });
+    desktopVisualizerBars.forEach((bar, index) => {
+      bar.style.setProperty("--bar-hue", String(180 + index * 7));
     });
 
     function renderCalendar() {
@@ -4328,6 +4776,7 @@
       const AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
       if (!AudioContextConstructor) {
         playerVisualizer.classList.add("fallback");
+        desktopVisualizerBarsContainer.classList.add("fallback");
         return;
       }
       if (!audioContext) {
@@ -4340,6 +4789,7 @@
         audioAnalyser.connect(audioContext.destination);
         audioFrequencyData = new Uint8Array(audioAnalyser.frequencyBinCount);
         playerVisualizer.classList.remove("fallback");
+        desktopVisualizerBarsContainer.classList.remove("fallback");
       }
       if (audioContext.state === "suspended") await audioContext.resume();
     }
@@ -4350,15 +4800,15 @@
         return;
       }
       audioAnalyser.getByteFrequencyData(audioFrequencyData);
-      visualizerBars.forEach((bar, index) => {
-        const start = Math.floor(index * audioFrequencyData.length / visualizerBars.length);
-        const end = Math.max(start + 1, Math.floor((index + 1) * audioFrequencyData.length / visualizerBars.length));
+      [visualizerBars, desktopVisualizerBars].forEach(bars => bars.forEach((bar, index) => {
+        const start = Math.floor(index * audioFrequencyData.length / bars.length);
+        const end = Math.max(start + 1, Math.floor((index + 1) * audioFrequencyData.length / bars.length));
         let peak = 0;
         for (let bin = start; bin < end; bin += 1) peak = Math.max(peak, audioFrequencyData[bin]);
         const level = peak / 255;
         bar.style.height = `${Math.max(4, 4 + Math.pow(level, .82) * 96)}%`;
-        bar.style.setProperty("--bar-hue", String((180 + index * 14 + Math.round(level * 62)) % 360));
-      });
+        bar.style.setProperty("--bar-hue", String((180 + index * (bars === visualizerBars ? 14 : 7) + Math.round(level * 62)) % 360));
+      }));
       visualizerFrame = requestAnimationFrame(renderAudioVisualizer);
     }
 
@@ -4372,6 +4822,7 @@
       if (visualizerFrame !== null) cancelAnimationFrame(visualizerFrame);
       visualizerFrame = null;
       visualizerBars.forEach(bar => { bar.style.height = "5%"; });
+      desktopVisualizerBars.forEach(bar => { bar.style.height = "5%"; });
     }
 
     function updatePlayerDisplay() {
@@ -4389,6 +4840,9 @@
       document.querySelector("#player-play").textContent = audioPlayer.paused ? "▶" : "Ⅱ";
       document.querySelector("#player-play").setAttribute("aria-label", audioPlayer.paused ? "Reproducir" : "Pausar");
       playerVisualizer.classList.toggle("playing", !audioPlayer.paused);
+      desktopMusicVisualizer.hidden = audioPlayer.paused;
+      desktopVisualizerBarsContainer.classList.toggle("playing", !audioPlayer.paused);
+      desktopVisualizerTrack.textContent = track ? track.name : "Windows Media Player";
       if (audioPlayer.paused) stopAudioVisualizer();
       else startAudioVisualizer();
       document.querySelector("#music-track").textContent = track ? track.name : "Windows Media Player";
