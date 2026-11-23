@@ -1552,6 +1552,7 @@
 </head>
 <body>
   <audio id="startup-sound" src="Microsoft Windows XP Startup Sound.mp3" preload="auto"></audio>
+  <audio id="xp-error-sound" src="Windows XP Error Sound.mp3" preload="auto"></audio>
   <section class="story-screen is-loading" id="story-screen" aria-label="Pantalla de inicio y selección de perfiles">
     <div class="story-menu">
       <div class="story-brand">
@@ -2609,17 +2610,10 @@
       setTimeout(() => {
         storyScreen.classList.remove("is-entering-game");
         storyScreen.hidden = true;
+        storyDialogue.hidden = true;
         document.body.classList.toggle("desktop-entered", isGotita);
         if (isGotita) startFlourishSequence();
         playStartupSound();
-        const saved = loadStoryProgress();
-        if (saved === "complete") {
-          showToast(isGotita ? "Perfil de Gotita cargado." : "Continuación cargada.");
-          return;
-        }
-        storyLine = /^\d+$/.test(saved) ? Number(saved) : 0;
-        saveStoryProgress(String(storyLine));
-        showStoryDialogue();
       }, enterDesktopDelay);
     }
 
@@ -2639,12 +2633,10 @@
         storyAboutButton.dataset.mode = "about";
       }
     });
-
-    const finishStoryBoot = () => {
+    setTimeout(() => {
       storyScreen.classList.remove("is-loading");
-    };
-    setTimeout(finishStoryBoot, 2200);
-    window.addEventListener("load", () => setTimeout(finishStoryBoot, 800), { once: true });
+    }, 2200);
+
     let contextMenuReturnFocus = null;
     let assistantTipTimer;
     let lastAssistantTipIndex = -1;
@@ -2675,6 +2667,7 @@
             window.hidden = false;
             focusWindow(window);
           } else {
+            if (window.id === "rhythm") pauseRhythmGame();
             window.dataset.minimized = "true";
             window.hidden = true;
           }
@@ -2719,6 +2712,7 @@
 
     function closeWindow(window) {
       if (window === browserWindow) suspendBrowserTabs();
+      if (window.id === "rhythm") pauseRhythmGame();
       window.hidden = true;
       window.dataset.minimized = "false";
       updateTaskbar();
@@ -3169,18 +3163,18 @@
         document.querySelector("#desktop-resolution").textContent = `${innerWidth} × ${innerHeight}`;
         desktopPropertiesDialog.showModal();
       } else if (action === "programs") {
-        showToast("Los programas instalados en este escritorio están listos para usarse.");
+        showApplicationNotFound("Programas");
       } else if (action === "network") {
         toggleTrayPopover(document.querySelector("#tray-network-button"));
       } else if (action === "search" || action === "folders") {
         openWindow("files");
       } else if (action === "up") {
-        showToast("Ya estás en Mi PC.");
+        showApplicationNotFound("Subir");
       } else if (action === "view") {
         const detailsView = computerWindow.classList.toggle("details-view");
         button.setAttribute("aria-pressed", String(detailsView));
       } else if (action === "cd") {
-        showToast("La unidad de CD (D:) está lista para explorar.");
+        showApplicationNotFound("Unidad de CD");
       }
     });
 
@@ -3237,6 +3231,7 @@
       window.addEventListener("pointerdown", () => focusWindow(window));
       window.querySelector("[data-close]").addEventListener("click", () => closeWindow(window));
       window.querySelector("[data-minimize]").addEventListener("click", () => {
+        if (window.id === "rhythm") pauseRhythmGame();
         window.hidden = true;
         window.dataset.minimized = "true";
         updateTaskbar();
@@ -3370,7 +3365,7 @@
         createBubble();
         showToast("Escritorio actualizado.");
       } else if (button.dataset.contextAction === "customize") {
-        showToast("Tema actual: Frutiger Aero.");
+        showApplicationNotFound("Personalizar");
       } else if (button.dataset.contextAction === "properties") {
         document.querySelector("#desktop-resolution").textContent = `${innerWidth} × ${innerHeight}`;
         desktopPropertiesDialog.showModal();
@@ -3407,18 +3402,18 @@
         document.querySelector("#desktop-resolution").textContent = `${innerWidth} × ${innerHeight}`;
         desktopPropertiesDialog.showModal();
       } else if (button.dataset.startAction === "program-defaults") {
-        showToast("Los programas de este escritorio están listos para usarse.");
+        showApplicationNotFound("Programas predeterminados");
       } else if (button.dataset.startAction === "network") {
         toggleTrayPopover(document.querySelector("#tray-network-button"));
       } else if (button.dataset.startAction === "printers") {
-        showToast("No hay impresoras configuradas en este escritorio.");
+        showApplicationNotFound("Impresoras y fax");
       } else if (button.dataset.startAction === "help") {
         showAssistantTip();
       } else if (button.dataset.startAction === "search") {
         openWindow("files");
         showToast("Explora tus archivos y carpetas.");
       } else if (button.dataset.startAction === "run") {
-        showToast("La opción Ejecutar no tiene comandos configurados.");
+        showApplicationNotFound("Ejecutar");
       }
     });
     startLogOffButton.addEventListener("click", () => {
@@ -4031,6 +4026,11 @@
     function showApplicationNotFound(itemName) {
       const dialog = document.querySelector("#xp-application-error");
       dialog.querySelector("#xp-error-path").textContent = `C:\\${itemName}`;
+      const errorSound = document.querySelector("#xp-error-sound");
+      errorSound.currentTime = 0;
+      errorSound.play().catch(error => {
+        console.error("No se pudo reproducir el sonido de error de Windows XP.", error);
+      });
       dialog.showModal();
       dialog.querySelector(".xp-error-ok").focus();
     }
@@ -4430,6 +4430,8 @@
     let rhythmSongVersion = "cut";
     let rhythmRecording = false;
     let recordedRhythmNotes = [];
+    let rhythmPaused = false;
+    let rhythmPausedPosition = 0;
     const rhythmSong = new Audio();
     rhythmSong.preload = "auto";
     rhythmSong.volume = 0.75;
@@ -4463,6 +4465,8 @@
     function resetRhythmGame() {
       rhythmRunning = false;
       rhythmCountdownCancelled = true;
+      rhythmPaused = false;
+      rhythmPausedPosition = 0;
       rhythmCountdown.textContent = "";
       rhythmCountdown.classList.remove("visible");
       rhythmStart.disabled = false;
@@ -4482,6 +4486,23 @@
       rhythmStatus.textContent = "Pulsa D, F, J o K al llegar a la barra.";
       rhythmStage.querySelectorAll(".rhythm-note").forEach(note => note.remove());
       rhythmStart.textContent = "Iniciar canción";
+    }
+
+    function pauseRhythmGame() {
+      rhythmPausedPosition = Math.max(0, rhythmSong.currentTime);
+      rhythmPaused = rhythmPausedPosition > 0;
+      rhythmRunning = false;
+      rhythmCountdownCancelled = true;
+      if (rhythmAnimation) cancelAnimationFrame(rhythmAnimation);
+      rhythmAnimation = null;
+      rhythmSong.pause();
+      rhythmCountdown.textContent = "";
+      rhythmCountdown.classList.remove("visible");
+      if (rhythmPaused) {
+        rhythmStart.disabled = false;
+        rhythmStart.textContent = "Reanudar";
+        rhythmStatus.textContent = "Canción pausada.";
+      }
     }
 
     function rhythmTone(lane, duration = 0.08) {
@@ -4747,6 +4768,23 @@
     }
 
     rhythmStart.addEventListener("click", () => {
+      if (rhythmPaused) {
+        rhythmPaused = false;
+        rhythmCountdownCancelled = false;
+        rhythmRunning = true;
+        rhythmStart.disabled = true;
+        rhythmStart.textContent = "Reproduciendo...";
+        rhythmSong.currentTime = rhythmPausedPosition;
+        rhythmSong.play().then(() => {
+          rhythmAnimation = requestAnimationFrame(animateRhythm);
+        }).catch(() => {
+          rhythmRunning = false;
+          rhythmStart.disabled = false;
+          rhythmStart.textContent = "Reintentar";
+          rhythmStatus.textContent = "El navegador bloqueó la reproducción.";
+        });
+        return;
+      }
       resetRhythmGame();
       rhythmCountdownCancelled = false;
       rhythmAudio = rhythmAudio || new (window.AudioContext || window.webkitAudioContext)();
@@ -4835,9 +4873,12 @@
     const rhythmSongSelect = document.querySelector("#rhythm-song");
     rhythmSongSelect.addEventListener("change", event => {
       rhythmSongVersion = event.target.value;
+      rhythmDifficultySelect.hidden = rhythmSongVersion === "full";
+      rhythmDifficultySelect.style.display = rhythmSongVersion === "full" ? "none" : "";
       resetRhythmGame();
       rhythmStatus.textContent = event.target.selectedOptions[0].textContent + " seleccionada.";
     });
+    rhythmDifficultySelect.hidden = rhythmSongVersion === "full";
     rhythmDifficultySelect.addEventListener("change", event => {
       rhythmDifficulty = event.target.value;
       resetRhythmGame();
@@ -4981,8 +5022,8 @@
         : "Elementos en esta ubicación";
       const grid = document.querySelector("#file-grid");
       grid.replaceChildren();
-      const entries = profile === "gotita" && folder === "music"
-        ? gotitaPlaylistTracks.map(track => ["♫", track.name])
+      const entries = folder === "music"
+        ? musicTracks.map(track => ["♫", track.name])
         : [...fileEntries[profile][folder]];
       let savedPaintImages = [];
       if (folder === "pictures") {
@@ -4996,7 +5037,7 @@
       }
       document.querySelector("#file-status").textContent = folder === "pictures"
         ? `${entries.length} elementos · ${profile === "gotita" ? "Diseños" : "Imágenes"}`
-        : profile === "gotita" && folder === "music" ? `${gotitaPlaylistTracks.length} pistas · Música` : content.status;
+        : folder === "music" ? `${musicTracks.length} pistas · Música` : content.status;
       entries.forEach(([icon, name, childFolder, savedImage]) => {
         if (savedImage) {
           if (savedImage.static) {
@@ -5067,6 +5108,16 @@
             configureFrutigerDocument(profile);
             frutigerDocumentOpener = entry;
             openWindow("frutiger-document");
+          });
+        } else if (folder === "music") {
+          entry.addEventListener("click", () => {
+            const trackIndex = musicTracks.findIndex(track => track.name === name);
+            if (trackIndex < 0) {
+              showToast("No se pudo encontrar esta canción en la lista.");
+              return;
+            }
+            openWindow("player");
+            playTrack(trackIndex);
           });
         } else {
           entry.addEventListener("click", () => showApplicationNotFound(name));
@@ -5243,6 +5294,7 @@
       { name: "Wired Or Wireless.mp3", url: "Wired Or Wireless.mp3" }
     ];
     const gotitaPlaylistTracks = [
+      { name: "6 Little Eggs Nightcore Eruruu.mp3", url: "6 Little Eggs Nightcore Eruruu.mp3" },
       { name: "Nightcore - Bad boy.mp3", url: "Nightcore - Bad boy.mp3" },
       { name: "Nightcore Classics - Rockefeller Street [HD].mp3", url: "Nightcore Classics - Rockefeller Street [HD].mp3" },
       { name: "Bad Apple!! feat.nomico", url: "bad-apple-feat-nomico.mp3" },
@@ -5392,7 +5444,7 @@
     });
     document.querySelector("#tray-security-button").addEventListener("click", () => {
       closeTrayPopovers();
-      showToast("Seguridad: todo está tranquilo en este escritorio de demostración.");
+      showApplicationNotFound("Centro de seguridad");
     });
     renderCalendar();
     syncTrayNetwork();
@@ -5514,7 +5566,7 @@
       const audioFiles = [...files].filter(file => file.type.startsWith("audio/") || /\.(mp3|m4a|aac|ogg|oga|wav|flac|opus|wma)$/i.test(file.name));
       if (!audioFiles.length) {
         playerStatus.textContent = "No se encontraron archivos de audio compatibles.";
-        showToast("Selecciona archivos de música como MP3, WAV u OGG.");
+        showToast("Selecciona archivos de audio compatibles para añadirlos a la lista.");
         return;
       }
       audioFiles.forEach(file => musicTracks.push({ name: file.name, url: URL.createObjectURL(file) }));
@@ -5524,7 +5576,8 @@
 
     async function playTrack(index) {
       if (!musicTracks.length) {
-        showToast("Añade música a tu lista para comenzar a reproducir.");
+        playerStatus.textContent = "Añade música a la lista antes de reproducir.";
+        showToast("Añade una canción a la lista para reproducirla.");
         return;
       }
       currentTrack = (index + musicTracks.length) % musicTracks.length;
@@ -5598,6 +5651,9 @@
     });
     audioPlayer.addEventListener("error", () => {
       playerStatus.textContent = "No se pudo leer el archivo de audio. Prueba con otro formato.";
+      const errorSound = document.querySelector("#xp-error-sound");
+      errorSound.currentTime = 0;
+      errorSound.play().catch(() => {});
     });
 
     const playerDrop = document.querySelector("#player-drop");
