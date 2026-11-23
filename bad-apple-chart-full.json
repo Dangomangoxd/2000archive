@@ -1,0 +1,7056 @@
+{
+  "cancion": "Bad Apple!! feat.nomico - Full",
+  "bpm": 138,
+  "offset_ms": 0,
+  "carriles": 4,
+  "duracion_ms": 324174,
+  "dificultades": {
+    "grabado": [
+      {
+        "tiempo_ms": 1040,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 1830,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 2279,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 2739,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 3064,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 3180,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 3576,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 4043,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 4476,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 4655,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 4907,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 5375,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 5789,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 6211,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 6338,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 6501,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 6598,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 7104,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 7534,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 7967,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 8146,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 8401,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 8831,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 9272,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 9694,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 9810,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 9957,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 10089,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 10576,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 11044,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 11447,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 11629,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 11872,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 12302,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 12728,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 13161,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 13293,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 13447,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 13571,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 14032,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 14473,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 14931,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 15406,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 15688,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 15975,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 16110,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 16273,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 16586,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 16783,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 16919,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 17019,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 17407,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 17631,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 17766,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 17856,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 18142,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 18262,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 18378,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 18665,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 18861,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 19168,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 19395,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 19485,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 19558,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 19663,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 20014,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 20232,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 20375,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 20440,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 20518,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 20878,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21060,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21204,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21358,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21606,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21699,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21815,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 21931,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 22166,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 22364,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 22643,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 22859,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 22983,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 23110,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 23262,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 23552,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 23703,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 23812,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 23939,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 24055,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 24361,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 24558,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 24678,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 24794,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 24911,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 25154,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 25305,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 25568,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 25738,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 26098,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 26323,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 26466,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 26582,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 26711,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 27000,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 27186,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 27313,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 27402,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 27527,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 27871,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28014,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28176,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28258,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28366,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28529,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28707,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 28881,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29005,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29059,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29276,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29570,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29779,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29931,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 29931,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30030,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30158,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30445,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30661,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30804,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30886,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 30959,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 31083,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 31334,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 31505,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 31648,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 31687,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 31783,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 32055,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 32244,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 32496,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 32686,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 33045,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 33270,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 33424,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 33487,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 33594,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 33919,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 34087,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 34260,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 34295,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 34384,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 34806,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35034,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35177,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35340,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35483,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35599,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35754,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 35952,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 36095,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 36211,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 36509,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 36734,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 36880,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 36931,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 37047,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 37166,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 37527,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 37685,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 37825,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 37930,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38262,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38463,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38598,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38642,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38731,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38838,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 38982,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 39183,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 39423,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 39551,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 39694,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 39992,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 40216,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 40359,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 40460,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 40568,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 40665,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 40937,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 41145,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 41280,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 41342,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 41447,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 41718,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 41908,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42051,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42143,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42249,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42403,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42546,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42608,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42728,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 42852,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 43104,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 43474,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 43761,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 43967,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 44365,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 44543,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 45032,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 45274,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 45751,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 45878,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 46354,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 46543,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 46749,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 47008,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 47217,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 47442,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 47910,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 48142,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 48216,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 48595,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 48827,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 49288,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 49493,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 49899,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 50104,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 50321,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 50557,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 50770,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 51006,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 51699,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 52047,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 52248,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 52733,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 52930,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 53370,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 53579,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 53823,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 54047,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 54245,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 54481,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 54891,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 55108,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 55549,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 55774,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 56118,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 56261,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 56396,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 56560,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 56691,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 56846,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 57008,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 57152,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 57384,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 57601,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 57852,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 58312,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 58526,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 58742,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 59221,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 59652,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 59914,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 60104,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 60526,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 60832,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 61029,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 61173,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 61400,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 61838,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 62055,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 62279,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 62504,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 62759,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 62911,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 63134,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 63397,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 63611,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 63758,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 64044,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 64280,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 64458,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 64639,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 64825,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 65321,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 65545,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 65743,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 66230,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 66606,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 66807,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 67039,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 67291,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 67542,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 67767,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 67983,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 68173,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 68390,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 68757,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 68966,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 69199,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 69218,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 69713,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 69714,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 70108,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 70244,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 70387,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 70549,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 70685,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 70971,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 71160,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 71385,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 71512,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 71784,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 72279,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 72484,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 72701,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 73151,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 73637,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 73769,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 74060,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 74264,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 74489,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 74752,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 74931,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 75139,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 75336,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 75813,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 76021,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 76219,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 76443,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 76679,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 76892,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 77109,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 77353,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 77585,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 77767,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 77999,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 78189,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 78367,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 78513,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 78719,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 79206,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 79423,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 79655,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 80070,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 80510,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 80700,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 80906,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 81087,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 81339,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 81583,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 81788,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 81942,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 82202,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 82651,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 82833,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 83146,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 83165,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 83615,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 83615,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 84040,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 84056,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 84489,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 84497,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 84946,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 85143,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 85379,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 85550,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 85774,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 86289,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 86486,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 86681,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 86900,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 87116,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 87314,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 87519,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 87952,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 88150,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 88358,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 88645,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 88862,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 89040,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 89284,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 89671,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 89914,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 90120,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 90337,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 90534,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 90751,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 90967,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 91416,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 91668,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 91846,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 92109,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 92298,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 92504,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 92713,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 93154,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 93367,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 93583,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 93800,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 94025,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 94223,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 94466,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 94918,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 95115,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 95313,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 95476,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 95689,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 95898,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 96195,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 96644,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 96842,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 97039,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 97240,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 97473,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 97894,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 98046,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 98254,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 98525,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 98765,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 99272,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 99497,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 99713,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 100183,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 100387,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 100584,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 100775,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 101017,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 101223,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 101459,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 101919,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 102125,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 102322,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 102558,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 102790,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 102999,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 103185,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 103626,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 103835,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 104025,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 104237,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 104447,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 104625,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 104888,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 105364,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 105542,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 105786,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 105994,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 106227,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 106470,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 106687,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 107101,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 107287,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 107504,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 107759,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 108007,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 108161,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 108398,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 108808,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 109025,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 109242,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 109431,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 109683,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 110050,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 110527,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 110735,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 110968,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 111203,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 111401,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 111606,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 111869,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 112310,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 112527,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 112733,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 112968,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 113185,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 113390,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 113622,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 114056,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 114516,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 114702,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 114946,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 115120,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 115368,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 115801,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 116234,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 116412,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 116664,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 116908,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 117133,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 117546,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 117782,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 118034,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 118224,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 118456,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 118592,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 118800,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 119025,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 119238,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 119455,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 119687,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 119904,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 120166,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 120391,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 120615,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 121030,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 121246,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 121451,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 121622,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 121831,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 122001,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 122272,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 122729,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 122926,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 123154,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 123359,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 123630,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 123800,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 124071,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 124486,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 124675,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 124888,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 125078,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 125313,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 125558,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 125762,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 126223,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 126420,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 126653,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 126850,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 127113,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 127194,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 127500,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 127941,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 128147,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 128329,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 128568,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 128824,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 128982,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 129191,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 129408,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 129648,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 129903,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 130120,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 130333,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 130577,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 130774,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 131018,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 131262,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 131468,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 131711,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 131861,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 132024,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 132249,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 132457,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 132674,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 133142,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 133321,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 133584,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 133816,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 134033,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 134246,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 134482,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 134625,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 134922,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 135147,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 135372,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 135581,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 135797,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 136030,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 136246,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 136641,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 136858,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 137101,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 137253,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 137504,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 137729,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 137927,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 138344,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 138541,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 138785,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 138963,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 139199,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 139656,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 139657,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 140124,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 140143,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 140558,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 140863,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 141103,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 141150,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 141285,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 141428,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 141769,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 141958,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 142078,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 142176,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 142311,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 142636,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 142849,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 143003,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 143112,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 143382,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 143545,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 143650,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 143859,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 144056,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 144327,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 144625,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 144768,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 144903,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 144992,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 145271,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 145495,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 145685,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 145774,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 146080,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 146304,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 146448,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 146559,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 146710,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 146962,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 147078,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 147179,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 147360,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 147485,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 147790,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 148096,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 148232,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 148330,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 148402,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 148688,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 148916,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149068,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149141,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149238,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149556,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149753,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149896,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 149965,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150039,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150120,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150318,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150453,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150535,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150758,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 150867,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 151002,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 151319,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 151533,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 151695,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 151714,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 151812,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 152163,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 152361,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 152515,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 152585,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 152667,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 152767,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153026,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153278,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153449,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153603,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153692,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153808,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 153956,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 154125,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 154269,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 154447,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 154664,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 154880,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 155085,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 155302,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 155484,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 155736,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 155953,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 156178,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 156409,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 156607,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 156800,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 156958,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 157175,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 157311,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 157562,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 157744,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 157914,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 158111,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 158344,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 158553,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 158805,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 159021,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 159207,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 159416,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 159640,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 159783,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160039,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160225,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160344,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160542,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160647,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160774,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160972,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 160991,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 161235,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 161440,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 161808,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 162288,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 162736,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 163166,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 163591,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 164015,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 164094,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 164276,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 164392,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 164537,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 164842,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 165283,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 165751,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 166192,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 166633,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167048,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167462,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167462,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167686,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167687,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167821,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167849,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 167992,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 168000,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 168216,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 168433,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 168611,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 168828,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 169036,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 169215,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 169675,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 169908,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 170116,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 170511,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 170979,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 171204,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 171409,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 171626,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 171881,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 172121,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 172337,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 172527,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 172744,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 173166,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 173406,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 173650,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 173893,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 174172,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 174370,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 174544,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 174741,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 174928,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 175136,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 175354,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 175565,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 175782,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 175991,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 176242,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 176630,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 176819,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 177024,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 177493,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 177941,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 178151,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 178402,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 178618,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 178762,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 178998,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 179222,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 179400,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 179644,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 180047,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 180256,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 180453,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 180961,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181390,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181436,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181560,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181579,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181723,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181742,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181885,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 181886,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182028,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182029,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182156,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182171,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182335,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182524,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182759,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 182984,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 183189,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 183630,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 183863,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 184064,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 184466,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 184889,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 185097,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 185330,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 185519,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 185798,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 186033,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 186247,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 186440,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 186672,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 187094,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 187327,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 187543,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 187752,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 187961,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 188220,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 188453,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 188623,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 188866,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 189056,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 189281,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 189470,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 189694,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 189857,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 190109,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 190531,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 190748,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 190964,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 191405,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 191882,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 192079,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 192303,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 192547,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 192764,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 192999,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 193185,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 193383,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 193584,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 193959,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 194141,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 194447,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 194455,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 194932,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 194932,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 195345,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 195364,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 195798,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 195798,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 196254,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 196471,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 196695,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 196913,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 197129,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 197524,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 197721,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 197946,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 198189,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 198441,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 198646,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 198855,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 199304,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 199513,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 199702,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 199888,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 200119,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 200295,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 200574,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 200953,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 201166,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 201421,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 201672,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 201878,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 202040,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 202284,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 202734,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 202969,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 203166,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 203398,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 203642,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 203859,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 204057,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 204470,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 204695,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 204927,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 205101,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 205345,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 205515,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 205767,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 206189,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 206440,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 206645,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 206854,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 207071,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 207303,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 207504,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 207593,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 207953,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 208232,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 208410,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 208627,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 208835,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 209021,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 209246,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 209373,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 209752,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 209985,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 210175,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 210384,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 210635,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 210778,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 210984,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 211158,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 211371,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 211553,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 211750,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 211913,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 212164,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 212342,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 212578,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 212776,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 212938,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 213189,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 213406,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 213584,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 213758,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 213955,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 214134,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 214296,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 214512,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 214908,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 215078,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 215331,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 215511,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 215744,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 215953,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 216165,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 216305,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 216637,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 216835,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 217094,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 217237,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 217543,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 217652,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 217888,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 217996,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 218201,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 218426,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 218615,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 218832,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 219002,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 219192,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 219416,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 219660,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 220101,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 220307,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 220542,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 220748,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 220991,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 221181,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 221433,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 221854,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 221995,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 222288,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 222504,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 222744,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 223000,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 223197,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 223627,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 223843,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 224060,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 224231,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 224474,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 224672,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 224915,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 225364,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 225570,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 225798,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 226003,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 226247,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 226390,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 226634,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 227117,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 227342,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 227551,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 227760,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 227992,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 228182,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 228406,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 228820,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 229037,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 229269,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 229459,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 229711,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 229873,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 230097,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 230512,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 230782,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 231007,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 231239,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 231475,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 231673,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 231870,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 232276,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 232520,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 232687,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 232950,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 233182,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 233391,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 233569,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 234021,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 234219,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 234463,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 234714,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 234912,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 235129,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 235345,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 235748,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 235964,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236224,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236226,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236226,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236226,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236460,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236479,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236480,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236480,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236665,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236665,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236703,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236711,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236854,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236874,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236920,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 236928,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237071,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237072,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237079,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237098,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237504,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237710,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 237954,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 238167,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 238441,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 238638,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 238836,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 238836,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 239088,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 239321,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 239529,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 239699,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 239942,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 240159,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 240508,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 240509,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 240949,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 241193,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 241390,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 241649,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 241866,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 242009,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 242288,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 242289,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 242702,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 242919,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 243135,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 243352,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 243596,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 243782,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 243991,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 243999,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 244000,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 244018,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 244432,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 244683,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 244854,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 245043,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 245295,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 245510,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 245755,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 245782,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 246231,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 246483,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 246673,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 246862,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 247087,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 247265,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 247544,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 247555,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 247734,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 248012,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 248221,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 248472,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 248681,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 248886,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 249091,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 249238,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 249478,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 249687,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 249857,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 250082,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 250272,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 250496,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 250659,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 250884,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 250991,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 251386,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 251855,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 252017,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 252268,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 252466,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 252702,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 252872,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 253143,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 253375,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 253584,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 253762,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 253998,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 254204,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 254455,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 254563,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 254896,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 255032,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 255240,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 255427,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 255670,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 255833,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 255995,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 256247,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 256696,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 256920,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 257091,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 257299,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 257524,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 257694,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 257920,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 258379,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 258623,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 258801,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 258936,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 259208,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 259432,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 259664,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 259927,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 260179,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 260322,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 260546,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 260783,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 260981,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 261212,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 261429,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 261870,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 262113,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 262312,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 262509,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 262760,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 262996,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 263229,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 263615,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 263805,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 264010,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 264200,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 264436,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 264649,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 264838,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 265299,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 265551,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 265713,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 265864,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 266065,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 266316,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 266611,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 267052,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 267315,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 267493,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 267726,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 267935,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 268143,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 268383,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 268836,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 268844,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 269266,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 269420,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 269672,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 269889,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 270113,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 270535,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 270744,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 270949,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 271139,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 271371,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 271580,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 271839,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 272281,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 272486,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 272776,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 272776,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 273000,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 273197,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 273441,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 273468,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 273639,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 273855,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 274072,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 274242,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 274502,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 274502,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 274737,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 274936,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 275152,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 275384,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 275384,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 275593,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 275845,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276034,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276278,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276278,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276483,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276502,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276734,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276754,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276952,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 276959,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277149,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277150,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277373,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277385,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277590,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277591,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277888,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 277896,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278058,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278078,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278129,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278147,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278240,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278240,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278310,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278310,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278426,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278426,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278535,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278542,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278650,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278662,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278759,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278766,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278850,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 278850,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 279246,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 279444,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 279688,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 279885,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 280129,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 280326,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 280550,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 281046,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 281243,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 281433,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 281449,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 281665,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 281863,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 282072,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 282315,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 282726,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 282935,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 283197,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 283294,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 283557,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 283797,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284033,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284034,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284049,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284068,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284490,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284653,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 284896,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285094,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285357,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285527,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285806,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285806,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285814,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 285814,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 286255,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 286464,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 286661,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 286912,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 287137,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 287300,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 287533,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 287559,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 287973,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 288206,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 288406,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 288612,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 288821,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 289053,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 289297,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 289297,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 289765,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 289982,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 290133,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 290384,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 290574,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 290764,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 290980,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 291456,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 291654,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 291871,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 292103,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 292311,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 292520,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 292733,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 292753,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 292760,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 293175,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 293383,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 293635,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 293833,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 294045,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 294262,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 294498,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 294517,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 294974,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 295226,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 295423,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 295632,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 295802,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 295937,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 296189,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 296209,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 296209,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 296216,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 296646,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 296928,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 297117,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 297323,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 297548,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 297711,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 297954,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 297955,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 298422,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 298655,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 298852,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 299049,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 299277,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 299429,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 299672,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 299680,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 300130,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 300175,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 300391,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 300570,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 300813,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 301031,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 301209,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 301425,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 301905,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 302118,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 302336,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 302551,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 302784,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 302966,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 303190,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 303191,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 303191,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 303198,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 303639,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 303883,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 304076,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 304270,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 304494,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 304664,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 304881,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 305322,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 305520,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 305783,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 306015,
+        "carril": 0,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 306286,
+        "carril": 1,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 306592,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 307040,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 307463,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 307463,
+        "carril": 3,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 307799,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 308066,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 308302,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 308651,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 308983,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 309262,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 309479,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 309823,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 310137,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 310334,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 310694,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 310965,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 311209,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 311541,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 311863,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 312107,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 312424,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 312727,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 312961,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 313313,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 313600,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 313836,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 314149,
+        "carril": 2,
+        "tipo": "grabada"
+      },
+      {
+        "tiempo_ms": 314456,
+        "carril": 2,
+        "tipo": "grabada"
+      }
+    ]
+  }
+}
