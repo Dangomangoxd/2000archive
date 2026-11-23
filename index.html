@@ -672,6 +672,43 @@
     .mine-cell[data-number="8"] { color: #777; }
     .mines-help { max-width: 335px; margin: 0; color: #67818a; font-size: 10px; line-height: 1.5; text-align: center; }
     .minesweeper-window .mines-help { width: 100%; max-width: none; margin: 0; padding: 4px 6px; border: 2px solid; border-color: #fff #7f7f7f #7f7f7f #fff; background: #c0c0c0; color: #333; font-size: 10px; line-height: 1.35; text-align: left; }
+    .rhythm-window { width: min(620px, calc(100vw - 24px)); }
+    .rhythm-window .window-content { padding: 10px; background: #bdbdbd; }
+    .rhythm-shell { display: grid; gap: 8px; padding: 8px; border: 2px solid; border-color: #fff #7f7f7f #7f7f7f #fff; background: linear-gradient(145deg, #e9fbf7, #bce1e6); }
+    .rhythm-scorebar { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 8px; border: 2px solid; border-color: #7f7f7f #fff #fff #7f7f7f; background: #101a31; color: #dffff7; font: bold 12px "Courier New", monospace; }
+    .rhythm-scorebar strong { color: #72e7ff; }
+    .rhythm-stage { position: relative; height: 330px; overflow: hidden; display: grid; grid-template-columns: repeat(4, 1fr); border: 3px solid; border-color: #58729a #d8efff #d8efff #58729a; background: linear-gradient(180deg, #10264f 0%, #1a3a67 68%, #315f7f 100%); }
+    .rhythm-lane { position: relative; border-right: 1px solid rgba(180,236,255,.22); }
+    .rhythm-lane:last-child { border-right: 0; }
+    .rhythm-lane::after { position: absolute; z-index: 4; right: 8%; bottom: 58px; left: 8%; height: 3px; border-radius: 50%; background: #fff; box-shadow: 0 0 10px #72e7ff; content: ""; }
+    .rhythm-note { position: absolute; z-index: 2; width: min(38px, 58%); aspect-ratio: 1; left: 50%; border: 3px solid rgba(255,255,255,.92); border-radius: 50%; background: #55c8df; box-shadow: 0 0 6px rgba(85,200,223,.62); transform-origin: center; translate: -50% 0; }
+    .rhythm-lane:nth-child(2) .rhythm-note { background: #f582b5; box-shadow: 0 0 7px rgba(245,130,181,.62); }
+    .rhythm-lane:nth-child(3) .rhythm-note { background: #91dc68; box-shadow: 0 0 7px rgba(145,220,104,.62); }
+    .rhythm-lane:nth-child(4) .rhythm-note { background: #ffc45c; box-shadow: 0 0 7px rgba(255,196,92,.62); }
+    .rhythm-keybar { position: absolute; z-index: 3; right: 0; bottom: 0; left: 0; height: 58px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 7px; background: rgba(8,18,43,.82); }
+    .rhythm-key { border: 2px solid; border-color: #dffaff #567a96 #567a96 #dffaff; border-radius: 5px; background: rgba(255,255,255,.18); color: #fff; font: bold 20px Tahoma, sans-serif; cursor: pointer; touch-action: manipulation; }
+    .rhythm-key.active { border-color: #fff #79c9d1 #79c9d1 #fff; background: #87e6d2; color: #183c50; transform: translateY(2px); }
+    .rhythm-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+    .rhythm-controls button { min-height: 28px; border: 2px solid; border-color: #fff #777 #777 #fff; background: #c0c0c0; color: #244451; font: 11px Tahoma, sans-serif; cursor: pointer; }
+    .rhythm-controls button:active { border-color: #777 #fff #fff #777; }
+    .rhythm-difficulty { height: 28px; border: 2px solid; border-color: #777 #fff #fff #777; background: #f7ffff; color: #244451; font: 11px Tahoma, sans-serif; }
+    .rhythm-offset { display: flex; align-items: center; gap: 5px; color: #355a69; font-size: 10px; white-space: nowrap; }
+    .rhythm-offset input { width: 72px; }
+    .rhythm-status { width: 100%; min-height: 18px; color: #355a69; font-size: 11px; text-align: left; }
+    .rhythm-recording { background: #f35e78 !important; color: #fff !important; box-shadow: 0 0 8px rgba(243,94,120,.55); }
+    .rhythm-countdown { position: absolute; z-index: 8; inset: 0; display: none; place-items: center; background: rgba(10,24,50,.44); color: #fff; font: bold 86px "Courier New", monospace; text-shadow: 0 4px 18px rgba(75,220,255,.9), 0 0 5px #183c50; pointer-events: none; }
+    .rhythm-countdown.visible { display: grid; animation: rhythm-count-pulse .72s ease-out 1; }
+    @keyframes rhythm-count-pulse { 0% { opacity: 0; transform: scale(.55); } 30% { opacity: 1; transform: scale(1); } 100% { opacity: 1; transform: scale(.92); } }
+    .rhythm-results { position: absolute; z-index: 9; inset: 0; display: none; place-items: center; padding: 20px; background: rgba(11,24,55,.82); backdrop-filter: blur(4px); }
+    .rhythm-results.visible { display: grid; }
+    .rhythm-results-card { width: min(390px, 92%); display: grid; justify-items: center; gap: 9px; padding: 18px; border: 3px solid; border-color: #fff #55798f #55798f #fff; background: linear-gradient(145deg, #efffff, #bfe4ec); color: #24495e; box-shadow: 0 12px 28px rgba(3,15,38,.48); text-align: center; }
+    .rhythm-results-card h2 { margin: 0; color: #1683bb; font: bold 27px "Trebuchet MS", sans-serif; text-shadow: 0 1px 0 #fff; }
+    .rhythm-results-grade { width: 78px; height: 78px; display: grid; place-items: center; border: 4px solid #fff; border-radius: 50%; background: linear-gradient(145deg, #65dfd2, #1683bb); color: #fff; font: bold 42px "Trebuchet MS", sans-serif; box-shadow: 0 0 14px rgba(64,200,204,.8); }
+    .rhythm-results-stats { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; gap: 6px; }
+    .rhythm-results-stats span { display: grid; gap: 3px; padding: 7px 4px; border: 1px solid #91b5c2; background: rgba(255,255,255,.68); font-size: 10px; }
+    .rhythm-results-stats strong { color: #1683bb; font-size: 15px; }
+    .rhythm-results-actions { display: flex; gap: 7px; }
+    .rhythm-results-actions button { min-width: 92px; min-height: 29px; border: 2px solid; border-color: #fff #777 #777 #fff; background: #c0c0c0; color: #244451; font: 11px Tahoma, sans-serif; cursor: pointer; }
     .note-window { width: min(360px, calc(100vw - 32px)); max-height: none; overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
     .note-window .titlebar { position: absolute; z-index: 1; top: 0; right: 0; left: 0; height: 28px; justify-content: flex-end; padding: 4px 5px; border: 0; background: transparent; }
     .note-window .window-title { display: none; }
@@ -1712,6 +1749,9 @@
       <button class="desktop-icon" data-open="minesweeper">
         <span class="emoji" aria-hidden="true"><img class="icon-image" src="minesweeper-icon.png" alt=""></span><span>Buscaminas</span>
       </button>
+      <button class="desktop-icon" data-open="rhythm">
+        <span class="emoji" aria-hidden="true">🎵</span><span>Rhythm Sky</span>
+      </button>
       <button class="desktop-icon" data-open="notes">
         <span class="emoji" aria-hidden="true"><img class="icon-image" src="notes-icon.png" alt=""></span><span>Notas</span>
       </button>
@@ -1747,6 +1787,7 @@
           <div class="browser-bookmarks" aria-label="Favoritos">
             <span aria-hidden="true">⭐</span>
             <button class="browser-bookmark" type="button" data-browser-bookmark="https://goetiax17.github.io/Gotita-closet/">GOTITA CLOSET</button>
+            <button class="browser-bookmark" type="button" data-browser-bookmark="https://webosumania.com/">WEB OSUMANIA</button>
             <button class="browser-bookmark" type="button" data-browser-bookmark="https://www.youtube.com/">YouTube</button>
           </div>
         </div>
@@ -1915,6 +1956,67 @@
           <div class="mines-message" id="mines-message" aria-live="polite">¡Encuentra las 10 minas!</div>
           <div class="mines-board" id="mines-board" role="grid" aria-label="Tablero de Buscaminas"></div>
           <p class="mines-help">Clic: revelar · clic derecho: marcar una mina.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="window rhythm-window" id="rhythm" data-title="Rhythm Sky" hidden>
+      <header class="titlebar">
+        <div class="window-title"><span aria-hidden="true">🎵</span> Rhythm Sky</div>
+        <div class="window-controls"><button data-minimize aria-label="Minimizar">—</button><button data-close aria-label="Cerrar">×</button></div>
+      </header>
+      <nav class="paint-menu" aria-label="Menú de Rhythm Sky"><span>Juego</span><span>D F J K</span></nav>
+      <div class="window-content">
+        <div class="rhythm-shell">
+          <div class="rhythm-scorebar">
+            <span>PUNTOS <strong id="rhythm-score">000000</strong></span>
+            <span id="rhythm-combo">COMBO 0</span>
+            <span id="rhythm-accuracy">100%</span>
+          </div>
+          <div class="rhythm-stage" id="rhythm-stage" aria-label="Tablero de Rhythm Sky">
+            <div class="rhythm-countdown" id="rhythm-countdown" aria-live="assertive"></div>
+            <div class="rhythm-results" id="rhythm-results" aria-live="polite">
+              <div class="rhythm-results-card">
+                <h2>¡Congratulations!</h2>
+                <div class="rhythm-results-grade" id="rhythm-results-grade">S</div>
+                <div class="rhythm-results-stats">
+                  <span>PUNTOS<strong id="rhythm-results-score">0</strong></span>
+                  <span>PRECISIÓN<strong id="rhythm-results-accuracy">100%</strong></span>
+                  <span>COMBO<strong id="rhythm-results-combo">0</strong></span>
+                </div>
+                <div class="rhythm-results-actions">
+                  <button id="rhythm-results-retry" type="button">Repetir</button>
+                  <button id="rhythm-results-close" type="button">Cerrar</button>
+                </div>
+              </div>
+            </div>
+            <div class="rhythm-lane" data-lane="0"></div>
+            <div class="rhythm-lane" data-lane="1"></div>
+            <div class="rhythm-lane" data-lane="2"></div>
+            <div class="rhythm-lane" data-lane="3"></div>
+            <div class="rhythm-keybar">
+              <button class="rhythm-key" type="button" data-lane="0" aria-label="D">D</button>
+              <button class="rhythm-key" type="button" data-lane="1" aria-label="F">F</button>
+              <button class="rhythm-key" type="button" data-lane="2" aria-label="J">J</button>
+              <button class="rhythm-key" type="button" data-lane="3" aria-label="K">K</button>
+            </div>
+          </div>
+          <div class="rhythm-controls">
+            <select class="rhythm-song" id="rhythm-song" aria-label="Versión de la canción">
+              <option value="cut" selected>Bad Apple — Cut</option>
+              <option value="full">Bad Apple — Full</option>
+            </select>
+            <select class="rhythm-difficulty" id="rhythm-difficulty" aria-label="Chart grabado">
+              <option value="grabado1">Grabado 1</option>
+              <option value="grabado2" selected>Grabado 2</option>
+            </select>
+            <label class="rhythm-offset">Timing <input id="rhythm-offset" type="range" min="-250" max="250" step="10" value="0"><output id="rhythm-offset-value">0 ms</output></label>
+            <button id="rhythm-start" type="button">Iniciar canción</button>
+            <button id="rhythm-reset" type="button">Reiniciar</button>
+            <button id="rhythm-record" type="button" aria-pressed="false">Grabar melodía</button>
+            <button id="rhythm-export" type="button" disabled>Exportar notas</button>
+            <div class="rhythm-status" id="rhythm-status" aria-live="polite">Pulsa D, F, J o K al llegar a la barra.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -2204,6 +2306,7 @@
         <div class="start-links">
           <button class="start-link" data-open="browser"><img class="icon-image" src="ie3.ico" alt=""><span class="start-link-copy"><strong>Internet Explorer</strong><small>Explorar Internet</small></span></button>
           <button class="start-link" data-open="minesweeper"><img class="icon-image" src="minesweeper-icon.png" alt=""><span class="start-link-copy"><strong>Buscaminas</strong><small>Juego clásico</small></span></button>
+          <button class="start-link" data-open="rhythm"><span class="start-link-image" aria-hidden="true">🎵</span><span class="start-link-copy"><strong>Rhythm Sky</strong><small>Juego de ritmo</small></span></button>
           <button class="start-link" data-open="notes"><img class="icon-image" src="notes-icon.png" alt=""><span class="start-link-copy"><strong>Bloc de notas</strong><small>Notas rápidas</small></span></button>
           <button class="start-link" data-open="player"><img class="icon-image" src="wmp-icon.png" alt=""><span class="start-link-copy"><strong>Windows Media Player</strong><small>Música y audio</small></span></button>
           <button class="start-link" data-open="paint"><img class="icon-image" src="Ms_paint_windows_xp_logo.webp" alt=""><span class="start-link-copy"><strong>Paint</strong><small>Dibujar y editar</small></span></button>
@@ -2216,6 +2319,7 @@
           <button class="start-link" data-open="files"><img class="icon-image" src="explorer.ico" alt=""><span class="start-link-copy"><strong>Explorador de archivos</strong></span></button>
           <button class="start-link" data-open="player"><img class="icon-image" src="wmp-icon.png" alt=""><span class="start-link-copy"><strong>Windows Media Player</strong></span></button>
           <button class="start-link" data-open="minesweeper"><img class="icon-image" src="minesweeper-icon.png" alt=""><span class="start-link-copy"><strong>Buscaminas</strong></span></button>
+          <button class="start-link" data-open="rhythm"><span class="start-link-image" aria-hidden="true">🎵</span><span class="start-link-copy"><strong>Rhythm Sky</strong></span></button>
           <button class="start-link" data-open="notes"><img class="icon-image" src="notes-icon.png" alt=""><span class="start-link-copy"><strong>Bloc de notas</strong></span></button>
           <button class="start-link" data-open="paint"><img class="icon-image" src="Ms_paint_windows_xp_logo.webp" alt=""><span class="start-link-copy"><strong>Paint</strong></span></button>
           <button class="start-link" data-open="computer"><img class="icon-image" src="equipo.png" alt=""><span class="start-link-copy"><strong>Equipo</strong></span></button>
@@ -2636,6 +2740,13 @@
 
     function loadBrowserTab(tab) {
       if (tab.loaded || !tab.url || tab.notice) return;
+      const host = new URL(tab.url).hostname.toLowerCase().replace(/^www\./, "");
+      if (host === "webosumania.com") {
+        tab.loaded = true;
+        tab.loadComplete = true;
+        showWebOsumaniaNotice(tab);
+        return;
+      }
       clearTimeout(tab.loadTimer);
       const loadGeneration = ++tab.loadGeneration;
       tab.loadComplete = false;
@@ -2712,6 +2823,29 @@
       if (activeBrowserTab === tab) browserStatus.textContent = tab.noticeStatus;
     }
 
+    function showWebOsumaniaNotice(tab) {
+      if (tab.notice) tab.notice.remove();
+      const notice = document.createElement("section");
+      notice.className = "browser-site-notice";
+      const heading = document.createElement("h1");
+      heading.textContent = "WEB OSUMANIA";
+      const explanation = document.createElement("p");
+      explanation.textContent = "Este sitio usa protección de Cloudflare y no permite mostrarse dentro de una ventana incrustada. Ábrelo en una pestaña del navegador para pasar la comprobación y jugar.";
+      const link = document.createElement("a");
+      link.href = tab.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Abrir WEB OSUMANIA";
+      notice.append(heading, explanation, link);
+      tab.notice = notice;
+      tab.noticeStatus = "El juego debe abrirse fuera de Internet Explorer";
+      tab.retryable = false;
+      tab.frame.hidden = true;
+      notice.hidden = tab !== activeBrowserTab;
+      browserViewport.append(notice);
+      if (activeBrowserTab === tab) browserStatus.textContent = tab.noticeStatus;
+    }
+
     function resumeBrowserTabs() {
       browserTabs.forEach(loadBrowserTab);
       browserSuspended = false;
@@ -2721,7 +2855,9 @@
     function browserTabLabel(url) {
       if (!url) return "Nueva pestaña";
       const { hostname } = new URL(url);
-      return hostname === "goetiax17.github.io" ? "GOTITA CLOSET" : hostname;
+      if (hostname === "goetiax17.github.io") return "GOTITA CLOSET";
+      if (hostname === "webosumania.com" || hostname === "www.webosumania.com") return "WEB OSUMANIA";
+      return hostname;
     }
 
     function isYoutubeUrl(url) {
@@ -2882,7 +3018,7 @@
       frame.className = "browser-iframe";
       frame.title = url ? browserTabLabel(url) : "Nueva pestaña";
       frame.referrerPolicy = "strict-origin-when-cross-origin";
-      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gamepad; gyroscope; picture-in-picture; pointer-lock; web-share";
       frame.allowFullscreen = true;
       frame.src = "about:blank";
       const tab = { url, label: browserTabLabel(url), frame, loaded: false, loadComplete: false, loadTimer: null, loadGeneration: 0, notice: null, noticeStatus: null, retryable: false };
@@ -3160,7 +3296,7 @@
     function sortDesktopIcons(sortBy) {
       const typeByOpen = {
         browser: "Internet", computer: "Sistema", files: "Carpeta", player: "Multimedia",
-        minesweeper: "Juego", notes: "Productividad", paint: "Creatividad", recycle: "Sistema"
+        minesweeper: "Juego", rhythm: "Juego", notes: "Productividad", paint: "Creatividad", recycle: "Sistema"
       };
       const icons = [...desktopIcons.children];
       icons.sort((a, b) => {
@@ -4269,6 +4405,481 @@
     document.querySelector("#mines-reset").addEventListener("click", resetMineGame);
     resetMineGame();
 
+    const rhythmStage = document.querySelector("#rhythm-stage");
+    const rhythmScore = document.querySelector("#rhythm-score");
+    const rhythmCombo = document.querySelector("#rhythm-combo");
+    const rhythmAccuracy = document.querySelector("#rhythm-accuracy");
+    const rhythmStatus = document.querySelector("#rhythm-status");
+    const rhythmStart = document.querySelector("#rhythm-start");
+    const rhythmCountdown = document.querySelector("#rhythm-countdown");
+    const rhythmResults = document.querySelector("#rhythm-results");
+    let rhythmRunning = false;
+    let rhythmAnimation = null;
+    let rhythmStartedAt = 0;
+    let rhythmNotes = [];
+    let rhythmPoints = 0;
+    let rhythmComboCount = 0;
+    let rhythmHits = 0;
+    let rhythmAttempts = 0;
+    let rhythmAudio = null;
+    let rhythmDifficulty = "grabado2";
+    let rhythmCountdownCancelled = false;
+    let rhythmTimingOffset = 0;
+    let rhythmSongVersion = "cut";
+    let rhythmRecording = false;
+    let recordedRhythmNotes = [];
+    const rhythmSong = new Audio();
+    rhythmSong.preload = "auto";
+    rhythmSong.volume = 0.75;
+    let rhythmChart = null;
+    try {
+      const savedRecording = JSON.parse(localStorage.getItem("rhythm-recorded-notes"));
+      recordedRhythmNotes = Array.isArray(savedRecording) ? savedRecording : [];
+    } catch (error) {
+      recordedRhythmNotes = [];
+    }
+    rhythmSong.addEventListener("ended", () => {
+      if (!rhythmRunning) return;
+      rhythmRunning = false;
+      if (rhythmAnimation) cancelAnimationFrame(rhythmAnimation);
+      rhythmAnimation = null;
+      if (rhythmRecording) {
+        finishRhythmRecording();
+      } else {
+        showRhythmResults();
+      }
+    });
+    rhythmSong.addEventListener("error", () => {
+      if (!rhythmSong.currentSrc.includes("Bad%20Apple") && !rhythmSong.currentSrc.includes("Bad Apple")) return;
+      rhythmRunning = false;
+      if (rhythmAnimation) cancelAnimationFrame(rhythmAnimation);
+      rhythmAnimation = null;
+      rhythmStatus.textContent = "No se pudo cargar Bad Apple desde este archivo.";
+      rhythmStart.textContent = "Reintentar";
+    });
+
+    function resetRhythmGame() {
+      rhythmRunning = false;
+      rhythmCountdownCancelled = true;
+      rhythmCountdown.textContent = "";
+      rhythmCountdown.classList.remove("visible");
+      rhythmStart.disabled = false;
+      if (rhythmAnimation) cancelAnimationFrame(rhythmAnimation);
+      rhythmAnimation = null;
+      rhythmSong.pause();
+      rhythmSong.currentTime = 0;
+      
+      rhythmNotes = [];
+      rhythmPoints = 0;
+      rhythmComboCount = 0;
+      rhythmHits = 0;
+      rhythmAttempts = 0;
+      rhythmScore.textContent = "000000";
+      rhythmCombo.textContent = "COMBO 0";
+      rhythmAccuracy.textContent = "100%";
+      rhythmStatus.textContent = "Pulsa D, F, J o K al llegar a la barra.";
+      rhythmStage.querySelectorAll(".rhythm-note").forEach(note => note.remove());
+      rhythmStart.textContent = "Iniciar canción";
+    }
+
+    function rhythmTone(lane, duration = 0.08) {
+      if (!rhythmAudio) return;
+      const start = rhythmAudio.currentTime;
+      const output = rhythmAudio.createGain();
+      output.gain.setValueAtTime(0.16, start);
+      output.gain.exponentialRampToValueAtTime(0.001, start + duration);
+      output.connect(rhythmAudio.destination);
+
+      const frameCount = Math.ceil(rhythmAudio.sampleRate * duration);
+      const noiseBuffer = rhythmAudio.createBuffer(1, frameCount, rhythmAudio.sampleRate);
+      const samples = noiseBuffer.getChannelData(0);
+      for (let index = 0; index < frameCount; index += 1) {
+        samples[index] = (Math.random() * 2 - 1) * Math.exp(-index / (frameCount * 0.22));
+      }
+      const noise = rhythmAudio.createBufferSource();
+      noise.buffer = noiseBuffer;
+      const highPass = rhythmAudio.createBiquadFilter();
+      highPass.type = "highpass";
+      highPass.frequency.value = 2800 + lane * 320;
+      highPass.Q.value = 1.2;
+      noise.connect(highPass);
+      highPass.connect(output);
+      noise.start(start);
+      noise.stop(start + duration);
+
+      [4100, 5200, 6800].forEach((frequency, index) => {
+        const shimmer = rhythmAudio.createOscillator();
+        const shimmerGain = rhythmAudio.createGain();
+        shimmer.type = "square";
+        shimmer.frequency.value = frequency + lane * 180 + index * 37;
+        shimmerGain.gain.setValueAtTime(0.018, start);
+        shimmerGain.gain.exponentialRampToValueAtTime(0.001, start + 0.045);
+        shimmer.connect(shimmerGain);
+        shimmerGain.connect(output);
+        shimmer.start(start);
+        shimmer.stop(start + 0.05);
+      });
+    }
+
+    async function loadBadAppleChart() {
+      if (rhythmChart) return rhythmChart;
+      try {
+        const dificultades = {};
+        const [firstResponse, secondResponse, fullResponse] = await Promise.all([
+          fetch("bad-apple-chart-grabado.json", { cache: "no-store" }),
+          fetch("bad-apple-chart-grabado2.json", { cache: "no-store" }),
+          fetch("bad-apple-chart-full.json", { cache: "no-store" })
+        ]);
+        if (firstResponse.ok) {
+          const firstChart = await firstResponse.json();
+          const firstNotes = firstChart?.dificultades?.grabado;
+          if (Array.isArray(firstNotes)) dificultades.grabado1 = firstNotes;
+        }
+        if (secondResponse.ok) {
+          const secondChart = await secondResponse.json();
+          const secondNotes = secondChart?.dificultades?.grabado;
+          if (Array.isArray(secondNotes)) dificultades.grabado2 = secondNotes;
+        }
+        if (fullResponse.ok) {
+          const fullChart = await fullResponse.json();
+          const fullNotes = fullChart?.dificultades?.grabado;
+          if (Array.isArray(fullNotes)) dificultades.full = fullNotes;
+        }
+        if (!dificultades.grabado1 && !dificultades.grabado2) {
+          throw new Error("No se encontró ningún chart grabado.");
+        }
+        dificultades.grabado = dificultades.grabado2 || dificultades.grabado1 || [];
+        rhythmChart = {
+          cancion: "Bad Apple!!",
+          bpm: 138,
+          offset_ms: 0,
+          carriles: 4,
+          duracion_ms: rhythmSongVersion === "full" ? 324174 : 132174,
+          dificultades
+        };
+        return rhythmChart;
+      } catch (error) {
+        console.error("No se pudo cargar el mapa de Bad Apple.", error);
+        showToast("No se pudo cargar el mapa de notas de Bad Apple.");
+        return null;
+      }
+    }
+
+    function createRhythmNotes() {
+      if (rhythmSongVersion === "full" && Array.isArray(rhythmChart?.dificultades?.full)) {
+        return rhythmChart.dificultades.full.map(note => ({
+          lane: Number(note.carril),
+          hitTime: Number(note.tiempo_ms),
+          hit: false,
+          missed: false,
+          element: null
+        }));
+      }
+      if (rhythmDifficulty === "grabado1" || rhythmDifficulty === "grabado2") {
+        const chartNotes = Array.isArray(rhythmChart?.dificultades?.[rhythmDifficulty])
+          ? rhythmChart.dificultades[rhythmDifficulty]
+          : recordedRhythmNotes;
+        return chartNotes.map(note => ({
+          lane: Number(note.carril),
+          hitTime: Number(note.tiempo_ms),
+          hit: false,
+          missed: false,
+          element: null
+        }));
+      }
+      const chartNotes = rhythmChart?.dificultades?.[rhythmDifficulty];
+      if (!Array.isArray(chartNotes)) return [];
+      const calibratedOffset = Number(rhythmChart.offset_ms || 0) + rhythmTimingOffset;
+      return [...chartNotes]
+        .sort((left, right) => Number(left.tiempo_ms) - Number(right.tiempo_ms))
+        .map(note => ({
+        lane: Number(note.carril),
+        hitTime: Number(note.tiempo_ms) + calibratedOffset,
+        hit: false,
+        missed: false,
+        element: null
+      }))
+        .filter(note => Number.isInteger(note.lane) && note.lane >= 0 && note.lane <= 3);
+    }
+
+    function updateRhythmDisplay() {
+      rhythmScore.textContent = String(rhythmPoints).padStart(6, "0");
+      rhythmCombo.textContent = `COMBO ${rhythmComboCount}`;
+      const accuracy = rhythmAttempts ? Math.round((rhythmHits / rhythmAttempts) * 100) : 100;
+      rhythmAccuracy.textContent = `${accuracy}%`;
+    }
+
+    function showRhythmResults() {
+      const accuracy = rhythmAttempts ? Math.round((rhythmHits / rhythmAttempts) * 100) : 100;
+      let grade = "C";
+      if (accuracy >= 95) grade = "S";
+      else if (accuracy >= 85) grade = "A";
+      else if (accuracy >= 70) grade = "B";
+      document.querySelector("#rhythm-results-grade").textContent = grade;
+      document.querySelector("#rhythm-results-score").textContent = String(rhythmPoints);
+      document.querySelector("#rhythm-results-accuracy").textContent = `${accuracy}%`;
+      document.querySelector("#rhythm-results-combo").textContent = String(rhythmComboCount);
+      rhythmResults.classList.add("visible");
+      rhythmStatus.textContent = `¡Terminaste! Puntuación: ${rhythmPoints}`;
+      rhythmStart.textContent = "Volver a jugar";
+      rhythmStart.disabled = false;
+    }
+
+    function animateRhythm() {
+      if (!rhythmRunning) return;
+      if (!rhythmNotes.length) {
+        rhythmAnimation = requestAnimationFrame(animateRhythm);
+        return;
+      }
+      if (rhythmRecording) {
+        rhythmAnimation = requestAnimationFrame(animateRhythm);
+        return;
+      }
+      const elapsed = Math.max(0, rhythmSong.currentTime * 1000);
+      let finished = true;
+      rhythmNotes.forEach(note => {
+        if (!note.hit && !note.missed) finished = false;
+        if (!note.element) {
+          if (elapsed < note.hitTime - 1450) return;
+          const element = document.createElement("div");
+          element.className = "rhythm-note";
+          note.element = element;
+          rhythmStage.querySelector(`.rhythm-lane[data-lane="${note.lane}"]`).append(element);
+        }
+        if (note.hit || note.missed) {
+          if (note.element) note.element.remove();
+          return;
+        }
+        const y = 263 - (note.hitTime - elapsed) * 0.24;
+        note.element.style.transform = `translateY(${y}px)`;
+        if (elapsed - note.hitTime > 260) {
+          note.missed = true;
+          rhythmAttempts += 1;
+          rhythmComboCount = 0;
+          rhythmStatus.textContent = "¡Miss!";
+          updateRhythmDisplay();
+        }
+      });
+      if (finished && elapsed > rhythmNotes[rhythmNotes.length - 1].hitTime + 600) {
+        rhythmRunning = false;
+        showRhythmResults();
+        return;
+      }
+      rhythmAnimation = requestAnimationFrame(animateRhythm);
+    }
+
+    function finishRhythmRecording() {
+      recordedRhythmNotes = recordedRhythmNotes
+        .sort((left, right) => Number(left.tiempo_ms) - Number(right.tiempo_ms));
+      localStorage.setItem("rhythm-recorded-notes", JSON.stringify(recordedRhythmNotes));
+      rhythmStatus.textContent = `Grabación lista · ${recordedRhythmNotes.length} notas`;
+      rhythmStart.disabled = false;
+      rhythmStart.textContent = "Volver a grabar";
+      document.querySelector("#rhythm-export").disabled = recordedRhythmNotes.length === 0;
+    }
+
+    function exportRecordedRhythmNotes() {
+      if (!recordedRhythmNotes.length) return;
+      const chart = {
+        cancion: rhythmSongVersion === "full"
+          ? "Bad Apple!! feat.nomico - Full"
+          : "Bad Apple!! feat.nomico - Cut",
+        bpm: 138,
+        offset_ms: 0,
+        carriles: 4,
+        duracion_ms: rhythmSongVersion === "full"
+          ? 324174
+          : 132174,
+        dificultades: { grabado: recordedRhythmNotes }
+      };
+      const blob = new Blob([JSON.stringify(chart, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "bad-apple-chart-grabado2.json";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    function hitRhythmLane(lane) {
+      const key = rhythmStage.querySelector(`.rhythm-key[data-lane="${lane}"]`);
+      if (key) {
+        key.classList.add("active");
+        setTimeout(() => key.classList.remove("active"), 90);
+      }
+      rhythmTone(lane);
+      if (rhythmRecording && rhythmRunning) {
+        const tiempoMs = Math.round(Math.max(0, rhythmSong.currentTime * 1000));
+        recordedRhythmNotes.push({ tiempo_ms: tiempoMs, carril: lane, tipo: "grabada" });
+        rhythmStatus.textContent = `Grabando · ${recordedRhythmNotes.length} notas`;
+        return;
+      }
+      if (!rhythmRunning) return;
+      const elapsed = rhythmRunning ? Math.max(0, rhythmSong.currentTime * 1000) : 0;
+      let nearest = null;
+      let nearestDistance = Infinity;
+      rhythmNotes.forEach(note => {
+        if (note.hit || note.missed || note.lane !== lane) return;
+        const distance = Math.abs(elapsed - note.hitTime);
+        if (distance < nearestDistance) {
+          nearest = note;
+          nearestDistance = distance;
+        }
+      });
+      if (!nearest || nearestDistance > 260) {
+        rhythmAttempts += 1;
+        rhythmComboCount = 0;
+        rhythmStatus.textContent = "Fuera de ritmo";
+        updateRhythmDisplay();
+        return;
+      }
+      nearest.hit = true;
+      rhythmAttempts += 1;
+      rhythmHits += 1;
+      rhythmComboCount += 1;
+      const precision = nearestDistance < 65 ? "PERFECT" : nearestDistance < 140 ? "GREAT" : "GOOD";
+      rhythmPoints += precision === "PERFECT" ? 100 : precision === "GREAT" ? 70 : 40;
+      rhythmPoints += rhythmComboCount >= 10 ? 25 : 0;
+      rhythmStatus.textContent = `${precision} · +${precision === "PERFECT" ? 100 : precision === "GREAT" ? 70 : 40}`;
+      updateRhythmDisplay();
+    }
+
+    rhythmStart.addEventListener("click", () => {
+      resetRhythmGame();
+      rhythmCountdownCancelled = false;
+      rhythmAudio = rhythmAudio || new (window.AudioContext || window.webkitAudioContext)();
+      rhythmAudio.resume();
+      rhythmStart.disabled = true;
+      rhythmStart.textContent = "Preparando...";
+      rhythmStatus.textContent = "¡Prepárate!";
+      const rhythmSongFile = rhythmSongVersion === "full"
+        ? "bad-apple-full.mp3"
+        : "bad-apple-feat-nomico.mp3";
+      rhythmSong.src = location.protocol === "http:"
+        ? `http://127.0.0.1:8766/${rhythmSongFile}`
+        : rhythmSongFile;
+      rhythmSong.load();
+      rhythmSong.currentTime = 0;
+      const showCountdown = text => {
+        rhythmCountdown.textContent = text;
+        rhythmCountdown.classList.remove("visible");
+        void rhythmCountdown.offsetWidth;
+        rhythmCountdown.classList.add("visible");
+      };
+
+      const begin = async () => {
+        if (!rhythmRecording) await loadBadAppleChart();
+        if (!rhythmRecording && !rhythmChart) {
+          rhythmRunning = false;
+          rhythmStart.disabled = false;
+          rhythmStart.textContent = "Reintentar";
+          rhythmStatus.textContent = "No se pudo cargar el mapa de notas.";
+          return;
+        }
+        rhythmNotes = rhythmRecording ? [] : createRhythmNotes();
+        if (!rhythmRecording && !rhythmNotes.length) {
+          rhythmRunning = false;
+          rhythmStart.disabled = false;
+          rhythmStatus.textContent = "El mapa de Bad Apple no contiene notas.";
+          return;
+        }
+        if (rhythmRecording) recordedRhythmNotes = [];
+
+        showCountdown("3");
+        await new Promise(resolve => setTimeout(resolve, 850));
+        if (rhythmCountdownCancelled) return;
+        showCountdown("2");
+        await new Promise(resolve => setTimeout(resolve, 850));
+        if (rhythmCountdownCancelled) return;
+        showCountdown("1");
+        await new Promise(resolve => setTimeout(resolve, 850));
+        if (rhythmCountdownCancelled) return;
+        showCountdown("GO");
+        await new Promise(resolve => setTimeout(resolve, 850));
+        if (rhythmCountdownCancelled) return;
+
+        rhythmCountdown.textContent = "";
+        rhythmCountdown.classList.remove("visible");
+        rhythmRunning = true;
+        rhythmStartedAt = performance.now();
+        rhythmSong.currentTime = 0;
+        rhythmStart.textContent = "Reproduciendo...";
+        try {
+          await rhythmSong.play();
+          rhythmAnimation = requestAnimationFrame(animateRhythm);
+        } catch (error) {
+          rhythmRunning = false;
+          rhythmStart.disabled = false;
+          rhythmStatus.textContent = "El navegador bloqueó la reproducción.";
+          rhythmStart.textContent = "Reintentar";
+        }
+      };
+      if (rhythmSong.readyState >= 1) begin();
+      else {
+        rhythmStatus.textContent = "Cargando Bad Apple!!...";
+        rhythmSong.addEventListener("loadedmetadata", begin, { once: true });
+      }
+    });
+    document.querySelector("#rhythm-reset").addEventListener("click", resetRhythmGame);
+    document.querySelector("#rhythm-results-retry").addEventListener("click", () => {
+      rhythmResults.classList.remove("visible");
+      rhythmStart.click();
+    });
+    document.querySelector("#rhythm-results-close").addEventListener("click", () => {
+      rhythmResults.classList.remove("visible");
+      resetRhythmGame();
+    });
+    const rhythmRecordButton = document.querySelector("#rhythm-record");
+    const rhythmExportButton = document.querySelector("#rhythm-export");
+    const rhythmDifficultySelect = document.querySelector("#rhythm-difficulty");
+    const rhythmSongSelect = document.querySelector("#rhythm-song");
+    rhythmSongSelect.addEventListener("change", event => {
+      rhythmSongVersion = event.target.value;
+      resetRhythmGame();
+      rhythmStatus.textContent = event.target.selectedOptions[0].textContent + " seleccionada.";
+    });
+    rhythmDifficultySelect.addEventListener("change", event => {
+      rhythmDifficulty = event.target.value;
+      resetRhythmGame();
+      rhythmStatus.textContent = event.target.selectedOptions[0].textContent + " seleccionado.";
+    });
+    if (recordedRhythmNotes.length) rhythmExportButton.disabled = false;
+    rhythmRecordButton.addEventListener("click", () => {
+      rhythmRecording = !rhythmRecording;
+      rhythmRecordButton.setAttribute("aria-pressed", String(rhythmRecording));
+      rhythmRecordButton.classList.toggle("rhythm-recording", rhythmRecording);
+      rhythmRecordButton.textContent = rhythmRecording ? "Grabando activado" : "Grabar melodía";
+      rhythmStatus.textContent = rhythmRecording
+        ? "Modo grabación: toca D, F, J o K mientras suena."
+        : "Modo grabación desactivado.";
+    });
+    rhythmExportButton.addEventListener("click", exportRecordedRhythmNotes);
+    const rhythmOffsetInput = document.querySelector("#rhythm-offset");
+    const rhythmOffsetValue = document.querySelector("#rhythm-offset-value");
+    const savedRhythmOffset = Number(localStorage.getItem("rhythm-timing-offset"));
+    if (Number.isFinite(savedRhythmOffset) && savedRhythmOffset >= -250 && savedRhythmOffset <= 250) {
+      rhythmTimingOffset = savedRhythmOffset;
+      rhythmOffsetInput.value = String(savedRhythmOffset);
+    }
+    rhythmOffsetValue.value = `${rhythmTimingOffset > 0 ? "+" : ""}${rhythmTimingOffset} ms`;
+    rhythmOffsetInput.addEventListener("input", event => {
+      rhythmTimingOffset = Number(event.target.value);
+      rhythmOffsetValue.value = `${rhythmTimingOffset > 0 ? "+" : ""}${rhythmTimingOffset} ms`;
+      localStorage.setItem("rhythm-timing-offset", String(rhythmTimingOffset));
+      if (rhythmRunning) rhythmNotes = createRhythmNotes();
+    });
+    rhythmStage.querySelectorAll(".rhythm-key").forEach(key => {
+      key.addEventListener("pointerdown", () => hitRhythmLane(Number(key.dataset.lane)));
+    });
+    document.addEventListener("keydown", event => {
+      if (event.repeat) return;
+      const lane = { d: 0, f: 1, j: 2, k: 3 }[event.key.toLowerCase()];
+      if (lane !== undefined) {
+        event.preventDefault();
+        hitRhythmLane(lane);
+      }
+    });
+
     const fileContents = {
       guest: {
         desktop: { title: "Mis archivos bonitos", status: "6 elementos · Este equipo" },
@@ -4287,13 +4898,13 @@
       guest: {
         desktop: [["📁", "Documentos", "documents"], ["🌅", "Imágenes", "pictures"], ["🎵", "Música", "music"], ["🌊", "fondo-aqua.jpg"], ["📝", "mis-recuerdos.txt"], ["💿", "playlist-verano.mp3"]],
         documents: [["📝", "mis-recuerdos.txt"], ["📄", "ideas-para-mi-web.txt"], ["📘", "Qué es Frutiger Aero.txt"]],
-        pictures: [["🌊", "fondo-aqua.jpg"], ["🌅", "atardecer.png"], ["🐬", "amigos-del-mar.jpg"]],
+        pictures: [["🖼️", "teto.png", null, { name: "teto.png", dataUrl: "teto.png", static: true }], ["🖼️", "gato pendejo.png", null, { name: "gato pendejo.png", dataUrl: "gato pendejo.png", static: true }], ["🖼️", "gota2.png", null, { name: "gota2.png", dataUrl: "gota2.png", static: true }], ["🖼️", "Luka.png", null, { name: "Luka.png", dataUrl: "Luka.png", static: true }], ["🖼️", "Miku.png", null, { name: "Miku.png", dataUrl: "Miku.png", static: true }]],
         music: [["💿", "playlist-verano.mp3"], ["🎶", "sonidos-del-oceano.mp3"]]
       },
       gotita: {
         desktop: [["📁", "Documentos", "documents"], ["🖼️", "Imágenes", "pictures"], ["♫", "Música", "music"], ["🖼️", "luka gotita fondo.jpg"], ["📝", "perfil-gotita.txt"], ["✦", "vector-flourish.svg"]],
         documents: [["📝", "notas-gotita.txt"], ["📄", "perfil-gotita.txt"], ["📘", "Qué es Frutiger Metro.txt"]],
-        pictures: [["🖼️", "luka gotita fondo.jpg"], ["👤", "gotita.png"], ["✦", "vector-flourish.svg"]],
+        pictures: [["🖼️", "teto.png", null, { name: "teto.png", dataUrl: "teto.png", static: true }], ["🖼️", "gato pendejo.png", null, { name: "gato pendejo.png", dataUrl: "gato pendejo.png", static: true }], ["🖼️", "gota2.png", null, { name: "gota2.png", dataUrl: "gota2.png", static: true }], ["🖼️", "Luka.png", null, { name: "Luka.png", dataUrl: "Luka.png", static: true }], ["🖼️", "Miku.png", null, { name: "Miku.png", dataUrl: "Miku.png", static: true }], ["🖼️", "luka gotita fondo.jpg"], ["👤", "gotita.png"], ["✦", "vector-flourish.svg"]],
         music: []
       }
     };
@@ -4388,6 +4999,25 @@
         : profile === "gotita" && folder === "music" ? `${gotitaPlaylistTracks.length} pistas · Música` : content.status;
       entries.forEach(([icon, name, childFolder, savedImage]) => {
         if (savedImage) {
+          if (savedImage.static) {
+            const imageEntry = document.createElement("article");
+            imageEntry.className = "saved-paint-image";
+            const openButton = document.createElement("button");
+            openButton.className = "saved-paint-image-open";
+            openButton.type = "button";
+            openButton.setAttribute("aria-label", `Previsualizar ${name}`);
+            const thumbnail = document.createElement("img");
+            thumbnail.src = savedImage.dataUrl;
+            thumbnail.alt = "";
+            const imageName = document.createElement("span");
+            imageName.className = "saved-paint-image-name";
+            imageName.textContent = name;
+            openButton.append(thumbnail, imageName);
+            openButton.addEventListener("click", () => openSavedPaintImage(savedImage));
+            imageEntry.append(openButton);
+            grid.append(imageEntry);
+            return;
+          }
           const imageEntry = document.createElement("article");
           imageEntry.className = "saved-paint-image";
           const openButton = document.createElement("button");
@@ -4615,7 +5245,9 @@
     const gotitaPlaylistTracks = [
       { name: "Nightcore - Bad boy.mp3", url: "Nightcore - Bad boy.mp3" },
       { name: "Nightcore Classics - Rockefeller Street [HD].mp3", url: "Nightcore Classics - Rockefeller Street [HD].mp3" },
-      { name: "6 Little Eggs Nightcore Eruruu.mp3", url: "6 Little Eggs Nightcore Eruruu.mp3" },
+      { name: "Bad Apple!! feat.nomico", url: "bad-apple-feat-nomico.mp3" },
+      { name: "Bad Apple!! feat.nomico — Full", url: "bad-apple-full.mp3" },
+      { name: "Bad Apple!! feat.nomico — Full", url: "bad-apple-full.mp3" },
       { name: "Nightcore - Doktorspiele.mp3", url: "Nightcore - Doktorspiele.mp3" },
       { name: "Nightcore - Pretty Little Psycho.mp3", url: "Nightcore - Pretty Little Psycho.mp3" },
       { name: "Psycho Teddy German Sub Español.mp3", url: "Psycho Teddy German Sub Español.mp3" },
@@ -4638,6 +5270,8 @@
     function configureMusicForProfile(profile) {
       audioPlayer.pause();
       audioPlayer.removeAttribute("src");
+      audioPlayer.removeAttribute("autoplay");
+      audioPlayer.autoplay = false;
       audioPlayer.load();
       musicTracks.splice(0, musicTracks.length);
       currentTrack = -1;
@@ -4884,11 +5518,9 @@
         showToast("Selecciona archivos de música como MP3, WAV u OGG.");
         return;
       }
-      const firstNewTrack = musicTracks.length;
       audioFiles.forEach(file => musicTracks.push({ name: file.name, url: URL.createObjectURL(file) }));
       renderPlaylist();
       playerStatus.textContent = `${audioFiles.length} ${audioFiles.length === 1 ? "pista añadida" : "pistas añadidas"} a la lista.`;
-      if (currentTrack === -1) playTrack(firstNewTrack);
     }
 
     async function playTrack(index) {
@@ -4962,16 +5594,8 @@
     audioPlayer.addEventListener("play", updatePlayerDisplay);
     audioPlayer.addEventListener("pause", updatePlayerDisplay);
     audioPlayer.addEventListener("ended", () => {
-      if (currentTrack < musicTracks.length - 1 || shuffleTracks) {
-        if (shuffleTracks && musicTracks.length > 1) {
-          let nextTrack = currentTrack;
-          while (nextTrack === currentTrack) nextTrack = Math.floor(Math.random() * musicTracks.length);
-          playTrack(nextTrack);
-        } else playTrack(currentTrack + 1);
-      } else {
-        playerStatus.textContent = "Lista terminada.";
-        updatePlayerDisplay();
-      }
+      playerStatus.textContent = "Lista terminada.";
+      updatePlayerDisplay();
     });
     audioPlayer.addEventListener("error", () => {
       playerStatus.textContent = "No se pudo leer el archivo de audio. Prueba con otro formato.";
